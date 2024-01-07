@@ -5,5 +5,8 @@
 
 <section>
 	<h1>About me</h1>
-	<p>Under construction</p>
+	<p>
+		Under construction, Will contain links to where you can find me and a brief description of who I
+		am.
+	</p>
 </section>

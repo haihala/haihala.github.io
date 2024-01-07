@@ -1,16 +1,25 @@
 <script>
 	import { page } from '$app/stores';
+
+	$: currentPage = $page.url.pathname;
+
+	let pages = [
+		['/', 'Home'],
+		['/blog', 'Blog'],
+		['/projects', 'Projects'],
+		['/wisdom', 'Wisdom'],
+		['/about', 'About']
+	];
 </script>
 
 <header>
 	<nav>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
+			{#each pages as [path, name]}
+				<li aria-current={currentPage === path ? 'page' : undefined}>
+					<a href={path}>{name}</a>
+				</li>
+			{/each}
 		</ul>
 	</nav>
 </header>
@@ -40,14 +49,14 @@
 	/* The default link color gets set globally */
 	li {
 		& a {
-			color: var(--color-text);
+			color: var(--color-link);
 			&:hover {
-				color: var(--color-theme-2);
+				color: var(--color-theme-1);
 			}
 		}
 	}
 
 	li[aria-current='page'] a {
-		color: var(--color-theme-1);
+		color: var(--color-theme-2);
 	}
 </style>
