@@ -31,6 +31,9 @@ jobs:
       - name: Install
         working-directory: ./svelte
         run: npm install
+      - name: Check
+        working-directory: ./svelte
+        run: npm run check && npm run lint
       - name: Build
         working-directory: ./svelte
         run: npm run build
