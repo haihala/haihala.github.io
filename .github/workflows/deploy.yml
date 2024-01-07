@@ -36,7 +36,8 @@ jobs:
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        path: svelte/build
+        with:
+          path: svelte/build
 
   # Deployment job
   deploy:
