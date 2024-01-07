@@ -1,5 +1,13 @@
 type Post = {
-	metadata: Article;
+	metadata: MetaArticle;
+};
+
+export type MetaArticle = {
+	link: string;
+	title: string;
+	tagline?: string;
+	tags: string[];
+	published: string;
 };
 
 export type Article = {
@@ -23,12 +31,10 @@ export const load_pages = async () => {
 				title,
 				tagline,
 				tags,
-				published
+				published: new Date(published)
 			};
 		})
-		.sort((a, b) => {
-			return a.published.valueOf() - b.published.valueOf();
-		});
+		.sort((a, b) => b.published.valueOf() - a.published.valueOf());
 
 	return posts;
 };

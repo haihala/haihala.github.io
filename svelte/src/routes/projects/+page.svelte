@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
+	import type { ComponentProps } from 'svelte';
 	import CardGrid from '$lib/components/CardGrid.svelte';
-	export let data;
+
+	export let data: ComponentProps<CardGrid>;
 </script>
 
 <svelte:head>

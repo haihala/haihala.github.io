@@ -30,5 +30,8 @@ export const load: PageLoad = async () => {
 				};
 			})
 			.sort((a, b) => a.published.valueOf() - b.published.valueOf())
+			.map(({ link, heading, description }) => {
+				return { link, heading, description };
+			})
 	};
 };
