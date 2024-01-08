@@ -1,4 +1,7 @@
 <script>
+	import CardGrid from '$lib/components/CardGrid.svelte';
+
+	export let data;
 </script>
 
 <svelte:head>
@@ -8,5 +11,13 @@
 
 <section>
 	<h1>Welcome</h1>
-	<p>Under heavy construction</p>
+
+	<p>
+		This is <a href="/about">my</a> home page where I can put things I want to show to people. Some of
+		my favoutites include:
+	</p>
+
+	<ul>
+		<CardGrid posts={data.favourites} />
+	</ul>
 </section>

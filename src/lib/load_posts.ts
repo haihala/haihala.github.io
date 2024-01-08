@@ -9,6 +9,7 @@ export type MetaArticle = {
 	link: string;
 	title: string;
 	tagline?: string;
+	favourite?: boolean;
 	tags: string[];
 	updatedAt: string;
 };
@@ -20,6 +21,7 @@ export type Article = {
 	tagline?: string;
 	tags: string[];
 	updatedAt: Date;
+	favourite: boolean;
 	content: typeof SvelteComponent;
 };
 
@@ -29,7 +31,7 @@ export const load_pages = async () => {
 	const posts = Object.entries(raw)
 		.map(([path, untypedPost]) => {
 			const post = untypedPost as Post;
-			const { tagline, title, tags, updatedAt } = post.metadata;
+			const { tagline, title, tags, updatedAt, favourite } = post.metadata;
 			const fname = path.replace(/^.*[\\/]/, '');
 			const slug = fname.replace(/\.md$/, '');
 
@@ -40,7 +42,8 @@ export const load_pages = async () => {
 				tagline,
 				tags,
 				updatedAt: new Date(updatedAt),
-				content: post.default
+				content: post.default,
+				favourite: !!favourite
 			};
 		})
 		.sort((a, b) => b.updatedAt.valueOf() - a.updatedAt.valueOf());
