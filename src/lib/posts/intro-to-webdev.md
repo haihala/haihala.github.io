@@ -1,10 +1,9 @@
 ---
-title: 'I need a website'
-tagline: 'Svelte first impressions'
-updatedAt: '2024-01-07 20:00:00'
+title: 'So you want to learn the web'
+updatedAt: '2024-01-08T10:07+02:00'
 tags: ['webdev']
 ---
 
-# Svelte Header
+# Snappy header
 
-Some text about Svelte
+Content

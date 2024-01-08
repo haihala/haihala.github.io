@@ -1,4 +1,7 @@
+import type { SvelteComponent } from 'svelte';
+
 type Post = {
+	default: typeof SvelteComponent;
 	metadata: MetaArticle;
 };
 
@@ -17,14 +20,16 @@ export type Article = {
 	tagline?: string;
 	tags: string[];
 	updatedAt: Date;
+	content: typeof SvelteComponent;
 };
 
 export const load_pages = async () => {
 	const raw = import.meta.glob(`./posts/*.md`, { eager: true });
 
 	const posts = Object.entries(raw)
-		.map(([path, post]) => {
-			const { tagline, title, tags, updatedAt } = (post as Post).metadata;
+		.map(([path, untypedPost]) => {
+			const post = untypedPost as Post;
+			const { tagline, title, tags, updatedAt } = post.metadata;
 			const fname = path.replace(/^.*[\\/]/, '');
 			const slug = fname.replace(/\.md$/, '');
 
@@ -34,7 +39,8 @@ export const load_pages = async () => {
 				title,
 				tagline,
 				tags,
-				updatedAt: new Date(updatedAt)
+				updatedAt: new Date(updatedAt),
+				content: post.default
 			};
 		})
 		.sort((a, b) => b.updatedAt.valueOf() - a.updatedAt.valueOf());
