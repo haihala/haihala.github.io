@@ -13,6 +13,10 @@ const projects: Project[] = [
 		main_slug: 'intro-to-wag'
 	},
 	{
+		name: 'IT Teaching',
+		main_slug: 'intro-to-teaching'
+	},
+	{
 		name: 'Webdev',
 		main_slug: 'intro-to-webdev'
 	}

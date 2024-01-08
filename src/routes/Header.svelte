@@ -7,7 +7,6 @@
 		['/', 'Home'],
 		['/blog', 'Blog'],
 		['/projects', 'Projects'],
-		['/wisdom', 'Wisdom'],
 		['/about', 'About']
 	];
 </script>
