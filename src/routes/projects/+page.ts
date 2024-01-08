@@ -9,12 +9,16 @@ type Project = {
 // Order matters here
 const projects: Project[] = [
 	{
-		name: 'Whoops! all grapplers',
+		name: 'Whoops! All grapplers',
 		main_slug: 'intro-to-wag'
 	},
 	{
 		name: 'IT Teaching',
 		main_slug: 'intro-to-teaching'
+	},
+	{
+		name: 'Pet projects',
+		main_slug: 'intro-to-pet-projects'
 	},
 	{
 		name: 'Webdev',
@@ -29,7 +33,13 @@ export const load: PageLoad = async () => {
 		posts: projects.map(({ name, main_slug }) => {
 			const post = fullPosts.find((p) => p.slug === main_slug);
 
-			return { link: post!.link, heading: name, description: post!.title };
+			const description = post!.title;
+
+			return {
+				link: post!.link,
+				heading: name,
+				description: description === name ? undefined : description
+			};
 		})
 	};
 };
