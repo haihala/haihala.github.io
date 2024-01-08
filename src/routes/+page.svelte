@@ -17,7 +17,5 @@
 		my favoutites include:
 	</p>
 
-	<ul>
-		<CardGrid posts={data.favourites} />
-	</ul>
+	<CardGrid posts={data.favourites} />
 </section>
