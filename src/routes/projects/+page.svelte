@@ -12,6 +12,9 @@
 
 <section>
 	<h1>Projects</h1>
-	<p>Under construction, will include my projects with relevant blog posts attached</p>
+	<p>
+		List of ongoign projects that I'm working on. There are shorter natured things that won't get a
+		project of their own.
+	</p>
 	<CardGrid {...data} />
 </section>

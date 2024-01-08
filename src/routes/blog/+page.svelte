@@ -12,6 +12,6 @@
 
 <section>
 	<h1>Blog</h1>
-	<p>Under construction, will include my blog posts in chronological order</p>
+	<p>My blog posts in chronological order (latest first)</p>
 	<CardGrid {...data} />
 </section>

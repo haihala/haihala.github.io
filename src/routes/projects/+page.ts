@@ -19,10 +19,6 @@ const projects: Project[] = [
 	{
 		name: 'Pet projects',
 		main_slug: 'intro-to-pet-projects'
-	},
-	{
-		name: 'Webdev',
-		main_slug: 'intro-to-webdev'
 	}
 ];
 
