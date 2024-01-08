@@ -9,10 +9,10 @@ favourite: true
 
 "Whoops! All graplers" is the working title of the rust base fighting game
 I've been hammering away for a few years. You can find the source code over at
-[github](https://github.com/rorawok/whoops-all-grapplers). The organization was
+[GitHub](https://github.com/rorawok/whoops-all-grapplers). The organization was
 an attempt I made at some point to maintain a Jenkins server that would run CI
 for some of my projects, however the server is long gone, I've just been too lazy
-to remove the org from github. I could write a manifesto on all the design that went into it
+to remove the org from GitHub. I could write a manifesto on all the design that went into it
 so far and in pieces and due time I probably will, but for now an introduction
 will suffice. It's written in [bevy](https://bevyengine.org/), a rust based ECS
 game engine, uses 3D models I made and animated in [blender](https://www.blender.org/).
