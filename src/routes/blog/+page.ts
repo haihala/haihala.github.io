@@ -5,11 +5,11 @@ export const load: PageLoad = async () => {
 	const fullPosts = await load_pages();
 
 	return {
-		posts: fullPosts.map((post) => {
+		posts: fullPosts.map(({ link, title, tagline }) => {
 			return {
-				link: post.link,
-				heading: post.title,
-				description: post.tagline
+				link,
+				heading: title,
+				description: tagline
 			};
 		})
 	};

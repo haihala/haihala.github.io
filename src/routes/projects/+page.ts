@@ -1,37 +1,31 @@
-import { load_pages, type Article } from '$lib/load_posts';
+import { load_pages } from '$lib/load_posts';
 import type { PageLoad } from './$types';
+
+type Project = {
+	name: string;
+	main_slug: string;
+};
+
+// Order matters here
+const projects: Project[] = [
+	{
+		name: 'Whoops! all grapplers',
+		main_slug: 'intro-to-wag'
+	},
+	{
+		name: 'Webdev',
+		main_slug: 'intro-to-webdev'
+	}
+];
 
 export const load: PageLoad = async () => {
 	const fullPosts = await load_pages();
 
-	const tagged = fullPosts.reduce(
-		(acc, next) => {
-			for (const tag of next.tags) {
-				if (!(tag in acc)) {
-					acc[tag] = next;
-				} else if (acc[tag].published > next.published) {
-					acc[tag] = next;
-				}
-			}
-
-			return acc;
-		},
-		{} as Record<string, Article>
-	);
-
 	return {
-		posts: Object.entries(tagged)
-			.map(([tag, post]) => {
-				return {
-					link: post.link,
-					heading: tag,
-					description: post.title,
-					published: post.published
-				};
-			})
-			.sort((a, b) => a.published.valueOf() - b.published.valueOf())
-			.map(({ link, heading, description }) => {
-				return { link, heading, description };
-			})
+		posts: projects.map(({ name, main_slug }) => {
+			const post = fullPosts.find((p) => p.slug === main_slug);
+
+			return { link: post!.link, heading: name, description: post!.title };
+		})
 	};
 };

@@ -14,7 +14,7 @@ export const entries: EntryGenerator = async () => {
 
 	return pages.map((page) => {
 		return {
-			slug: page.link.replace('/blog/', '')
+			slug: page.slug
 		};
 	});
 };

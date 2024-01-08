@@ -7,15 +7,16 @@ export type MetaArticle = {
 	title: string;
 	tagline?: string;
 	tags: string[];
-	published: string;
+	updatedAt: string;
 };
 
 export type Article = {
 	link: string;
+	slug: string;
 	title: string;
 	tagline?: string;
 	tags: string[];
-	published: Date;
+	updatedAt: Date;
 };
 
 export const load_pages = async () => {
@@ -23,18 +24,20 @@ export const load_pages = async () => {
 
 	const posts = Object.entries(raw)
 		.map(([path, post]) => {
-			const { tagline, title, tags, published } = (post as Post).metadata;
+			const { tagline, title, tags, updatedAt } = (post as Post).metadata;
 			const fname = path.replace(/^.*[\\/]/, '');
+			const slug = fname.replace(/\.md$/, '');
 
 			return {
-				link: `/blog/${fname.replace(/\.md$/, '')}`,
+				link: `/blog/${slug}`,
+				slug,
 				title,
 				tagline,
 				tags,
-				published: new Date(published)
+				updatedAt: new Date(updatedAt)
 			};
 		})
-		.sort((a, b) => b.published.valueOf() - a.published.valueOf());
+		.sort((a, b) => b.updatedAt.valueOf() - a.updatedAt.valueOf());
 
 	return posts;
 };
