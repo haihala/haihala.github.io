@@ -22,7 +22,7 @@ export const init = async (): Promise<{
 	input_map: InputMap;
 	game_world: GameWorld;
 }> => {
-	const main = document.getElementsByTagName('main')[0];
+	const main = document.body;
 
 	// App
 	const app = new Application();
@@ -84,15 +84,6 @@ export const init = async (): Promise<{
 	};
 	window.addEventListener('keydown', downHandler);
 	window.addEventListener('keyup', upHandler);
-
-	const unMount = () => {
-		console.log('test');
-		main.innerHTML = '';
-		window.removeEventListener('keydown', downHandler);
-		window.removeEventListener('keyup', upHandler);
-		window.removeEventListener('beforeunload', unMount);
-	};
-	window.addEventListener('beforeunload', unMount);
 
 	return { app, input_map, game_world: { car } };
 };
