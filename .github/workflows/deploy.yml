@@ -34,10 +34,12 @@ jobs:
           mkdir build
           cd godot-web-test
           godot --headless --export-release Web $(dirname $(pwd))/build/godot-test.html
-          cd ..
-          wget -O build/coi-serviceworker.min.js https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js 
-          sed  '/\<head\>/a \<script src="coi-serviceworker.min.js"\>\</script\>' build/godot-test.html > temp.html
-          mv temp.html build/godot-test.html
+      - name: Fix problem with Github Pages headers
+        run: |
+          cd build
+          wget https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js 
+          sed  '/\<head\>/a \<script src="coi-serviceworker.min.js"\>\</script\>' godot-test.html > temp.html
+          mv temp.html godot-test.html
       - uses: actions/upload-artifact@v4
         with:
           name: godot
