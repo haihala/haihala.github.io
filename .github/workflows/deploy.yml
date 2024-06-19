@@ -17,8 +17,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
+  build-godot:
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.2.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Build
+        run: cd godot-web-test && godot --headless --export-release Web
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot
+          path: build
+
+  build-svelte:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,18 +53,28 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: svelte
           path: build
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: [build-godot, build-svelte]
     steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: build
+      - name: Debug
+        run: ls -R
+      - name: Upload to pages
+        id: upload-pages-artifact@v3
+        with:
+          path: build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
