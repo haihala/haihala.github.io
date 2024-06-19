@@ -22,16 +22,14 @@ jobs:
     container:
       image: barichello/godot-ci:4.2.2
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Setup
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
       - name: Build
         run: cd godot-web-test && godot --headless --export-release Web
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: godot
           path: build
@@ -39,10 +37,8 @@ jobs:
   build-svelte:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 21
@@ -52,8 +48,7 @@ jobs:
         run: npm run check && npm run lint
       - name: Build
         run: npm run build
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: svelte
           path: build
@@ -72,7 +67,7 @@ jobs:
       - name: Debug
         run: ls -R
       - name: Upload to pages
-        id: upload-pages-artifact@v3
+        uses: upload-pages-artifact@v3
         with:
           path: build
       - name: Deploy to GitHub Pages
