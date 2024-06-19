@@ -35,7 +35,8 @@ jobs:
           cd godot-web-test
           godot --headless --export-release Web $(dirname $(pwd))/build/godot-test.html
           cd ..
-          sed  '/\<head\>/a \<script src="https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js"\>\</script\>' build/godot-test.html > temp.html
+          curl -K https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js -o build/coi-serviceworker.min.js
+          sed  '/\<head\>/a \<script src="coi-serviceworker.min.js"\>\</script\>' build/godot-test.html > temp.html
           mv temp.html build/godot-test.html
       - uses: actions/upload-artifact@v4
         with:
