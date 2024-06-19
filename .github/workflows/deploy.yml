@@ -19,8 +19,10 @@ concurrency:
 jobs:
   build-godot:
     runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: 4.2.2
     container:
-      image: barichello/godot-ci:4.2.2
+      image: barichello/godot-ci:${GODOT_VERSION}
     steps:
       - uses: actions/checkout@v4
       - name: Setup
