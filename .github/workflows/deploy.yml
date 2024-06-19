@@ -34,6 +34,9 @@ jobs:
           mkdir build
           cd godot-web-test
           godot --headless --export-release Web $(dirname $(pwd))/build/godot-test.html
+          cd ..
+          sed  '/\<head\>/a \<script src="https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js"\>\</script\>' build/godot-test.html > temp.html
+          mv temp.html build/godot-test
       - uses: actions/upload-artifact@v4
         with:
           name: godot
@@ -66,8 +69,10 @@ jobs:
     needs: [build-godot, build-svelte]
     steps:
       - uses: actions/download-artifact@v4
-        with:
-          path: build
+      - name: Unpack artefacts
+        run: |
+          mkdir build
+          mv godot/* svelte/* build
       - name: Debug
         run: ls -R
       - uses: actions/upload-pages-artifact@v3
