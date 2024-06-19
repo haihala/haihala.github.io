@@ -31,11 +31,13 @@ jobs:
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
       - name: Build
         run: |
+          set -euxo pipefail
           mkdir build
           cd godot-web-test
           godot --headless --export-release Web $(dirname $(pwd))/build/godot-test.html
           cd ..
           sed  '/\<head\>/a \<script src="https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js"\>\</script\>' build/godot-test.html > temp.html
+          cat temp.html
           mv temp.html build/godot-test
       - uses: actions/upload-artifact@v4
         with:
