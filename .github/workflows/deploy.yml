@@ -16,11 +16,12 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
+env:
+  GODOT_VERSION: 4.2.2
+
 jobs:
   build-godot:
     runs-on: ubuntu-latest
-    env:
-      GODOT_VERSION: 4.2.2
     container:
       image: barichello/godot-ci:${GODOT_VERSION}
     steps:
