@@ -15,8 +15,9 @@
 	</p>
 
 	<p>
-		You can find me on <a href="https://github.com/haihala">GitHub</a> and
-		<a href="https://www.linkedin.com/in/eero-haihala/">linkedin</a> or reach me by email at
+		You can find me on <a href="https://github.com/haihala">GitHub</a>,
+		<a href="https://www.linkedin.com/in/eero-haihala/">linkedin</a>,
+		<a href="https://hajhawa.itch.io/">itch.io</a>, or reach out by email at
 		<a href="mailto:eero.haihala@gmail.com">eero.haihala@gmail.com</a>
 	</p>
 </section>
