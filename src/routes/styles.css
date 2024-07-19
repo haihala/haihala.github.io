@@ -89,3 +89,11 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+blockquote {
+    border-left: 0.5rem solid #00000055;
+}
+
+blockquote > p {
+    padding: 0.5rem;
+}
