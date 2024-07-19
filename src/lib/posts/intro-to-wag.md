@@ -1,5 +1,6 @@
 ---
 title: 'Whoops! All grapplers'
+tagline: 'My fighting game project'
 updatedAt: '2024-01-07 19:00:00'
 tags: ['wag']
 favourite: true
