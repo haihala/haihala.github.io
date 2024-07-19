@@ -5,6 +5,7 @@ export const load: PageLoad = async () => {
 	const fullPosts = await load_pages();
 	const favourites = fullPosts
 		.filter((post) => post.favourite)
+		.sort((a, b) => b.updatedAt.getTime() - a.updatedAt.getTime())
 		.map(({ link, title, tagline }) => {
 			return {
 				link,
