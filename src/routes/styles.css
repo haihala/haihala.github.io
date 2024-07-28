@@ -97,3 +97,7 @@ blockquote {
 blockquote > p {
     padding: 0.5rem;
 }
+
+article img {
+    max-width: 100%;
+}
