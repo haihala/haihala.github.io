@@ -15,7 +15,7 @@
 	.grid {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(auto-fit, 20rem);
+		grid-template-columns: repeat(3, 1fr);
 		justify-content: center;
 		width: 100%;
 	}
