@@ -15,10 +15,14 @@
 </a>
 
 <style>
+	h2 {
+		height: 2em;
+	}
+
 	div {
-		background-color: var(--color-text);
-		color: var(--color-bg-base);
-		border-radius: 1rem;
+		background-color: var(--color-bg-card);
+		color: var(--color-text-card);
+		border-radius: 0.5rem;
 		padding: 0.01rem 1rem;
 	}
 </style>
