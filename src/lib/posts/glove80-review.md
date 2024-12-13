@@ -12,7 +12,7 @@ ergonomic, split keyboard with concave keywells from MoErgo.
 
 Picture from the manufacturer:
 
-![picture from the MoErgo
+![MoErgo
 website](https://www.moergo.com/cdn/shop/files/Hero-3842x2000_1600x.jpg)
 
 In layman's terms, two hunks of circuitry wrapped in plastic with buttons that
