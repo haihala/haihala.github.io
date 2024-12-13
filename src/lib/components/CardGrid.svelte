@@ -2,7 +2,11 @@
 	import type { ComponentProps } from 'svelte';
 	import Card from './Card.svelte';
 
-	export let posts: ComponentProps<Card>[];
+	interface Props {
+		posts: ComponentProps<Card>[];
+	}
+
+	let { posts }: Props = $props();
 </script>
 
 <div class="grid">

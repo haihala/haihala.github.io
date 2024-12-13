@@ -1,17 +1,22 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte';
 	import './styles.css';
 	import { page } from '$app/stores';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 {#if $page.url.pathname === '/zombie-game'}
-	<slot />
+	{@render children?.()}
 {:else}
 	<div class="app">
 		<Header />
 
 		<main>
-			<slot />
+			{@render children?.()}
 		</main>
 	</div>
 

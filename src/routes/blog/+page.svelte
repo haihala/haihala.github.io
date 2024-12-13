@@ -2,7 +2,11 @@
 	import type { ComponentProps } from 'svelte';
 	import CardGrid from '$lib/components/CardGrid.svelte';
 
-	export let data: ComponentProps<CardGrid>;
+	interface Props {
+		data: ComponentProps<CardGrid>;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>

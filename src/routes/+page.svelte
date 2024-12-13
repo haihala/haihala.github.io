@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import CardGrid from '$lib/components/CardGrid.svelte';
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <svelte:head>

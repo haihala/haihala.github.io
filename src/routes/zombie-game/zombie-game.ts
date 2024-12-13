@@ -1,4 +1,4 @@
-import { Application, Assets, Sprite, Ticker } from 'pixi.js';
+import { Application, Assets, Sprite, type Ticker } from 'pixi.js';
 
 type Car = {
 	velocity: { x: number; y: number };

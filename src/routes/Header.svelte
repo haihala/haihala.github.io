@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 
-	$: currentPage = $page.url.pathname;
+	let currentPage = $derived($page.url.pathname);
 
 	let pages = [
 		['/', 'Home'],
