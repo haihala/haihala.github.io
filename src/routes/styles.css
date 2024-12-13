@@ -29,11 +29,6 @@ body {
             var(--color-bg-base));
 
     background-color: var(--color-bg-base);
-    background-image: linear-gradient(to right,
-            var(--glow-color) 0%,
-            var(--color-bg-base) var(--glow-width),
-            var(--color-bg-base) calc(100% - var(--glow-width)),
-            var(--glow-color) 100%);
     animation: flicker 5s infinite;
 }
 
