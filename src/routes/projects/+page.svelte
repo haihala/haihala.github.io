@@ -3,7 +3,7 @@
 	import CardGrid from '$lib/components/CardGrid.svelte';
 
 	interface Props {
-		data: ComponentProps<CardGrid>;
+		data: ComponentProps<typeof CardGrid>;
 	}
 
 	let { data }: Props = $props();

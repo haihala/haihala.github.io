@@ -3,7 +3,7 @@
 	import Card from './Card.svelte';
 
 	interface Props {
-		posts: ComponentProps<Card>[];
+		posts: ComponentProps<typeof Card>[];
 	}
 
 	let { posts }: Props = $props();
