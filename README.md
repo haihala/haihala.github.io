@@ -5,45 +5,17 @@ Something to send to recruiters and share links through.
 
 You can see the site at https://haihala.github.io
 
-## Original svelte readme
+## Developing
 
-Headings changed, otherwise as it was generated
+install dependencies with `npm install` and start a development server with `npm
+run dev`. Then press o+enter to open the dev server site in a browser tab. You
+can do `npm run dev -- --open` to open the tab automatically.
 
-### create-svelte
+To create a production version of your app, run `npm run build`. It goes into
+the `build` directory. Sometimes it is smart to see it builds before pushing.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+### CI
 
-#### Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-### create a new project in the current directory
-npm create svelte@latest
-
-### create a new project in my-app
-npm create svelte@latest my-app
-```
-
-#### Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-### or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-#### Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+CI builds the svelte app with the static adapter, companion apps like the godot
+test game, and then compiles those to a single object that it uploads to Github
+pages.
