@@ -25,7 +25,7 @@ export type Article = {
 	content: typeof SvelteComponent;
 };
 
-export const load_pages = async () => {
+export const load_pages = async (): Promise<Article[]> => {
 	const raw = import.meta.glob(`./posts/*.md`, { eager: true });
 
 	const posts = Object.entries(raw)
