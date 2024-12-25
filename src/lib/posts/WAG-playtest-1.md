@@ -3,7 +3,7 @@ title: 'WAG first playtests'
 tagline: 'An eye opening experience'
 updatedAt: '2024-11-30T09:09+02:00'
 tags: ['wag']
-favourite: true
+favourite: false
 ---
 
 # WAG playtest 1

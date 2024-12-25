@@ -13,9 +13,12 @@
 	<h1>Welcome</h1>
 
 	<p>
-		This is <a href="/about">my</a> home page where I can put things I want to show to people. Some of
-		my favoutites include:
+		This is <a href="/about">my</a> home page where I can put things I want to show to people.
 	</p>
 
+	<p>"Fresh" off the presses:</p>
+	<CardGrid posts={data.newest} />
+
+	<p>Some of my favourites:</p>
 	<CardGrid posts={data.favourites} />
 </section>
