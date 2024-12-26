@@ -1,5 +1,5 @@
 ---
-title: 'Wag pre-polish update'
+title: 'WAG pre-polish update'
 tagline: 'Mechanically settling down'
 updatedAt: '2024-07-18T14:22+03:00'
 tags: ['wag']

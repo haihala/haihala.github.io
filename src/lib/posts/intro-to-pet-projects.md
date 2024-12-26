@@ -3,7 +3,7 @@ title: 'Pet projects'
 tagline: 'Small yet mighty'
 updatedAt: '2024-01-08T11:24+02:00'
 tags: ['pet-project']
-favourite: true
+favourite: false
 ---
 
 # Pet projects
