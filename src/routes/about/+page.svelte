@@ -46,7 +46,7 @@
 	<p>
 		Wowee describing oneself is hard. I'm just a dude working on <a href="/projects">projects</a>.
 		Graduated in the spring of 2024 with a masters in technology. I do engineering (whatever that
-		is) for a living and develop games to live. Most of my endeavours worth writing about end up at
+		is) for a living and develop games to live. Most of my endeavors worth writing about end up at
 		<a href="/blog">my blog</a>.
 	</p>
 

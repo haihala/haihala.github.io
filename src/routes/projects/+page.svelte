@@ -17,8 +17,8 @@
 <section>
 	<h1>Projects</h1>
 	<p>
-		List of ongoing projects that I'm working on. There are shorter natured things that won't get a
-		project of their own.
+		List of ongoing projects that I'm working on. I have a bunch of smaller projects that won't get
+		a project page of their own.
 	</p>
 	<CardGrid {...data} />
 </section>

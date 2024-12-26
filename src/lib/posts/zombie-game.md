@@ -54,7 +54,7 @@ be a game engine, as much as it seems to aim for a rendering solution, bringing
 WebGL to the unwashed masses. In the end about third of the TS code is just for
 getting the four input buttons to read in a nice way.
 
-In the end, at this simple of a step, Pixi seemed more like a hinderance than
+In the end, at this simple of a step, Pixi seemed more like a hindrance than
 an aid. It's not difficult to draw a PNG, move it, and rotate it on a canvas,
 so fair enough not the use case they are going for, but with a few slight
 exceptions, this is pretty much all that is going on in their examples /
@@ -73,7 +73,7 @@ apply it to for example give an object an outline or generate a height map with
 the provided noise texture. It provides the learner with fish, instead of
 teaching them to fish if you pardon the pun.
 
-In the age of Wasm, I fail to see Javascript based systems like pixi thriving.
+In the age of Wasm, I fail to see JavaScript based systems like pixi thriving.
 Obviously there are always those who learned JS at 14 and never wavered from
 that, so there will always be a market, but I don't see the long term
 trajectory for games. For overpaid designers and web developers who want to add
@@ -84,10 +84,10 @@ meteor.js, with maybe one or two half-notable products before falling to the
 limbo of ember.js, never to completely die but slowly fading to obscurity. JS
 just isn't a good option for game development. It's not fast like a compiled
 language nor does it offer particularly good mechanics for handling concepts
-such as vectors. The only thing going for it is being the linqua franca of the
-web, so when that rug is pulled, no reason remains. I do acknowledge that wasm
+such as vectors. The only thing going for it is being the lingua franca of the
+web, so when that rug is pulled, no reason remains. I do acknowledge that Wasm
 is still a long way from being there. Here is to hoping it will get here before
 nuclear fission.
 
 Maybe this project will continue, maybe even in this form, but for now I'm
-satisfied in my experiement and not craving more of this..
+satisfied in my experiment and not craving more of this..

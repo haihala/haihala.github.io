@@ -8,7 +8,7 @@ favourite: true
 
 # WAG
 
-"Whoops! All graplers" is the working title of the rust base fighting game
+"Whoops! All grapplers" is the working title of the rust base fighting game
 I've been hammering away for a few years. You can find the source code over at
 [GitHub](https://github.com/rorawok/whoops-all-grapplers). The organization was
 an attempt I made at some point to maintain a Jenkins server that would run CI
@@ -20,12 +20,12 @@ game engine, uses 3D models I made and animated in [blender](https://www.blender
 
 I noticed how I was essentially oscillating between two extremes.
 I'd pick a super easy project, do half of it, lose motivation due to the
-rest being trivial gruntwork, quit, pick a massive megaproject I'm more enthusiastic
+rest being trivial grunt work, quit, pick a massive megaproject I'm more enthusiastic
 about, get nowhere as it was way out of the scope of my ability, quit, repeat.
-With WAG, I deliberately tried to aim for a middleground. Out of my comfort zone,
+With WAG, I deliberately tried to aim for a middle ground. Out of my comfort zone,
 at least enough to be interesting, but also something I felt like I could tackle.
 At the start of the project I knew very little rust, basically no blender, and
-my game design experience had been a few microprojets, so traditional wisdom
+my game design experience had been a few microprojects, so traditional wisdom
 would say it was outside of the scope of my abilities, which I would agree with
 I also think this was the only way I'd ever get anywhere. I frequently feel pure
 joy when something just works in a way I don't in my [pet projects](/blog/intro-to-pet-projects).
@@ -34,7 +34,7 @@ At the beginning I made a conscious choice. I knew this would take a while
 This acceptance allows me to keep at it, as I don't feel like a failure for not
 getting it done already. The original naive plan was a year of dev time for a
 prototype, but that's laughable in hindsight, especially with how the scope has
-shifted. **This is fine**. My livelyhood doesn't depend on the success of the game,
+shifted. **This is fine**. My livelihood doesn't depend on the success of the game,
 which is probably for the best since there probably won't be much of that to go around.
 
 The most important takeaway I've got from this project is learning to enjoy trying.

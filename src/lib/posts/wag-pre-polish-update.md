@@ -67,7 +67,7 @@ Dota 2, I realized that this is annoying to manage on a controller. I scrapped
 the idea that you could buy multiple of the same item and just make it into
 effectively an upgrade tree. I bring this up because one of the narrative
 aspects of Mizku was that she was coming from humble origins and this was
-reflected in the plan by having lots of consumables she would be incentivised to
+reflected in the plan by having lots of consumables she would be incentivized to
 repeatedly buy. This would lead to the general items being comparatively more
 expensive over the course of the game. Even though consumables still exist, I
 realized that they are way harder to design for now that you can't buy the same
@@ -122,38 +122,38 @@ It's hardly a problem at all. Most of my issues however are technical in nature.
 
 Mizku has a sword and a lot of her animations include sheathing or unsheathing
 the sword. I realized that I can use the idle pose as a base for the last
-keyframe when sheathing. For reasons unclear to me, this occasionally causes an
+key frame when sheathing. For reasons unclear to me, this occasionally causes an
 unnatural wrist rotation, as instead of going the short way around, Blender
 reverses the wrist motion of the entire animation. This is mostly notable with
-actions that have large swings. I usually end up deleting the keyframes and
+actions that have large swings. I usually end up deleting the key frames and
 recreating them. This is a recurring issue and I feel like it shouldn't be.
 
 In addition to the wrist motions, I struggle with the sword clipping through her
-body. Fixing this to not look bad is a large timesink in the sword animations.
+body. Fixing this to not look bad is a large time sink in the sword animations.
 It feels tedious and difficult and I do regret having a sword for character #1,
 as some of these problems are sword specific and I now have to undertake those
 along with the generic issues. Also considered just teleporting the sword out
 for sword moves, but don't want to go back and do that now as I'm fine with the
 current animations.
 
-I feel that I basically have to have auto keyframe on as the alternative is
-pressing i every time I change anything. his does make the curve editors nearly
+I feel that I basically have to have auto key frame on as the alternative is
+pressing i every time I change anything. This does make the curve editors nearly
 worthless, but that could be a skill issue. I use the human meta rig and it has
 a lot of controls to adjust.
 
-Editing keyframes can have effects on adjacent keyframes. I understand why it
+Editing key frames can have effects on adjacent key frames. I understand why it
 works like this, but I dislike it nevertheless. On multiple occasions I adjust
 the pose at either end of a swing and it completely ruins the movement in the
-middle or vice versa. I mostly fix this by adding more keyframes, but this seems
-tedious and it feels like I should just keyframe all the bones. I occasionally
-do just that and then remove excess at the end with Blender's keyframe cleaner.
+middle or vice versa. I mostly fix this by adding more key frames, but this seems
+tedious and it feels like I should just key frame all the bones. I occasionally
+do just that and then remove excess at the end with Blender's key frame cleaner.
 It does sometimes delete channels that stay the same throughout the animation
 which is a problem when switching between animations. I think exporting the
 actions makes the model return to the default stance between actions, so it
 isn't a problem after export but it has tripped me up multiple times in the
 editor. There may be a setting to not do that, should investigate. For now I
 just went around all the actions with a loop of select T-pose, select target
-action, go to frame 0, Select all bones, add keyframe.
+action, go to frame 0, Select all bones, add key frame.
 
 # Easy icon art
 
@@ -207,7 +207,7 @@ calculated from the paths, but there was no way to undo that to generate a
 mapping between the left and right sides. I have Blender set up to compress the
 bone hierarchy on export, so the hierarchy in blender does not match the one in
 game. I think it didn't fit in some Bevy bone limit without this, this may no
-longer be the case. The way I dealt with this was to first use an online gltf
+longer be the case. The way I dealt with this was to first use an online glTF
 viewer to look at the exported .glb file. I then took note of all of the side
 specific bones within the viewer and re-created pairs of the UUIDs for each pair
 that needs to get flipped using the same mechanism Bevy uses. My descend to
@@ -233,7 +233,7 @@ it, as I see no reason it would not be out of date again in a year. In most
 parts the churn has been manageable, but there are high level architecture
 differences that clearly stem from how the project started in Bevy 0.5. I have a
 sneaking suspicion that when I finally get around to netcode, I may have to get
-the rework done with, as there are clear problems with consisteny in the current
+the rework done with, as there are clear problems with consistency in the current
 setup.
 
 # Next up

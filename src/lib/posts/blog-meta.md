@@ -12,7 +12,7 @@ First things first, you can find the source code at
 
 At my job, I'm full stack / devops-y engineer which occasionally involves a
 lot of React. All cards on the table, I don't think there is a reason to use
-React as of today (2024-01-08). It's difficult to onboard, similtaneously in
+React as of today (2024-01-08). It's difficult to onboard, simultaneously in
 flux and behind the curve, hard to reason about (useEffect) and the insistence
 on being a library has made for one of the worst ecosystems ever if you consider
 the user count. I've been trying to find a tool that better suits my purposes
@@ -21,23 +21,23 @@ and interests, and this time I picked Svelte.
 ## How the sausage gets made.
 
 I used some of [Josh collins' wisdom](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
-and used a system where markdown files with frontmatter get parsed and rendered with
-[MsveX](https://github.com/pngwn/MDsveX). The whole site is then compilled into
+and used a system where markdown files with front matter get parsed and rendered with
+[MsveX](https://github.com/pngwn/MDsveX). The whole site is then compiled into
 static files and served from [GitHub pages](https://pages.github.com/).
 You can take a look at the source if you'd like to know more.
 
 I also considered something like [HTMX](https://htmx.org/) + [Loco](https://loco.rs/),
 but the static hosting of GitHub pages was too tempting.
 
-I really like how the page loading turned out. The frontmatter contains things
-like if a post is a favourite (shown on the front page) or what tags it has
+I really like how the page loading turned out. The front matter contains things
+like if a post is a favorite (shown on the front page) or what tags it has
 (what posts get recommended at the bottom)
 
 ## About Svelte
 
-Svelte is yet another frontend JS framework, but along with solid and quik are
+Svelte is yet another front-end JS framework, but along with solid and quik are
 of a generation that comes after React has stumbled itself through several
-rethinkings of how a UI ought to work. I'll try to keep this brief:
+rounds of rethinking of how a UI ought to work. I'll try to keep this brief:
 
 ### What I Liked
 

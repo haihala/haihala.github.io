@@ -19,6 +19,6 @@
 	<p>"Fresh" off the presses:</p>
 	<CardGrid posts={data.newest} />
 
-	<p>Some of my favourites:</p>
+	<p>Some of my favorites:</p>
 	<CardGrid posts={data.favourites} />
 </section>

@@ -8,7 +8,7 @@ tags: ['hardware', 'review']
 # What and why
 
 The [glove80](https://www.moergo.com/) is an ortholinear, column staggered,
-ergonomic, split keyboard with concave keywells from MoErgo.
+ergonomic, split keyboard with concave key wells from MoErgo.
 
 Picture from the manufacturer:
 
@@ -27,7 +27,7 @@ Two impulses lead to me owning one:
 New toys also go brrt and my employer paid for it. I did pick it out.
 
 I would like to highlight that the main reason was to optimize. I am from the
-nordic countries, which means the keyboard available to me throughout my youth
+Nordic countries, which means the keyboard available to me throughout my youth
 with all the keys I need to communicate in my native language are not exactly
 optimal for programming. Some of the most notable annoyances:
 
@@ -44,7 +44,7 @@ to not go back and forth to access those.
 
 And to be utterly clear, I don't experience constant, significant, or
 debilitating pain. I am somewhat sore at times and would still like to have
-funtional wrists in ten years, so I'm getting ahead of this.
+functional wrists in ten years, so I'm getting ahead of this.
 
 # How it went
 
@@ -59,7 +59,7 @@ The difficulty of carrying is likely related to how many keys there are (80, 40
 per half, 6 of which are in each thumb cluster). I adore the big thumb clusters,
 as they essentially eliminate the wrist movements. This was what made me pick
 the glove80 over ZSA offerings like the voyager (two thumb cluster keys per
-side) or the moonlander (four thumb cluster keys per side).
+side) or the Moonlander (four thumb cluster keys per side).
 
 My needs for optimizing were met, albeit it was laborious. I got the
 configuration software to do everything I wanted it to do eventually, but some
@@ -67,23 +67,23 @@ things like a dedicated key for backticks took some thinking (ended up doing a
 multi-key macro). You can use ZMK and build it yourself, which allows you to
 store your configuration in a git repo. I will probably do this from now on.
 
-A few years ago I had tried dvorak due to the need to optimize, but it came with
+A few years ago I had tried Dvorak due to the need to optimize, but it came with
 a bunch of problems. Almost every time I played a game, I needed to rebind all
 of the keys. That was, if the game even allowed for it. If I used someone else's
 computer, I granny typed with my index fingers. Eventually I gave up, but formed
-a theory that the benefits of dvorak could be achieved via other means, which
+a theory that the benefits of Dvorak could be achieved via other means, which
 would give the speed and comfort benefits without the problems. My current
 layout seems to validate that theory. The learning curve was notably better as
 well, but my earlier experimentation may have helped with that.
 
 On the topic of gaming, the glove80 is somewhat cumbersome in fps games. The
 keys one is supposed to use with the middle and the ring finger are deeper
-within the keywells. This is quite comfortable when typing, but not the best
+within the key wells. This is quite comfortable when typing, but not the best
 when using wasd to move. I added a layer that shifted everything to the right by
 one space, but this then had problems with what keys were available. Reaching T
 with your right hand is trivial under normal circumstances, but if everything is
 shifted to the right by a step, it jumps to the other half. After a while, I
-just settled to having a separate gaming keyboard. Unlike with dvorak, I have no
+just settled to having a separate gaming keyboard. Unlike with Dvorak, I have no
 problems switching back and forth.
 
 My major complaints have to do with minor physical traits. The feet of the

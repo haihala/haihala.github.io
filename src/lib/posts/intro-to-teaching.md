@@ -12,7 +12,7 @@ Full disclosure: I have no pedagogical background, for some reason people just
 ask me to lecture about stuff. As for what I've done, I've been the main
 organizer and lecturer at a summer program for high schoolers at
 [Matematiikkalinja](https://matematiikkalinja.fi/). This includes lectures on
-a wide array of computer science related topics like frontend web development and
+a wide array of computer science related topics like front end web development and
 command line usage. Practical exercises where the students make stuff are also
 frequently used.
 
@@ -34,25 +34,25 @@ unfortunately many university lectures can help, but it can also give you a fals
 sense of progress. The pages turn and your brain is gathering what you read, but
 only through application of your knowledge can you be certain that you understand.
 If you must, use passive resources in two ways. Way 1: Gain new perspective on something
-you already know. Watching tutorials on stuff you think you know is suprisingly
+you already know. Watching tutorials on stuff you think you know is surprisingly
 insightful. Way 2: Reference. Reading documentation for some tool you use
-cover to cover could techically help, but I find that you retain way more if
+cover to cover could technically help, but I find that you retain way more if
 instead you go out and do a thing and when you don't know how to do something,
 learn how to do that one specific thing and just that thing. Both of the ways may
 require retreading ground. You may feel like you get something, only to really get
 it the second time a few years down the line. This is fine and par for the course.
 
-For way 2 I can't and won't offer sources, but for way 1 here are a few of my favourites:
+For way 2 I can't and won't offer sources, but for way 1 here are a few of my favorites:
 
 - [The Art of Code - Dylan Beattie](https://www.youtube.com/watch?v=6avJHaC3C2U)
   - NDC presentation that I'm unable to do justice to with words
   - Fun, insightful, the prime example of perspective-giving way-2 source
   - **This is great for teachers as well**
-- [Grug braied developer](https://grugbrain.dev/)
+- [Grug brained developer](https://grugbrain.dev/)
   - A brilliant meditation on simplicity and complexity
   - An ego check for some (that's me)
 - [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
-  - Consise yet comprehensive explanation of why more rigid type systems are powerful
+  - Concise yet comprehensive explanation of why more rigid type systems are powerful
 
 And remember, engineering is not about memorization. It doesn't matter if you
 have to google things or ask an AI. It's not a shame to not know,

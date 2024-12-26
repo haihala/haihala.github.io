@@ -36,7 +36,7 @@ bang out a new item in half an hour or so, 25 mins of which are making the icon.
 There were also a few small improvements to the dev tooling, such as
 configurable starting wealth and more/better binds.
 
-Big thanks to my casual friends and local fgc grinders who volunteered to test
+Big thanks to my casual friends and local FGC grinders who volunteered to test
 the game and despite numerous game-breaking bugs didn't complain.
 
 ## Menus
@@ -144,7 +144,7 @@ Points 2 and 3 are simply mistakes in using the tool. How bevy_ggrs handles
 things is that if an entity gets despawned and respawned due to a rollback, only
 the components registered with it are re-added to the entity. This means that
 most components should be designated. There is also an entity command provided
-by bevy_ggrs that adds the requried component(s?) bevy_ggrs to consider that
+by bevy_ggrs that adds the required component(s?) bevy_ggrs to consider that
 entity in the first place. All gameplay relevant entities should probably be
 included in the rollback simulations, but it's easy to miss some. Custom hash
 functions should also be added to make the sync hash a more comprehensive view
@@ -153,7 +153,7 @@ are really important, so you should make the transform hashes a part of the sync
 hash.
 
 Synctest sessions are a tool provided by bevy_ggrs that trigger a rollback on
-each frame, greatly increasing the likelyhood of a desync if the code allows for
+each frame, greatly increasing the likelihood of a desync if the code allows for
 it. Desyncs can be inconsistent, so having a tool that bumps up the odds is
 invaluable when debugging. To once again re-iterate. The handling of the desyncs
 is still questionable at best, as the game simply keeps going after having
@@ -171,8 +171,8 @@ effects. I ditched hanabi, as I found it hard to work with and wrote my own
 visual effects using a custom system that accepts human readable descriptions of
 effects and then spawns quads with shaders. Something similar for audio already
 existed. Audio system has a bunch of small clever bits, like how it has very
-easy variant voiceline support or how it alters the pitch slightly to make audio
-feel less repetetive.
+easy variant voice line support or how it alters the pitch slightly to make audio
+feel less repetitive.
 
 Some of the effects that I added / edited:
 
@@ -183,7 +183,7 @@ Some of the effects that I added / edited:
   - Speed lines for dashes and jumps
   - Blocking
   - Throw hit and avoid
-  - Better meter usage indicator (fresnel on character)
+  - Better meter usage indicator (Fresnel on character)
   - Darken out the character to basically a silhouette (status effect)
 - Audio
   - Attacking (generic and specific for each special move)
@@ -205,13 +205,13 @@ I also pitch shift the sound up or down by about 10%, which is maybe a bit
 extreme, but also adds variety.
 
 These updates are really nice, but made it abundantly clear that I will need to
-get some help with the animations, vfx, sfx, and especially voice acting. None
+get some help with the animations, VFX, SFX, and especially voice acting. None
 of this came naturally to me and it shows in the quality, but at the very least
 I now understand that world a bit more.
 
 ## Move descriptions
 
-Figuring out a consise and informative way to describe the moves of a character
+Figuring out a concise and informative way to describe the moves of a character
 has been an ongoing problem since the game had moves. Similarly to input
 parsing, I've gone through several implementations, and with the temporary
 exception of the month following a rework, they all feel problematic. On one
@@ -235,7 +235,7 @@ previous system had a concept of action blocks, each of which was supposed to
 describe a period of time. The script (effect) of an action consisted of a
 linear series of action blocks. Each action block contained information on what
 action events to send out when entering, when to exit the block, and whether or
-not the block can be cancelled into something. This solution was pretty
+not the block can be canceled into something. This solution was pretty
 cumbersome to work with, especially with more dynamic actions. There was an enum
 with a variant for each type of an exit condition a block could have. One for
 simply taking some time, one for input state, one for whatever. The block
@@ -252,10 +252,10 @@ can't capture any variables in rust, I had to use macros to put the values in
 the fn at compile time.
 
 This may be an open proclamation of a skill issue, but fuck macros in rust. They
-were ok to write, but very hard to debug. Because of the flexibility of the
+were tolerable to write, but very hard to debug. Because of the flexibility of the
 system, you can very easily make a lot of small mistakes, like relying on
 imports outside the macro. Rust analyzer occasionally completely gives up with
-macros and I had plenty of cases where simple operations like go to defintion
+macros and I had plenty of cases where simple operations like go to definition
 just don't work. The macros I had made also lacked variety to describe different
 types of moves, so I ended up with lots of overloads for the same macro with
 differing amounts of arguments, rest filled with defaults. This was fine in some
@@ -351,7 +351,7 @@ fully recall of of them. Here are some of the more memorable ones:
   - Add input state data to the history and make a distinction between input requirements that look at the state vs events, but this adds complexity
 
 This implementation was fine for a while and I was able to patch it to fulfill
-several demands. I got charge and multipress inputs to work fine, but there were
+several demands. I got charge and multi press inputs to work fine, but there were
 a few unfixables. Maybe six months in, I got seduced by an idea of a better
 system, the gen 2 parser.
 
@@ -414,17 +414,17 @@ otherwise not change. If the synthetic event was not sent, the character would
 walk the wrong way after a cross over and would block / not block things they
 were supposed to. In the above example without the synthetic event, if the
 opponent hits with a cross-up on the way down, it would not get blocked without
-the synthetic event, as the parser still thinks the stick is facing foward.
+the synthetic event, as the parser still thinks the stick is facing forward.
 
-### Parser gen 3: Lookback 2: Electric boogaloo
+### Parser gen 3: Lookback 2: Electric Boogaloo
 
-This was a rage-rewrite. I initially just wanted to re-add multipresses, but
+This was a rage-rewrite. I initially just wanted to re-add multi presses, but
 that turned out to be very difficult, as the parser heads were difficult to
 reason about, which can be seen in how it was the only part of the game that had
 decent unit tests. After trying for a few hours I just said fuck it and rewrote
 the whole thing to be simpler with the lessons learned through generations 1 and 2.
 
-Gen 3 was yet another lookbehind parser similar to gen 1. However it had a few
+Gen 3 was yet another lookback parser similar to gen 1. However it had a few
 advantages that I learned along the way. Gen 3 looks back an amount of time
 proportional to input complexity, which is measured by the amount of
 requirements the input has. For a simple button press, it doesn't even look
@@ -448,7 +448,7 @@ get removed later. It's a bit of a hack and I may end up removing it.
 There is now also a metadata section in the inputs that contains flags. At the
 moment there are two flags, 'A' and 'S'. The 'A' flag stands for Absolute, which
 means the input does not care about sidedness. This is useful for menu
-navigation, which previously had to double flip the sides to un-flip the baked
+navigation, which previously had to double flip the sides to revert the baked
 in flip. The 'S' flag stands for slow and increases the amount of lookback
 frames per requirement. The optional sidedness made the whole thing way simpler,
 as it gets processed pretty early on and most of the parsing is side-agnostic.
@@ -491,7 +491,7 @@ Bevy 0.14 introduced an observer system. With it, you can observe for
 "Triggers", either in general or on a specific entity. This was a great system
 for my game, but unfortunately Bevy added it years into the project. Being the
 compulsive type, I did end up biting the bullet and refactoring the events
-emited by the moves to use this pattern.
+emitted by the moves to use this pattern.
 
 Old system:
 

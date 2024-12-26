@@ -46,7 +46,7 @@ around me. I saw co-pressers who had been with the association for much longer
 than I, but with ability on par with mine get denied boons on the basis that
 their methods were inadequate. Having witnessed first-hand how new buttons are
 disregarded or even discouraged, this seemed contradictory. On the other hand I
-saw my peers from school pressing the shinier buttons I dremt of pressing and
+saw my peers from school pressing the shinier buttons I dreamt of pressing and
 being rewarded with my yearly boons every couple of months.
 
 I started clicking switches in private. Maybe this was me branching out or
@@ -91,7 +91,7 @@ true. I simply like pressing buttons.
 I did take their advice for a while and tried to focus on the outcomes and
 disregard the buttons. This lead my techniques rusty and my tools lacking. I was
 pressing the same buttons the same way day in day out because it seemed like the
-best way to optimise for what I was being asked. I saw how my co-pressers ended
+best way to optimize for what I was being asked. I saw how my co-pressers ended
 up in their situations and felt it happening to me.
 
 At this time I noticed this wasn't getting better. I was unrecognizable to
@@ -105,9 +105,9 @@ reasonable.
 
 I scheduled a month of time, during which I was under no obligation to press
 buttons. I lasted two days until the switchboard started calling. After several
-hijinks and a remarkably low volume of button presses, that month had passed. I
+high jinks and a remarkably low volume of button presses, that month had passed. I
 returned to my station to resume pressing buttons. Due to my early takeoff, I
-had landed before my co-pressers which left the shared space feeling earie.
+had landed before my co-pressers which left the shared space feeling eerie.
 There were seats for hundreds of pressers, occupied by a handful. I didn't speak
 to a single person the first week besides my morning greetings.
 
@@ -125,9 +125,9 @@ All of my presses could've been done in a single productive day, rather than the
 four unproductive ones I had.
 
 I hold no ill will towards my co-pressers, if anything I am upset at myself. I
-cannot verbalise why I am bothered by the fact that my presses were inefficient.
+cannot verbalize why I am bothered by the fact that my presses were inefficient.
 It has no impact on anything. Maybe the fact that my co-pressers were
-incentivised to dig themselves to a hole to reduce their options and make them
+incentivized to dig themselves to a hole to reduce their options and make them
 stay with the group for longer. Maybe it was how I saw others with my
 opportunities thrive in their own environments. Maybe the initial feeling of
 purpose I gained while learning the ropes or playing with my switches had made

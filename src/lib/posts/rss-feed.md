@@ -19,9 +19,9 @@ You can find the source code [here](https://github.com/haihala/haihala.github.io
 
 I cheated off of [Scott
 Spence](https://scottspence.com/posts/make-an-rss-feed-with-sveltekit)'s post,
-hallowed be his name. Got it to work locally pretty quickly, but it didnt work
+hallowed be his name. Got it to work locally pretty quickly, but it didn't work
 in pages, as Github served it as an octet stream because had the feed at `/rss`.
-I tried changing it to `/rss.xml` to see if github would guess the
+I tried changing it to `/rss.xml` to see if Github would guess the
 `Content-Type` correctly and it did.
 
 A short one today, this was surprisingly easy at the end of the day.
