@@ -20,20 +20,12 @@ const format = (posts: Article[]) => {
     <description>My blog where I talk about software / game development / design</description>
     ${posts.map((post) => {
 			const link = `${website}/blog/${post.slug}`;
-
 			return `<item>
   <title>${post.title}</title>
-  <description>A blog built with SvelteKit about tech and stuff!</description>
   <link>${link}/</link>
   <pubDate>${new Date(post.updatedAt)}</pubDate>
-  <content:encoded>${post.tagline} 
-    <div style="margin-top: 50px; font-style: italic;">
-      <strong>
-        <a href="${link}">
-          Keep reading
-        </a>
-      </strong>  
-    </div>
+  <content:encoded>
+    ${post.tagline}<br><strong><a href="${link}">Read the full post here</a></strong>
   </content:encoded>
 </item>`;
 		})})}
