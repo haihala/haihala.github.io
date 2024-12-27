@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { ComponentProps } from 'svelte';
 	import CardGrid from '$lib/components/CardGrid.svelte';
+	import { website } from '../rss.xml/+server.ts';
+	let feed = `${website}/rss.xml`;
 
 	interface Props {
 		data: ComponentProps<typeof CardGrid>;
@@ -17,5 +19,8 @@
 <section>
 	<h1>Blog</h1>
 	<p>My blog posts in chronological order (latest first)</p>
+	<p>
+		RSS feed available at <a href={feed}>{feed}</a>
+	</p>
 	<CardGrid {...data} />
 </section>

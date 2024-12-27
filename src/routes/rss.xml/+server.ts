@@ -1,7 +1,7 @@
 import { load_pages, type Article } from '$lib/load_posts';
 
 const title = 'Haihala blog';
-const website = 'https://haihala.github.io';
+export const website = 'https://haihala.github.io';
 
 export const prerender = true;
 export async function GET() {
