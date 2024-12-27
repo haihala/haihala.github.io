@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ComponentProps } from 'svelte';
 	import CardGrid from '$lib/components/CardGrid.svelte';
-	import { website } from '../constants.ts';
+	import { website } from '../constants';
 	let feed = `${website}/rss.xml`;
 
 	interface Props {
