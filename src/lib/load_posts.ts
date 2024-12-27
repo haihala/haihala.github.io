@@ -10,6 +10,7 @@ export type MetaArticle = {
 	title: string;
 	tagline?: string;
 	favourite?: boolean;
+	draft?: boolean;
 	tags: string[];
 	updatedAt: string;
 };
@@ -22,16 +23,21 @@ export type Article = {
 	tags: string[];
 	updatedAt: Date;
 	favourite: boolean;
+	draft: boolean;
 	content: typeof SvelteComponent;
 };
 
-export const load_pages = async (): Promise<Article[]> => {
+export type LoadOptions = {
+	includeDrafts?: boolean;
+};
+
+export const load_pages = async (opts?: LoadOptions): Promise<Article[]> => {
 	const raw = import.meta.glob(`./posts/*.md`, { eager: true });
 
 	const posts = Object.entries(raw)
 		.map(([path, untypedPost]) => {
 			const post = untypedPost as Post;
-			const { tagline, title, tags, updatedAt, favourite } = post.metadata;
+			const { tagline, title, tags, updatedAt, favourite, draft } = post.metadata;
 			const fname = path.replace(/^.*[\\/]/, '');
 			const slug = fname.replace(/\.md$/, '');
 
@@ -43,10 +49,11 @@ export const load_pages = async (): Promise<Article[]> => {
 				tags,
 				updatedAt: new Date(updatedAt),
 				content: post.default,
-				favourite: !!favourite
+				favourite: !!favourite,
+				draft: !!draft
 			};
 		})
-		.sort((a, b) => b.updatedAt.valueOf() - a.updatedAt.valueOf());
+		.filter((post) => opts?.includeDrafts || !post.draft);
 
-	return posts;
+	return posts.sort((a, b) => b.updatedAt.valueOf() - a.updatedAt.valueOf());
 };
