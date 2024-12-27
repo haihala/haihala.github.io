@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="250mm"
+   viewBox="0 0 50 250"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="git-conflict-rebased.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.5953125"
+     inkscape:cx="-52.913386"
+     inkscape:cy="615.64304"
+     inkscape:window-width="1916"
+     inkscape:window-height="1028"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <inkscape:path-effect
+       effect="tiling"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1.3.1"
+       unit="px"
+       seed="1;1"
+       lpesatellites=""
+       num_rows="2"
+       num_cols="2"
+       gapx="200"
+       gapy="200"
+       offset="0"
+       offset_type="false"
+       scale="0"
+       rotate="0"
+       mirrorrowsx="false"
+       mirrorrowsy="false"
+       mirrorcolsx="false"
+       mirrorcolsy="false"
+       mirrortrans="false"
+       shrink_interp="false"
+       split_items="true"
+       link_styles="false"
+       interpolate_scalex="false"
+       interpolate_scaley="true"
+       interpolate_rotatex="false"
+       interpolate_rotatey="true"
+       random_scale="false"
+       random_rotate="false"
+       random_gap_y="false"
+       random_gap_x="false"
+       transformorigin="" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="85.78,30.169889"
+       end_point="85.481352,74.796183"
+       center_point="85.630676,52.483036"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-92.541912,65.136959)">
+    <g
+       id="g10"
+       transform="translate(2.1868519,4.3042655)">
+      <circle
+         style="fill:none;fill-opacity:0.483014;stroke:#4240bf;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         id="path1"
+         cx="115.35506"
+         cy="55.558777"
+         r="22.313147" />
+      <path
+         style="fill:none;fill-opacity:0.483014;stroke:#b24141;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         id="path2"
+         d="m 137.66821,-42.323812 c 0,12.323211 -9.98994,22.313147 -22.31315,22.313147 -12.32321,0 -22.313148,-9.989936 -22.313148,-22.313147 0,-12.323211 9.989938,-22.313147 22.313148,-22.313147 12.32321,0 22.31315,9.989936 22.31315,22.313147 z" />
+      <path
+         style="fill:none;fill-opacity:0.483014;stroke:#43a44e;stroke-width:1;stroke-dasharray:none"
+         id="path3"
+         d="m 137.66821,153.44137 c 0,12.32321 -9.98994,22.31314 -22.31315,22.31314 -12.32321,0 -22.313148,-9.98993 -22.313148,-22.31314 0,-12.32322 9.989938,-22.31315 22.313148,-22.31315 12.32321,0 22.31315,9.98993 22.31315,22.31315 z" />
+      <path
+         style="display:inline;fill:#43a492;fill-opacity:1;fill-rule:evenodd;stroke:#4240bf;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle)"
+         d="m 111.93969,127.71285 -1e-5,-53.2563"
+         id="path4"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#path3"
+         inkscape:connection-end="#path1"
+         transform="translate(3.415373,3.4153735)" />
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#b24141;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle)"
+         d="M 111.93969,29.830257 V -23.426039"
+         id="path5"
+         inkscape:connector-type="orthogonal"
+         inkscape:connector-curvature="0"
+         inkscape:connection-end="#path2"
+         inkscape:connection-start="#path1"
+         transform="translate(3.415373,3.4153735)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Agave Nerd Font';-inkscape-font-specification:'Agave Nerd Font';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#43a44e;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-miterlimit:4;stroke-dasharray:none"
+         x="102.53104"
+         y="155.54666"
+         id="text9"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           style="fill:#43a44e;fill-opacity:1;stroke-width:1.32292"
+           x="102.53104"
+           y="155.54666">Commit A</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Agave Nerd Font';-inkscape-font-specification:'Agave Nerd Font';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#43a44e;fill-opacity:1;stroke:none;stroke-width:1.323;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="102.60545"
+         y="57.664074"
+         id="text10"><tspan
+           sodipodi:role="line"
+           id="tspan10"
+           style="fill:#4345a4;fill-opacity:1;stroke:none;stroke-width:1.323;stroke-dasharray:none"
+           x="102.60545"
+           y="57.664074">Commit B</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Agave Nerd Font';-inkscape-font-specification:'Agave Nerd Font';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#b24141;fill-opacity:1;stroke:none;stroke-width:1.323;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="102.67986"
+         y="-40.218513"
+         id="text10-7"><tspan
+           sodipodi:role="line"
+           id="tspan10-8"
+           style="fill:#b24141;fill-opacity:1;stroke:none;stroke-width:1.323;stroke-dasharray:none"
+           x="102.67986"
+           y="-40.218513">Commit C</tspan></text>
+    </g>
+  </g>
+</svg>
