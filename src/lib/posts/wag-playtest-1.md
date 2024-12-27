@@ -10,7 +10,7 @@ favourite: false
 
 [Short video](https://youtu.be/OdVJorNeXlM), [Github release](https://github.com/haihala/whoops-all-grapplers/releases/tag/11-2024-video)
 
-[Previous post](/blog/WAG-pre-polish-update) was made after
+[Previous post](/blog/wag-pre-polish-update) was made after
 [this commit](https://github.com/haihala/whoops-all-grapplers/commit/3e9ae4fe82d8ff7ad7869e9cb79609d735aadec2)
 I think I'll use tags from now on, hunting that down was unpleasant. This is
 roughly a period of three months, during which I was relatively active.

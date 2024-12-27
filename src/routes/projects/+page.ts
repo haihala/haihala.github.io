@@ -11,7 +11,7 @@ type Project = {
 const projects: Project[] = [
 	{
 		name: 'Whoops! All grapplers',
-		main_slug: 'intro-to-wag',
+		main_slug: 'wag-intro',
 		description: 'A fighting game built in rust'
 	},
 	{
