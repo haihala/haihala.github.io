@@ -5,8 +5,6 @@ updatedAt: '2024-01-08T14:05+02:00'
 tags: ['webdev', 'teaching']
 ---
 
-# So you want to learn web dev
-
 This is meant as a resource for people with some software development basics like
 loops and variables down, but little to no understanding of how the web works.
 Also this is a resource I can share with people when they ask me about web dev.

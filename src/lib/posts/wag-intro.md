@@ -6,8 +6,6 @@ tags: ['wag']
 favourite: true
 ---
 
-# WAG
-
 "Whoops! All grapplers" is the working title of the rust base fighting game
 I've been hammering away for a few years. You can find the source code over at
 [GitHub](https://github.com/rorawok/whoops-all-grapplers). The organization was

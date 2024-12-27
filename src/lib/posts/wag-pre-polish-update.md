@@ -5,8 +5,6 @@ updatedAt: '2024-07-18T14:22+03:00'
 tags: ['wag']
 ---
 
-# WAG pre-polish update
-
 I made a short [Video demo](https://youtu.be/hjmYv8yBe7Q) for those who want
 something more visual.
 

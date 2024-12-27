@@ -6,7 +6,5 @@ tags: ['pet-project']
 favourite: false
 ---
 
-# Pet projects
-
 I like building stuff. This page will serve as an index for all the little
 pet projects I've made and want to share.

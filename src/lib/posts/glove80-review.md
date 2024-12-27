@@ -5,7 +5,7 @@ updatedAt: '2024-07-28T10:59+03:00'
 tags: ['hardware', 'review']
 ---
 
-# What and why
+## What and why
 
 The [glove80](https://www.moergo.com/) is an ortholinear, column staggered,
 ergonomic, split keyboard with concave key wells from MoErgo.
@@ -46,7 +46,7 @@ And to be utterly clear, I don't experience constant, significant, or
 debilitating pain. I am somewhat sore at times and would still like to have
 functional wrists in ten years, so I'm getting ahead of this.
 
-# How it went
+## How it went
 
 Ordered my glove80 which came with a carrying case. Initially I thought the case
 was sleek and nice, but after a while I realized it obscures the fact that the
@@ -95,7 +95,7 @@ no idea who designed the tenting solution, but it does not work for me. Every
 time I tried, I ended up with a fragile wobbly configuration and after a few
 days went back to the flat configuration.
 
-# Overall verdict
+## Overall verdict
 
 In short, I would say it does the bare minimum. It works. It fills my
 configuration needs, but I do think I may have been more satisfied with one of

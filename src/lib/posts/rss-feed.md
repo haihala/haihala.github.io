@@ -5,7 +5,7 @@ updatedAt: '2024-12-25T16:29+02:00'
 tags: ['webdev', 'pet-project']
 ---
 
-# The short version
+## The short version
 
 You can find the source code [here](https://github.com/haihala/haihala.github.io/blob/main/src/routes/rss.xml/%2Bserver.ts), but in short:
 
@@ -15,7 +15,7 @@ You can find the source code [here](https://github.com/haihala/haihala.github.io
 - Make the `GET` function return a response object with xml as the body
   - I'm pretty sure the headers don't matter after build
 
-# How I did it
+## How I did it
 
 I cheated off of [Scott
 Spence](https://scottspence.com/posts/make-an-rss-feed-with-sveltekit)'s post,

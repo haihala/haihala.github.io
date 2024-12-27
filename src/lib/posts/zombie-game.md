@@ -5,7 +5,7 @@ updatedAt: '2024-06-17T15:15+03:00'
 tags: ['webdev', 'pet-project']
 ---
 
-# So I got baited to make a zombie game with Pixi.js
+So I got baited to make a zombie game with Pixi.js
 
 [Link to game](/zombie-game)
 

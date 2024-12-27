@@ -22,6 +22,8 @@ export const load: PageLoad = async ({ params }) => {
 		})
 		.map(({ post }) => post);
 	return {
+		title: main_post!.title,
+		subtitle: main_post?.tagline,
 		content: main_post!.content,
 		similar
 	};

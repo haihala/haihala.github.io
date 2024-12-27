@@ -8,6 +8,10 @@
 	let { data }: Props = $props();
 </script>
 
+<h1>{data.title}</h1>
+
+<span class="centered">{data.subtitle}</span>
+
 <article>
 	<data.content />
 </article>
@@ -29,5 +33,11 @@
 <style>
 	footer {
 		margin-top: auto;
+	}
+
+	.centered {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -1rem;
 	}
 </style>

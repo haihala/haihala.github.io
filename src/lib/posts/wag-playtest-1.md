@@ -6,8 +6,6 @@ tags: ['wag']
 favourite: false
 ---
 
-# WAG playtest 1
-
 [Short video](https://youtu.be/OdVJorNeXlM), [Github release](https://github.com/haihala/whoops-all-grapplers/releases/tag/11-2024-video)
 
 [Previous post](/blog/wag-pre-polish-update) was made after

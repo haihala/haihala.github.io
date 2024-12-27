@@ -5,8 +5,6 @@ updatedAt: '2024-01-08T13:23+02:00'
 tags: ['webdev', 'pet-project']
 ---
 
-# This blog
-
 First things first, you can find the source code at
 [GitHub](https://github.com/haihala/haihala.github.io)
 

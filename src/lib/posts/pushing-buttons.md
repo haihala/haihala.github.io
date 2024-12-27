@@ -5,8 +5,6 @@ updatedAt: '2024-07-11T23:46+03:00'
 tags: ['prose', 'abstract']
 ---
 
-# I push buttons.
-
 I push buttons in a respectable group. One with brand recognition, at least
 locally. Pressing buttons seems to smooth over many undesirable aspects of life.
 I don't worry about my health nor rent.

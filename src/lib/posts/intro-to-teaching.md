@@ -6,8 +6,6 @@ tags: ['teaching']
 favourite: true
 ---
 
-# Teaching computer science
-
 Full disclosure: I have no pedagogical background, for some reason people just
 ask me to lecture about stuff. As for what I've done, I've been the main
 organizer and lecturer at a summer program for high schoolers at
