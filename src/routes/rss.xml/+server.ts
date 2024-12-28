@@ -25,7 +25,7 @@ const format = (posts: Article[]) => {
   <link>${link}/</link>
   <pubDate>${new Date(post.updatedAt)}</pubDate>
   <content:encoded>
-    ${post.tagline}<br><strong><a href="${link}">Read the full post here</a></strong>
+    <p>${post.tagline}</p><p><strong><a href="${link}">Read the full post here</a></strong></p>
   </content:encoded>
 </item>`;
 		})})}
