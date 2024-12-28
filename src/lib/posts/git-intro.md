@@ -4,7 +4,7 @@ tagline: 'Speedrun learning'
 updatedAt: '2024-12-25T16:29+02:00'
 tags: ['teaching']
 favourite: true
-draft: true
+draft: false
 ---
 
 Git is a version management tool, which allows for wonderful things, like:
