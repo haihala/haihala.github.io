@@ -28,7 +28,7 @@ export type Article = {
 };
 
 export type LoadOptions = {
-	includeDrafts?: boolean;
+	drafts?: 'include' | 'only';
 };
 
 export const load_pages = async (opts?: LoadOptions): Promise<Article[]> => {
@@ -53,7 +53,12 @@ export const load_pages = async (opts?: LoadOptions): Promise<Article[]> => {
 				draft: !!draft
 			};
 		})
-		.filter((post) => opts?.includeDrafts || !post.draft);
+		.filter(
+			(post) =>
+				opts?.drafts === 'include' ||
+				(opts?.drafts == 'only' && post.draft) ||
+				(opts?.drafts === undefined && !post.draft)
+		);
 
 	return posts.sort((a, b) => b.updatedAt.valueOf() - a.updatedAt.valueOf());
 };

@@ -2,7 +2,7 @@ import { load_pages } from '$lib/load_posts';
 import type { EntryGenerator, PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
-	const pages = await load_pages({ includeDrafts: true });
+	const pages = await load_pages({ drafts: 'include' });
 	const main_post = pages.find((p) => p.slug === params.slug);
 	const similar = pages
 		.filter((post) => post.slug !== main_post?.slug && !post.draft)
