@@ -262,3 +262,14 @@ Useful links:
 
 - https://stackoverflow.com/questions/27417656/should-diff3-be-default-conflictstyle-on-git
 - https://www.ductile.systems/zdiff3/
+
+### `git add -p`
+
+I use a bunch of git plugins for my neovim config, including
+[gitsigns](https://github.com/lewis6991/gitsigns.nvim), which has a feature to
+stage individual patches / hunks (consequent lines of changes) of a file,
+instead of adding the whole file. I know popular editors like VSCode also has a
+feature like this. If you want, you can use `git add -p` or `git add --patch` to
+interactively loop through all the patches and choose which ones to stage.
+Helpful when you realize you've crossed over to the next task at some point on
+accident and want to make it into two commits.
