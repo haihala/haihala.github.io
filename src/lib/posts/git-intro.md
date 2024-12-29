@@ -1,7 +1,7 @@
 ---
 title: 'What the git?'
 tagline: 'Speedrun learning'
-updatedAt: '2024-12-25T16:29+02:00'
+updatedAt: '2024-12-29T13:40+02:00'
 tags: ['teaching']
 favourite: true
 draft: false
@@ -245,3 +245,20 @@ There are a few useful commands that may help along the way:
 
 Hope this helps you get started. You can find my contact details [here](/about)
 if you need to get in contact.
+
+## Amendments
+
+The main post is about what it was when I originally posted it.
+
+### Diff3
+
+By default, git uses a two part diff system when showing conflicts. If you're
+rebasing, it shows what you did and what the other half did that caused the
+conflict. By using diff3 (or zdiff3), you also get the base version. When doing
+the example rebase from above, with the default settings you would get the
+changes from commits B and C, but with diff3 you also get to see A.
+
+Useful links:
+
+- https://stackoverflow.com/questions/27417656/should-diff3-be-default-conflictstyle-on-git
+- https://www.ductile.systems/zdiff3/
