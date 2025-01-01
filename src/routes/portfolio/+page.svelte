@@ -13,7 +13,7 @@
 	<div>
 		<div class="page video-cover">
 			<h1>A Portfolio</h1>
-			<h2>With a video in the background</h2>
+			<h2>One of those with a video in the background</h2>
 			<p>Scroll down to read more</p>
 		</div>
 		<div class="page">
@@ -21,7 +21,6 @@
 		</div>
 		<div class="page">
 			<h2>Whoops! All grapplers</h2>
-
 			<Carousel
 				elems={[
 					{
@@ -48,7 +47,6 @@
 					}
 				]}
 			/>
-
 			<PortfolioPanels
 				description={[
 					'2.5D fighting game',
@@ -68,7 +66,6 @@
 					'Rust mindset shift is awesome'
 				]}
 			/>
-
 			<p>
 				When I was younger I had a tendency to oscillate between projects that are way too big to
 				accomplish before I lost interest and projects that were way too small for me to ever get
@@ -82,7 +79,6 @@
 				emphasis on block pressure and the corresponding de-emphasis on neutral and several specific
 				character designs.
 			</p>
-
 			<p>
 				The elevator pitch, is that it's a relatively simple fighting game, that gates the
 				complexity behind an item shop, similarly to mobas. This was in part inspired by how several
@@ -91,7 +87,6 @@
 				cognitive load and allows the players to take it at their own pace. It also makes theory
 				crafting not only accessible, but encouraged for low to mid level players.
 			</p>
-
 			<p>
 				Unfortunately it doesn't screenshot that well. In terms of programming it's way more
 				impressive, but visually it's less eye-catching. The UI especially is very early on and is
@@ -101,7 +96,6 @@
 				can talk your ear off about it. The source code is available on
 				<a href="https://github.com/haihala/whoops-all-grapplers">Github</a>.
 			</p>
-
 			<p>
 				One of the motivations I had for starting this project was that I wanted to learn Rust and
 				the ECS pattern. Nowadays I would consider Rust to be my most comfortable language, even
@@ -116,9 +110,9 @@
 				when some built-in systems execute, just so I can specify my own around them.
 			</p>
 		</div>
+
 		<div class="page">
 			<h2>Green eggs and ham</h2>
-
 			<Carousel
 				elems={[
 					{
@@ -141,7 +135,6 @@
 					}
 				]}
 			/>
-
 			<PortfolioPanels
 				description={['Level based', '2D adventure', 'Platformer', 'Built with Godot']}
 				contribution={['Game design', 'Programming', 'Everything besides assets']}
@@ -153,7 +146,6 @@
 					'Prioritization'
 				]}
 			/>
-
 			<p>
 				This is my most visually appealing game so far. It took about a week of effort spread out
 				over about a month or so. It was a part of a game project course in school. The course
@@ -165,16 +157,15 @@
 				about it is the self-indulgent writing that seems to creep into my projects when nobody is
 				looking.
 			</p>
-
 			<p>
 				You can find the game on <a href="https://hajhawa.itch.io/green-eggs-and-ham">itch</a>. Feel
 				free to try it. Code is available on
 				<a href="https://github.com/haihala/VIM.MT.310-Game-Project-2">Github</a>
 			</p>
 		</div>
+
 		<div class="page">
 			<h2>Mission IMPossible</h2>
-
 			<Carousel
 				elems={[
 					{
@@ -191,7 +182,6 @@
 					}
 				]}
 			/>
-
 			<PortfolioPanels
 				description={[
 					'3D stealth game',
@@ -206,13 +196,11 @@
 					'Compassion and patience are indispensable'
 				]}
 			/>
-
 			<p>
 				Like Green eggs and ham, this was a game I made for the university project course. Unlike
 				that one, this was made in a group with four other people. Unfortunately this was the second
 				game most of us had ever made, with the first one being mostly following a godot tutorial.
 			</p>
-
 			<p>
 				The game is a stealth game where you sneak about a house doing chores. The bar on the left
 				is a progress bar that shows how many chores you have left. Some tools required tools you
@@ -221,7 +209,6 @@
 				a sound and vision based detection system, patrol routes and stuff like that. The hat
 				(picture 3) gave you a passive movement speed buff.
 			</p>
-
 			<p>
 				The course mandated that everyone had a role. One of programmer, game designer, artist,
 				project manager and so on. I wanted to be the programmer, so I intentionally dodged the role
@@ -237,14 +224,13 @@
 				>.
 			</p>
 		</div>
+
 		<div class="page">
 			<h2>Smaller projects</h2>
-
 			<img
 				src="https://img.itch.zone/aW1nLzM4NTQ2NjYucG5n/original/%2B8HF7V.png"
 				alt="Poster art for 'My dystopian Laserhell hovercar'"
 			/>
-
 			<p>
 				I used to partake in the yearly GMTK itch.io game jam. Sometimes alone, sometimes with a
 				friend. In total I think I submitted four times, most of them being not that great. The past
@@ -262,7 +248,6 @@
 			</p>
 
 			<h3>Teaching computer science</h3>
-
 			<p>
 				Couldn't figure out if this should go here or not, but for three years I was the head
 				teacher for the summer computer science course over at
@@ -281,14 +266,12 @@
 			</p>
 
 			<h3>Tabletop role playing</h3>
-
 			<p>
 				In addition to digital, I'm quite fond of analog games like board games, card games and most
 				of all, tabletop role playing games. I've designed a few adventures, systems, and player
 				options. I haven't had sufficient faith in any of them to show them to a crowd larger than
 				my friends, but I do like how tinkering with designs like that makes you think.
 			</p>
-
 			<p>
 				As of writing, I mostly play Pathfinder 2e, with occasional D&amp;D and Fate, I've also read
 				through many others like Gurps and Swade, but haven't had a chance to play those yet. In
@@ -296,7 +279,6 @@
 			</p>
 
 			<h2>The end</h2>
-
 			<p>
 				Thanks for reading, you can get back to the blog
 				<a href="/">here</a>. If any of this seems helpful or interesting, get in contact:
