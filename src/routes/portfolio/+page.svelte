@@ -1,13 +1,12 @@
 <script>
 	import Carousel from '$lib/components/Carousel.svelte';
 	import AboutMe from './AboutMe.svelte';
+	import BackgroundVideo from './BackgroundVideo.svelte';
 	import PortfolioPanels from './PortfolioPanels.svelte';
 	import Socials from './Socials.svelte';
 </script>
 
-<video autoplay muted loop>
-	<source src="/portfolio/landing-background.mp4" type="video/mp4" />
-</video>
+<BackgroundVideo />
 
 <div class="root">
 	<div>
@@ -116,7 +115,7 @@
 				elems={[
 					{
 						type: 'video',
-						src: '/portfolio/geah-demo.mp4',
+						src: '/portfolio/geah-tutorial.mp4',
 						alt: 'Video of the tutorial'
 					},
 					{
@@ -290,17 +289,6 @@
 </div>
 
 <style>
-	video {
-		height: 100vh;
-		width: 100vw;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		opacity: 30%;
-		object-fit: cover;
-	}
-
 	.root {
 		position: absolute;
 		top: 0;

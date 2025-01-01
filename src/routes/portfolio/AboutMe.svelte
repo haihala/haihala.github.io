@@ -24,8 +24,9 @@
 	<div>
 		The short version:
 		<ul>
-			<li>Master of Technology (computer engineering) from Tampere University</li>
-			<li>Generalist programmer (web, cloud, tools, games)</li>
+			<li>Generalist programmer</li>
+			<li>Master of Technology</li>
+			<li>Lead developer at Vincit</li>
 			<li>Part time programming teacher</li>
 			<li>Hobbyist game developer</li>
 		</ul>
