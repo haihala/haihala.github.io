@@ -29,18 +29,16 @@
 		>
 			<Icon icon="material-symbols:chevron-backward" />
 		</button>
-		<div>
-			{#each radioButtons as selected, i}
-				<button
-					type="button"
-					class="radio-visual"
-					class:selected
-					onclick={() => (active = i)}
-					aria-label="show image {i + 1}"
-				>
-				</button>
-			{/each}
-		</div>
+		{#each radioButtons as selected, i}
+			<button
+				type="button"
+				class="radio-visual"
+				class:selected
+				onclick={() => (active = i)}
+				aria-label="show image {i + 1}"
+			>
+			</button>
+		{/each}
 		<button
 			class="cycler"
 			onclick={() => {
@@ -70,6 +68,7 @@
 	img,
 	video {
 		width: 100%;
+		max-width: 100vw;
 		object-fit: cover;
 	}
 
@@ -80,21 +79,23 @@
 	.controls {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		max-width: 100%;
+		gap: 0.2rem;
 	}
 
 	.radio-visual {
-		content: '';
-		padding: 0.8rem;
-		margin: 0.5rem;
 		border-radius: 100%;
 		border: none;
 
-		background-color: var(--color-bg-card);
-	}
+		width: 0.5cm;
+		height: 0.5cm;
 
-	.radio-visual:hover {
-		opacity: 50%;
+		background-color: var(--color-bg-card);
+
+		&:hover {
+			opacity: 50%;
+		}
 	}
 
 	.selected {
@@ -103,20 +104,27 @@
 	}
 
 	.cycler {
-		background-color: var(--color-bg-card);
-		border: none;
-		font-size: 2rem;
+		width: 1cm;
+		height: 1cm;
+		font-size: 1.5rem;
 		background-color: transparent;
 		color: var(--text-color);
 		display: flex;
 		align-items: center;
-		margin: 0 1rem;
 		border-radius: 100%;
 		border: solid;
 
 		&:hover {
 			color: var(--color-theme-2);
 			border-color: var(--color-theme-1);
+		}
+
+		&:first-of-type {
+			margin-right: 1rem;
+		}
+
+		&:last-of-type {
+			margin-left: 1rem;
 		}
 	}
 </style>

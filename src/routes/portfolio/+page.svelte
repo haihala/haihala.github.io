@@ -11,9 +11,8 @@
 
 <div class="root">
 	<div>
-		<div class="page video-cover">
-			<h1>A Portfolio</h1>
-			<h2>One of those with a video in the background</h2>
+		<div class="video-cover">
+			<h1>One of those pretentious portfolios with a video in the background</h1>
 			<p>Scroll down to read more</p>
 		</div>
 		<div class="page">
@@ -292,13 +291,14 @@
 
 <style>
 	video {
-		min-width: 100vw;
-		min-height: 90vh;
+		height: 100vh;
+		width: 100vw;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		opacity: 30%;
+		object-fit: cover;
 	}
 
 	.root {
@@ -329,11 +329,18 @@
 	}
 
 	.video-cover {
-		min-height: max(100vh, calc(100vw * 9 / 16));
+		min-height: 80vh;
+		padding-top: 20vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		* {
+			margin: 2rem;
+		}
 	}
 
 	h1 {
-		font-size: 5rem;
-		margin-top: 20rem;
+		font-size: 2rem;
 	}
 </style>
