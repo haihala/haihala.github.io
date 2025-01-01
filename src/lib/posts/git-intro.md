@@ -243,7 +243,8 @@ There are a few useful commands that may help along the way:
   - If you added more stuff to the staging area, those will get folded in
   - You can edit the message again (probably in `vim`)
 
-Hope this helps you get started. You can find my contact details [here](/about)
+Hope this helps you get started. You can find my contact details
+[here](/portfolio)
 if you need to get in contact.
 
 ## Amendments

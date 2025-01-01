@@ -13,7 +13,7 @@
 	<h1>Welcome</h1>
 
 	<p>
-		This is <a href="/about">my</a> home page where I can put things I want to show to people.
+		This is <a href="/portfolio">my</a> home page where I can put things I want to show to people.
 	</p>
 
 	<p>"Fresh" off the presses:</p>

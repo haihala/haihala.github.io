@@ -7,9 +7,11 @@
 	}
 
 	let { children }: Props = $props();
+
+	let noFrame = ['/zombie-game', '/portfolio'].includes($page.url.pathname);
 </script>
 
-{#if $page.url.pathname === '/zombie-game'}
+{#if noFrame}
 	{@render children?.()}
 {:else}
 	<div class="app">
