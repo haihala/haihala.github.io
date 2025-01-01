@@ -6,9 +6,9 @@
 		children?: import('svelte').Snippet;
 	}
 
-	let { children }: Props = $props();
+	const { children }: Props = $props();
 
-	let noFrame = ['/zombie-game', '/portfolio'].includes($page.url.pathname);
+	const noFrame = $derived(['/zombie-game', '/portfolio'].includes($page.url.pathname));
 </script>
 
 {#if noFrame}
