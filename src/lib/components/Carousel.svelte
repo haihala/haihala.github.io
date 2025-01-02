@@ -8,13 +8,15 @@
 <div class="layout">
 	<div class="images">
 		{#each elems as elem, i}
-			{#if elem.type === 'video'}
-				<video loop muted class:hidden={i !== active} autoplay={i === active}>
-					<source src={elem.src} type="video/mp4" />
-					<p>{elem.alt}</p>
-				</video>
-			{:else}
-				<img class:hidden={i !== active} src={elem.src} alt={elem.alt} />
+			{#if i === active}
+				{#if elem.type === 'video'}
+					<video loop muted autoplay={i === active}>
+						<source src={elem.src} type="video/mp4" />
+						<p>{elem.alt}</p>
+					</video>
+				{:else}
+					<img src={elem.src} alt={elem.alt} />
+				{/if}
 			{/if}
 		{/each}
 	</div>
@@ -70,10 +72,6 @@
 		width: 100%;
 		max-width: 100vw;
 		object-fit: cover;
-	}
-
-	.hidden {
-		display: none;
 	}
 
 	.controls {
