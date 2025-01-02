@@ -1,7 +1,7 @@
 <script>
 	const videos = [
-		'/portfolio/wag-combo.mp4',
 		'portfolio/geah-tutorial.mp4',
+		'/portfolio/wag-combo.mp4',
 		'/portfolio/dickbone.mp4'
 	];
 
