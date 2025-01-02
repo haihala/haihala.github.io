@@ -9,8 +9,7 @@
 	<div class="images">
 		{#each elems as elem, i}
 			{#if elem.type === 'video'}
-				<video loop muted class:hidden={i !== active} autoplay={i === active}>
-					<source src={elem.src} type="video/mp4" />
+				<video loop muted class:hidden={i !== active} autoplay={i === active} src={elem.src}>
 					<p>{elem.alt}</p>
 				</video>
 			{:else}
