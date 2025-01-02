@@ -6,6 +6,10 @@
 	import Socials from './Socials.svelte';
 </script>
 
+<svelte:head>
+	<title>Portfolio</title>
+</svelte:head>
+
 <BackgroundVideo />
 
 <div class="root">
