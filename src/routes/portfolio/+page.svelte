@@ -1,5 +1,6 @@
 <script>
 	import Carousel from '$lib/components/Carousel.svelte';
+	import Icon from '@iconify/svelte';
 	import AboutMe from './AboutMe.svelte';
 	import BackgroundVideo from './BackgroundVideo.svelte';
 	import PortfolioPanels from './PortfolioPanels.svelte';
@@ -17,7 +18,16 @@
 	<div>
 		<div class="video-cover">
 			<h1>One of those pretentious portfolios with a video in the background</h1>
-			<p>Scroll down to read more</p>
+			<button
+				class="scroll-icon"
+				onclick={() => {
+					const h2 = document.querySelector('.page');
+					h2?.scrollIntoView({ behavior: 'smooth' });
+				}}
+				aria-label="Scroll to first page"
+			>
+				<Icon icon="material-symbols:arrow-cool-down" height="3rem" />
+			</button>
 		</div>
 		<div class="page">
 			<AboutMe />
@@ -99,10 +109,10 @@
 				theory crafting not only accessible, but encouraged for low to mid level players.
 			</p>
 			<p>
-				Unfortunately the game doesn't screenshot well. The UI especially is very early on and is
-				not representative of the final product. If you want to read more,
-				<a href="/blog/wag-intro">I tend to blog a lot about it</a>. Some of the posts include
-				videos. I really tried to keep this concise, but if prompted can talk your ear off about it.
+				Unfortunately, the game doesn't screenshot well. The UI especially is very early on and is
+				not representative of the final product. You can read more about it
+				<a href="/blog/wag-intro">on my blog</a>. Some of the posts include videos. I really tried
+				to keep this concise, but if prompted can talk your ear off about it.
 				<a href="https://github.com/haihala/whoops-all-grapplers"
 					>The source code is available on Github</a
 				>.
@@ -205,15 +215,12 @@
 				description={[
 					'3D stealth game',
 					'With a goal to clean a house',
-					'Before the resident of the house catches you',
+					'Before the resident catches you',
 					'Built with Unity'
 				]}
 				contribution={['Programming', 'Coaching', 'VFX', 'Game design']}
 				focus={['Working in a team', 'Delegation', 'Creating tooling']}
-				takeaways={[
-					"Output doesn't scale linearly with team size",
-					'Compassion and patience are indispensable'
-				]}
+				takeaways={['Compassion good', 'Patience is a must']}
 			/>
 			<p>
 				Like Green eggs and ham, this was made for the same university course. Unlike that one, this
@@ -255,9 +262,9 @@
 			/>
 			<p>
 				I used to partake in the yearly GMTK itch.io game jam. Sometimes alone, sometimes with a
-				friend. In total I think I submitted four times, most of them being not that great. The past
-				few years, the part time teaching has unfortunately overlapped with the GMTK jam, so I've
-				been unable to attend. This was one of those submissions I did with Lauri Virtanen, a fellow
+				friend. In total I think I submitted four times, most of them being not that great. My
+				teaching gig schedule sadly overlaps with the jam, so I've been unable to attend for the
+				past few years. This was one of those submissions I did with Lauri Virtanen, a fellow
 				programmer I've known since high school. I did mostly design and programming with maybe a
 				30/70 split. Lauri did both of those, but also art and music with something like a
 				10/40/30/20 split between design/programming/art/music. It has been years and I'm handwaving
@@ -330,6 +337,17 @@
 		align-items: center;
 	}
 
+	.scroll-icon {
+		border: solid;
+		border-radius: 100%;
+		padding: 1rem;
+		width: 2cm;
+		height: 2cm;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	.page {
 		display: flex;
 		flex-direction: column;
@@ -340,7 +358,7 @@
 		p,
 		img,
 		div.padded {
-			max-width: 80%;
+			max-width: 90%;
 			@media (min-width: 1280px) {
 				max-width: 60rem;
 			}
@@ -353,6 +371,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 3rem;
 
 		* {
 			margin: 2rem;

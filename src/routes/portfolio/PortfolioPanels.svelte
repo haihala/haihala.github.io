@@ -52,9 +52,11 @@
 		gap: 1rem;
 		justify-content: center;
 
+		width: 90%;
 		grid-template-columns: repeat(1, 1fr);
 		@media (min-width: 720px) {
 			grid-template-columns: repeat(2, 1fr);
+			width: auto;
 		}
 		@media (min-width: 1280px) {
 			grid-template-columns: repeat(4, 1fr);

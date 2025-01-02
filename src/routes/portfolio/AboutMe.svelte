@@ -33,9 +33,9 @@
 		<p>
 			Wowee describing oneself is hard. I'm just a dude working on <a href="/projects">projects</a>.
 			I do engineering (whatever that is) for a living and develop games to live. Most of my
-			endeavors worth writing about end up at
+			endeavors worth writing about end up on
 			<a href="/blog">my blog</a>. The rest of this page is a list of cherry-picked game projects
-			that hopefully show I can make those.
+			that hopefully showcase I can indeed make those.
 		</p>
 		If you're already interested:
 		<Socials />
