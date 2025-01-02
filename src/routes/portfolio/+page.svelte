@@ -88,11 +88,12 @@
 			<p>
 				Unfortunately it doesn't screenshot that well. In terms of programming it's way more
 				impressive, but visually it's less eye-catching. The UI especially is very early on and is
-				not representative of the game. If you want to read more, I tend to blog a lot about it over <a
-					href="/blog/wag-intro">yonder</a
-				>. Some of the posts include videos. I really tried to keep this concise, but if prompted
-				can talk your ear off about it. The source code is available on
-				<a href="https://github.com/haihala/whoops-all-grapplers">Github</a>.
+				not representative of the game. If you want to read more,
+				<a href="/blog/wag-intro">I tend to blog a lot about it</a>. Some of the posts include
+				videos. I really tried to keep this concise, but if prompted can talk your ear off about it.
+				<a href="https://github.com/haihala/whoops-all-grapplers"
+					>The source code is available on Github</a
+				>.
 			</p>
 			<p>
 				One of the motivations I had for starting this project was that I wanted to learn Rust and
@@ -151,14 +152,16 @@
 				that point, having already made a couple of games. I self-imposed additional time
 				constraints. I set an upper limit on how much time I would spend on the game, and tried to
 				maximize what I got done in that time. I recycled a lot for the levels and spend most of my
-				time on juice. In the end, the game takes maybe 30mins-1h to beat. The only thing I regret
-				about it is the self-indulgent writing that seems to creep into my projects when nobody is
-				looking.
+				time on juice. The only thing I regret about it is the self-indulgent writing that seems to
+				creep into my projects when nobody is looking.
 			</p>
 			<p>
-				You can find the game on <a href="https://hajhawa.itch.io/green-eggs-and-ham">itch</a>. Feel
-				free to try it. Code is available on
-				<a href="https://github.com/haihala/VIM.MT.310-Game-Project-2">Github</a>
+				If you are curious, <a href="https://hajhawa.itch.io/green-eggs-and-ham"
+					>you can find the game on itch.io</a
+				>. Feel free to try it, it should take about an hour to beat.
+				<a href="https://github.com/haihala/VIM.MT.310-Game-Project-2"
+					>Code is available on Github</a
+				>
 			</p>
 		</div>
 
@@ -217,8 +220,8 @@
 				the project, although it doesn't really meet my personal threshold of quality. It's not that
 				appealing visually and the play space is not great. One of the main communication problems
 				was between the artist who also designed the level and the rest of the team, which lead us
-				to cutting some corners. If you want to check it out, you can find the game over on <a
-					href="https://uriel35.itch.io/mission-impossible">itch.io</a
+				to cutting some corners. If you want to check it out, you can find <a
+					href="https://uriel35.itch.io/mission-impossible">the game over on itch.io</a
 				>.
 			</p>
 		</div>
@@ -237,12 +240,11 @@
 				Virtanen, a fellow programmer I've known since high school.
 			</p>
 			<p>
-				You can find the itch.io submission <a
-					href="https://hajhawa.itch.io/my-dystopian-laserhell-hovercar">here</a
-				>
-				and the source code <a href="https://github.com/haihala/jambalam">here</a>, although I must
-				warn you that this is an older submission and the quality doesn't necessarily reflect my
-				current skill level.
+				You can find
+				<a href="https://hajhawa.itch.io/my-dystopian-laserhell-hovercar">the game on itch.io </a>
+				and <a href="https://github.com/haihala/jambalam">the source code on Github</a>, although I
+				must warn you that this is an older submission and the quality doesn't necessarily reflect
+				my current skill level.
 			</p>
 
 			<h3>Teaching computer science</h3>
@@ -278,8 +280,8 @@
 
 			<h2>The end</h2>
 			<p>
-				Thanks for reading, you can get back to the blog
-				<a href="/">here</a>. If any of this seems helpful or interesting, get in contact:
+				Thanks for reading, you can get <a href="/">back to the blog</a> by clicking that link. If any
+				of this seems helpful or interesting, get in contact:
 			</p>
 			<div class="padded">
 				<Socials />
