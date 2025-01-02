@@ -63,7 +63,9 @@
 
 	.box {
 		border-radius: 1rem;
-		padding: 2rem;
+		padding: 0 2rem;
+		padding-bottom: 1rem;
+		color: var(--color-text-card);
 	}
 
 	ul {
@@ -72,13 +74,13 @@
 	}
 
 	.description {
-		background-color: #ffa500;
+		background-color: #ffbb33;
 	}
 	.contribution {
-		background-color: #ff5349;
+		background-color: #f17e84;
 	}
 	.focus {
-		background-color: #0d98ba;
+		background-color: #44ccee;
 	}
 	.takeaway {
 		background-color: #50c878;

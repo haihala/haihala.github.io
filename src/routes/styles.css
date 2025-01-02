@@ -4,7 +4,7 @@
     --color-theme-1: #ff3131;
     --color-theme-2: #ff7733;
     --color-text: #ffeeee;
-    --color-text-card: #000000;
+    --color-text-card: #101010;
     --color-bg-base: #25272d;
     --color-bg-highlight: color-mix(in srgb, var(--color-bg-base) 80%, var(--color-theme-1));
     --color-bg-card: #fce8d6;
