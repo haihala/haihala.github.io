@@ -8,6 +8,7 @@
 
 <svelte:head>
 	<title>Portfolio</title>
+	<meta name="description" content="Eero Häihälä's game development portfolio" />
 </svelte:head>
 
 <BackgroundVideo />
