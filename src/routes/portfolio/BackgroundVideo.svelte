@@ -22,7 +22,7 @@
 <style>
 	video {
 		height: 100vh;
-		width: 100vw;
+		width: 100%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
