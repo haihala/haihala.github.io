@@ -87,8 +87,8 @@
 		border-radius: 100%;
 		border: none;
 
-		width: 0.5cm;
-		height: 0.5cm;
+		width: 0.9cm;
+		height: 0.9cm;
 
 		background-color: var(--color-bg-card);
 
