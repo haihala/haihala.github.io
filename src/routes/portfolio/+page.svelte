@@ -204,11 +204,11 @@
 			</p>
 			<p>
 				The game is a stealth game where you sneak about a house doing chores. The bar on the left
-				is a progress bar that shows how many chores you have left. Some tools required tools you
-				would need to find in the world. For example, you need a sponge to wash off the brown dirt
-				smears (right side of picture 2). We added stealth game classics like the coin from Hitman,
-				a sound and vision based detection system, patrol routes and stuff like that. The hat
-				(picture 3) gave you a passive movement speed buff.
+				is a progress bar that shows how many chores you have left. Some chores required tools that
+				start the game scattered around the play space. For example, you need a sponge to wash off
+				the brown dirt smears (right side of picture 2). We added stealth game classics like the
+				coin from Hitman, a sound and vision based detection system, patrol routes and stuff like
+				that. The hat (picture 3) gave you a passive movement speed buff.
 			</p>
 			<p>
 				The course mandated that everyone had a role. One of programmer, game designer, artist,
