@@ -58,7 +58,15 @@
 					'With rollback netcode',
 					'Built with Bevy and Rust'
 				]}
-				contribution={['Game design', 'Programming', 'Animations', 'Modeling', 'Art', 'SFX']}
+				contribution={[
+					'Game design',
+					'Programming',
+					'VFX',
+					'Modeling and animations',
+					'UI design',
+					'Icon art',
+					'SFX / Voice acting'
+				]}
 				focus={['Everything', 'So pretty much nothing']}
 				takeaways={[
 					'Lots of hard lessons',
@@ -71,29 +79,28 @@
 			/>
 			<p>
 				When I was younger I had a tendency to oscillate between projects that are way too big to
-				accomplish before I lost interest and projects that were way too small for me to ever get
-				interested in. Originally in 2021 this was my best attempt at landing in the goldilocks zone
-				between the two extremes. I was getting into fighting games at the time with <a
+				finish before losing interest and projects that were way too small for me to ever get
+				interested in the first place. I started work on this in 2021, and it has held my interest
+				so far. I was getting into fighting games at the time with the release of <a
 					href="https://www.guiltygear.com/ggst/">Guilty Gear: Strive</a
-				>. One of the things that consistently motivates me is when I simultaneously like and
-				dislike something. In some ways, GGST is fantastic (art, music, rollback netcode), but in
-				others it was horrendous. My list of gripes changes over time, but as of writing it includes
-				but is not limited to the lobby system, loading times, unintuitive legacy mechanics,
+				>. One of the things that consistently motivates me is when a game evokes strong emotions in
+				both ways. In some ways, GGST is fantastic (art, music, rollback netcode to pick a few
+				cherries), but in others I can't stand it. My list of gripes changes over time, but some of
+				the evergreen topics include the lobby system, loading times, unintuitive legacy mechanics,
 				emphasis on block pressure and the corresponding de-emphasis on neutral and several specific
 				character designs.
 			</p>
 			<p>
-				The elevator pitch, is that it's a relatively simple fighting game, that gates the
-				complexity behind an item shop, similarly to mobas. This was in part inspired by how several
-				moba players told me they thought fighting games were too difficult, despite them playing a
-				game that is an order of magnitude more complex in some ways. The shop spreads out the
-				cognitive load and allows the players to take it at their own pace. It also makes theory
-				crafting not only accessible, but encouraged for low to mid level players.
+				The elevator pitch is that WAG is a relatively simple fighting game at first, with most of
+				the complexity gated behind an item shop, similarly to mobas. This was in part inspired by
+				how several moba players refused to even try fighting games due to the perceived difficulty
+				despite playing a game that is an order of magnitude more complex in some ways. The shop
+				spreads out the cognitive load and allows the players to take it at their own pace. It makes
+				theory crafting not only accessible, but encouraged for low to mid level players.
 			</p>
 			<p>
-				Unfortunately it doesn't screenshot that well. In terms of programming it's way more
-				impressive, but visually it's less eye-catching. The UI especially is very early on and is
-				not representative of the game. If you want to read more,
+				Unfortunately the game doesn't screenshot well. The UI especially is very early on and is
+				not representative of the final product. If you want to read more,
 				<a href="/blog/wag-intro">I tend to blog a lot about it</a>. Some of the posts include
 				videos. I really tried to keep this concise, but if prompted can talk your ear off about it.
 				<a href="https://github.com/haihala/whoops-all-grapplers"
@@ -108,10 +115,13 @@
 				vicinity, such as tooling and engine development. ECS was a bipolar experience. In some
 				ways, it is incredibly good. Splitting code comes naturally and extending existing systems
 				can be very easy. In other ways it is cumbersome. The game has rollback netcode, which means
-				it must be deterministic, which means the system execution order must be deterministic,
-				which means it must be dictated by hand, which is not as ergonomic as most things in Bevy.
-				For example, I would occasionally have to dive into the guts of Bevy itself to figure out
-				when some built-in systems execute, just so I can specify my own around them.
+				it must be completely deterministic regardless of machine architecture or frame rate.
+				Ensuring determinism was a low point for Bevy's otherwise very ergonomic APIs. The project
+				started on bevy 0.5, which was before Bevy was a year old. This has lead to a lot of growing
+				pains. I've redone some systems several times due to Bevy changing. That's not to say they
+				are perfect or even that the primary reason for me to rewrite something is a Bevy update,
+				just that there has been a lot of effort put into ventures one would probably not need to
+				worry about on a more established engine.
 			</p>
 		</div>
 
@@ -151,22 +161,25 @@
 				]}
 			/>
 			<p>
-				This is my most visually appealing game so far. It took about a week of effort spread out
-				over about a month or so. It was a part of a game project course in school. The course
-				started with the students following along a Godot tutorial, which was a bit basic for me at
-				that point, having already made a couple of games. I self-imposed additional time
-				constraints. I set an upper limit on how much time I would spend on the game, and tried to
-				maximize what I got done in that time. I recycled a lot for the levels and spend most of my
-				time on juice. The only thing I regret about it is the self-indulgent writing that seems to
-				creep into my projects when nobody is looking.
+				This is my most visually appealing game so far. It took about a week or two of effort spread
+				out over about a month or so. This was my assignment for a university course. The course
+				started with the students following along a Godot tutorial and then adding their own stuff
+				on top. Having already made a couple of games, the tutorial was a bit basic, but informative
+				as this was my first game in Godot. I self-imposed additional time constraints to focus on
+				efficiency over effort. I set an upper limit on how much time I would spend on the game, and
+				tried to maximize what I got done in that time. I recycled a lot for the levels and spend
+				most of my time on juice and polish. There is very notable hitstop and screen shake. The
+				hearts in the top left corner for example pulse faster when there are fewer of them and
+				pulse with a slight offset to each other.
 			</p>
 			<p>
-				If you are curious, <a href="https://hajhawa.itch.io/green-eggs-and-ham"
-					>you can find the game on itch.io</a
-				>. Feel free to try it, it should take about an hour to beat.
+				The only thing I regret about it is the self-indulgent writing that seems to creep into my
+				projects when nobody is looking. If you are curious, <a
+					href="https://hajhawa.itch.io/green-eggs-and-ham">you can find the game on itch.io</a
+				>. Feel free to try it. For most players it takes 30 minutes to an hour to beat.
 				<a href="https://github.com/haihala/VIM.MT.310-Game-Project-2"
 					>Code is available on Github</a
-				>
+				>.
 			</p>
 		</div>
 
@@ -203,31 +216,34 @@
 				]}
 			/>
 			<p>
-				Like Green eggs and ham, this was a game I made for the university project course. Unlike
-				that one, this was made in a group with four other people. Unfortunately this was the second
-				game most of us had ever made, with the first one being mostly following a godot tutorial.
+				Like Green eggs and ham, this was made for the same university course. Unlike that one, this
+				was made in a group with four other people. Unfortunately this was the second game most of
+				us had ever made, with the first one being mostly following a godot tutorial and then
+				changing a few assets, maybe editing a tilemap.
 			</p>
 			<p>
-				The game is a stealth game where you sneak about a house doing chores. The bar on the left
-				is a progress bar that shows how many chores you have left. Some chores required tools that
-				start the game scattered around the play space. For example, you need a sponge to wash off
-				the brown dirt smears (right side of picture 2). We added stealth game classics like the
-				coin from Hitman, a sound and vision based detection system, patrol routes and stuff like
-				that. The hat (picture 3) gave you a passive movement speed buff.
+				In the game, you play as a house self that sneaks around a house doing chores. The bar on
+				the left indicates how many chores you have left. Some chores required tools that start the
+				game scattered around the play space. For example, you need a sponge to wash off the brown
+				dirt smears (right side of picture 2). Once you've filled the bar, you have to get back to
+				the place you started the level in. Originally we planned to have multiple levels, but ended
+				up boiling it down to just the one. There are items besides tools, for example a coin
+				similar to the one from the Hitman series and the hat worn in the third picture, which I
+				think gave you a movement speed buff.
 			</p>
 			<p>
-				The course mandated that everyone had a role. One of programmer, game designer, artist,
-				project manager and so on. I wanted to be the programmer, so I intentionally dodged the role
-				of project manager. I did end up helping most of the team, including the project manager
-				quite a bit, but overall consider this a successful delegation. For most of the team, this
-				was the first time they had ever used git or any type of a project tracking tool (I think we
-				ended up with shortcut or trello), which created some friction. Overall I'm satisfied with
-				the project, although it doesn't really meet my personal threshold of quality. It's not that
-				appealing visually and the play space is not great. One of the main communication problems
-				was between the artist who also designed the level and the rest of the team, which lead us
-				to cutting some corners. If you want to check it out, you can find <a
-					href="https://uriel35.itch.io/mission-impossible">the game over on itch.io</a
-				>.
+				The course mandated that everyone had a role. I wanted to be the programmer, so I
+				intentionally dodged the role of project manager. In the end I did end up helping most of
+				the team, including the project manager quite a bit, but overall consider this a successful
+				delegation. For most of the team, this was the first time they had ever used git or any type
+				of a project tracking tool (I think we ended up with shortcut, but it could've been trello).
+				Overall I'm satisfied with the project, although it doesn't really meet my personal
+				threshold of quality. It's not that appealing visually or mechanically. The kindest thing I
+				can say is that I think we tried our best and it has some decent ideas. If you want to check
+				it out, you can find <a href="https://uriel35.itch.io/mission-impossible"
+					>the game over on itch.io</a
+				>
+				and <a href="https://github.com/haihala/VIM.MT.310-Group-4">the code over at GitHub</a>.
 			</p>
 		</div>
 
@@ -240,9 +256,13 @@
 			<p>
 				I used to partake in the yearly GMTK itch.io game jam. Sometimes alone, sometimes with a
 				friend. In total I think I submitted four times, most of them being not that great. The past
-				few years, the part time teaching has unfortunately overlapped with the GMTK jam timings,
-				but I'll try to attend again in 2025. This was one of those submissions I did with Lauri
-				Virtanen, a fellow programmer I've known since high school.
+				few years, the part time teaching has unfortunately overlapped with the GMTK jam, so I've
+				been unable to attend. This was one of those submissions I did with Lauri Virtanen, a fellow
+				programmer I've known since high school. I did mostly design and programming with maybe a
+				30/70 split. Lauri did both of those, but also art and music with something like a
+				10/40/30/20 split between design/programming/art/music. It has been years and I'm handwaving
+				the numbers, but the gist is that I did most of of the programming and design, while Lauri
+				focused more on the aesthetics.
 			</p>
 			<p>
 				You can find
@@ -256,31 +276,35 @@
 			<p>
 				Couldn't figure out if this should go here or not, but for three years I was the head
 				teacher for the summer computer science course over at
-				<a href="https://matematiikkalinja.fi/">Matematiikkalinja</a>. The program is meant for
-				people entering high school and the goal is to teach them the basics of computer science.
-				Some students are already competent programmers by the time they enter the classroom, while
-				a growing group have never touched a keyboard before. My role was twofold. I was lecturing
-				and hosting exercise sessions, but also responsible for recruiting others to host lectures
-				on their areas of expertise or work as teaching assistants. I loved doing it and cherish all
-				the memories I made along the way, but after the summer of 2024 chose to give it up. I felt
-				like I had accomplished all the changes I wanted to see and had nothing left to do. It did
-				cause me stress and eat into my summer vacations, but the primary problem was the lack of a
-				goal to strive for. I reformed the traditionally unchanged curriculum, taking out what was
-				no longer useful and introducing lessons to cover traditional blind spots such as web
-				development.
+				<a href="https://matematiikkalinja.fi/">Matematiikkalinja</a>. The program is meant to teach
+				people entering high school the basics of computer science. Some students are already
+				competent programmers by the time the course starts, while a growing number have never
+				touched a keyboard before. My role was twofold. I was lecturing and hosting exercise
+				sessions, but also responsible for recruiting and managing other lecturers and TAs. I loved
+				doing it and cherish all the memories I made along the way, but after the summer of 2024
+				chose to give it up. I felt like I had accomplished everything I wanted and there was
+				nothing left to do. Managing the chaos did cause me stress and eat into my summer vacations,
+				but the primary problem was the lack of a goal. I reformed the traditionally rigid
+				curriculum, taking out what was no longer useful, reforming existing materials to be more
+				approachable for the students, and introducing lessons to cover traditional blind spots such
+				as web development. The last year went off without a hitch, which in a weird way was a
+				disappointment, as it proved I had mastered the craft to be a tad egotistical.
 			</p>
 
 			<h3>Tabletop role playing</h3>
 			<p>
-				In addition to digital, I'm quite fond of analog games like board games, card games and most
-				of all, tabletop role playing games. I've designed a few adventures, systems, and player
-				options. I haven't had sufficient faith in any of them to show them to a crowd larger than
-				my friends, but I do like how tinkering with designs like that makes you think.
+				In addition to digital, I'm quite fond of analog games. Board games, card games and most of
+				all, tabletop role playing games are my jam. I've designed a few adventures, systems, and
+				player options for them, but haven't had sufficient faith in any of them to show them to a
+				crowd larger than my friends. I do like how tinkering with designs like that makes you think
+				and still occasionally spend a few hours drafting something up, just to understand why the
+				thing I'm trying to fix works the way it does.
 			</p>
 			<p>
 				As of writing, I mostly play Pathfinder 2e, with occasional D&amp;D and Fate, I've also read
 				through many others like Gurps and Swade, but haven't had a chance to play those yet. In
-				general I prefer DMing, but that depends on the system and the group.
+				general I prefer DMing, but that depends on the system and the group. I'm passively
+				interested in rules light or more "LARP-like" games, but don't seek them out.
 			</p>
 
 			<h2>The end</h2>

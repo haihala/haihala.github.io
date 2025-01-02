@@ -22,13 +22,13 @@
 		]}
 	/>
 	<div>
-		The short version:
+		<b>Eero Häihälä</b>, the short version goes something like this:
 		<ul>
 			<li>Generalist programmer</li>
 			<li>Master of Technology</li>
 			<li>Lead developer at Vincit</li>
-			<li>Part time programming teacher</li>
 			<li>Hobbyist game developer</li>
+			<li>Part time programming teacher</li>
 		</ul>
 		<p>
 			Wowee describing oneself is hard. I'm just a dude working on <a href="/projects">projects</a>.
