@@ -57,9 +57,12 @@
 		align-items: center;
 		gap: 1rem;
 		height: 100%;
+		width: 100%;
 	}
 
 	.images {
+		height: 100%;
+		width: 100%;
 		display: flex;
 		align-items: center;
 	}
