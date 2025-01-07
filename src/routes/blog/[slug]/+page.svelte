@@ -15,14 +15,16 @@
 
 {#if data.updatedAt && data.updatedAt !== data.createdAt}
 	<div class="edit-note">
-		<span>
+		<div>
 			<Icon icon="material-symbols:info" />
 			This post was updated after original publication
-		</span>
-		<br />
-		Originally published: {data.createdAt}
-		<br />
-		Latest edit happened: {data.updatedAt}
+		</div>
+		<p>
+			Originally published: {data.createdAt}
+		</p>
+		<p>
+			Latest edit happened: {data.updatedAt}
+		</p>
 	</div>
 {/if}
 
@@ -57,13 +59,18 @@
 
 	.edit-note {
 		margin-top: 1rem;
-		padding: 1rem;
-		border-left: solid var(--color-theme-1) 0.5rem;
+		padding: 0 1rem;
+
+		--border-color: color-mix(in srgb, var(--color-theme-1) 50%, transparent);
+		border-left: solid var(--border-color) 0.5rem;
 		background-color: rgba(0, 0, 0, 0.2);
 
-		span {
-			font-size: 2rem;
-			line-height: 4rem;
+		div {
+			margin-top: 1rem;
+			font-size: 1.5rem;
+			display: flex;
+			gap: 1rem;
+			align-items: center;
 		}
 	}
 </style>
