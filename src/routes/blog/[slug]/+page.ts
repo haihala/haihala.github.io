@@ -18,7 +18,7 @@ export const load: PageLoad = async ({ params }) => {
 				return a.overlap - b.overlap;
 			}
 
-			return a.post.createdAt.valueOf() - b.post.createdAt.valueOf();
+			return b.post.createdAt.valueOf() - a.post.createdAt.valueOf();
 		})
 		.map(({ post }) => post);
 

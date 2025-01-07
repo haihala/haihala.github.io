@@ -32,9 +32,10 @@
 	<data.content />
 </article>
 
-{#if data.similar.length > 0}
-	<footer>
-		<hr />
+<footer>
+	<hr />
+	<p>This post was originally released on {data.createdAt}</p>
+	{#if data.similar.length > 0}
 		<p>You may also like:</p>
 		<ul>
 			{#each data.similar as similar}
@@ -43,8 +44,8 @@
 				</li>
 			{/each}
 		</ul>
-	</footer>
-{/if}
+	{/if}
+</footer>
 
 <style>
 	footer {
