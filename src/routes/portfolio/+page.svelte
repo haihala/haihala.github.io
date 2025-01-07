@@ -256,6 +256,21 @@
 
 		<div class="page">
 			<h2>Smaller projects</h2>
+
+			<p>
+				Some of my newer microprojects have a post on my blog. I started the blog in 2024, so it
+				won't include projects before that for the most part. I'll try to make a post for every new
+				Jam game or notable hyperfixation. The blog posts should have visuals, I don't want to bloat
+				this page.
+			</p>
+
+			<ul>
+				<li>
+					<a href="/blog/squeli">Squeli</a> - Top down 2d 2-4 player pvp arena shooter weekend Jam game
+				</li>
+			</ul>
+
+			<h3>My Dystopian Laserhell Hovercar</h3>
 			<img
 				src="https://img.itch.zone/aW1nLzM4NTQ2NjYucG5n/original/%2B8HF7V.png"
 				alt="Poster art for 'My dystopian Laserhell hovercar'"
@@ -356,12 +371,17 @@
 		max-width: 100vw;
 
 		p,
+		ul,
 		img,
 		div.padded {
 			max-width: 90%;
 			@media (min-width: 1280px) {
 				max-width: 60rem;
 			}
+		}
+
+		ul {
+			width: 100%;
 		}
 	}
 
