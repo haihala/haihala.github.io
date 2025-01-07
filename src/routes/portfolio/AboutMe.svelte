@@ -16,8 +16,8 @@
 				alt: 'My portrait outside in a coat and scarf'
 			},
 			{
-				src: '/portfolio/face-tender.jpg',
-				alt: 'My portrait sitting on a floor smiling slightly'
+				src: '/portfolio/face-pf-dm-cropped.jpg',
+				alt: 'Me DMing pathfinder for my weekly group'
 			}
 		]}
 	/>
