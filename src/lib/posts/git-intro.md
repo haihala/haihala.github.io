@@ -1,8 +1,8 @@
 ---
 title: 'What the git?'
 tagline: 'Speedrun learning'
-createdAt: '2024-12-29T13:40+02:00'
-updatedAt: '2024-12-25T16:29+02:00'
+createdAt: '2024-12-25T16:29+02:00'
+updatedAt: '2024-12-29T13:40+02:00'
 tags: ['teaching']
 favourite: true
 draft: false
