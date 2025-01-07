@@ -1,7 +1,7 @@
 ---
 title: 'Glove80 after 6 months'
 tagline: 'My first ergo keyboard'
-updatedAt: '2024-07-28T10:59+03:00'
+createdAt: '2024-07-28T10:59+03:00'
 tags: ['hardware', 'review']
 ---
 

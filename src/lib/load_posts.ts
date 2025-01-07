@@ -12,7 +12,8 @@ export type MetaArticle = {
 	favourite?: boolean;
 	draft?: boolean;
 	tags: string[];
-	updatedAt: string;
+	createdAt: string;
+	updatedAt?: string;
 };
 
 export type Article = {
@@ -21,7 +22,8 @@ export type Article = {
 	title: string;
 	tagline?: string;
 	tags: string[];
-	updatedAt: Date;
+	createdAt: Date;
+	updatedAt?: Date;
 	favourite: boolean;
 	draft: boolean;
 	content: typeof SvelteComponent;
@@ -37,7 +39,7 @@ export const load_pages = async (opts?: LoadOptions): Promise<Article[]> => {
 	const posts = Object.entries(raw)
 		.map(([path, untypedPost]) => {
 			const post = untypedPost as Post;
-			const { tagline, title, tags, updatedAt, favourite, draft } = post.metadata;
+			const { tagline, title, tags, createdAt, updatedAt, favourite, draft } = post.metadata;
 			const fname = path.replace(/^.*[\\/]/, '');
 			const slug = fname.replace(/\.md$/, '');
 
@@ -47,7 +49,8 @@ export const load_pages = async (opts?: LoadOptions): Promise<Article[]> => {
 				title,
 				tagline,
 				tags,
-				updatedAt: new Date(updatedAt),
+				createdAt: new Date(createdAt),
+				updatedAt: updatedAt === undefined ? undefined : new Date(updatedAt),
 				content: post.default,
 				favourite: !!favourite,
 				draft: !!draft
@@ -60,5 +63,5 @@ export const load_pages = async (opts?: LoadOptions): Promise<Article[]> => {
 				(opts?.drafts === undefined && !post.draft)
 		);
 
-	return posts.sort((a, b) => b.updatedAt.valueOf() - a.updatedAt.valueOf());
+	return posts.sort((a, b) => b.createdAt.valueOf() - a.createdAt.valueOf());
 };

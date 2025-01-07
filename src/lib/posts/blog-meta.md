@@ -1,7 +1,7 @@
 ---
 title: 'I made a blog with svelte'
 tagline: 'In magic we trust'
-updatedAt: '2024-01-08T13:23+02:00'
+createdAt: '2024-01-08T13:23+02:00'
 tags: ['webdev', 'pet-project']
 ---
 

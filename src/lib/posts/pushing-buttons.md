@@ -1,7 +1,7 @@
 ---
 title: 'I push buttons'
 tagline: 'Warning on the grind'
-updatedAt: '2024-07-11T23:46+03:00'
+createdAt: '2024-07-11T23:46+03:00'
 tags: ['prose', 'abstract']
 ---
 

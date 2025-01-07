@@ -1,7 +1,7 @@
 ---
 title: 'How not to teach computer science'
 tagline: 'Lessons learnt along the way'
-updatedAt: '2024-01-08T10:14+02:00'
+createdAt: '2024-01-08T10:14+02:00'
 tags: ['teaching']
 favourite: true
 ---

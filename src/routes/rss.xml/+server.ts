@@ -23,7 +23,7 @@ const format = (posts: Article[]) => {
 			return `<item>
   <title>${post.title}</title>
   <link>${link}/</link>
-  <pubDate>${new Date(post.updatedAt)}</pubDate>
+  <pubDate>${new Date(post.createdAt)}</pubDate>
   <content:encoded>
     <p>${post.tagline}</p><p><strong><a href="${link}">Read the full post here</a></strong></p>
   </content:encoded>

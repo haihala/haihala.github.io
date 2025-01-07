@@ -18,13 +18,16 @@ export const load: PageLoad = async ({ params }) => {
 				return a.overlap - b.overlap;
 			}
 
-			return a.post.updatedAt.valueOf() - b.post.updatedAt.valueOf();
+			return a.post.createdAt.valueOf() - b.post.createdAt.valueOf();
 		})
 		.map(({ post }) => post);
+
 	return {
 		title: main_post!.title,
 		subtitle: main_post?.tagline,
 		content: main_post!.content,
+		updatedAt: main_post!.updatedAt,
+		createdAt: main_post!.createdAt,
 		similar
 	};
 };
