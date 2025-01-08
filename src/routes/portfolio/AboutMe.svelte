@@ -26,7 +26,14 @@
 		<ul>
 			<li>Generalist programmer</li>
 			<li>Master of Technology</li>
-			<li>Lead developer at Vincit</li>
+			<li>
+				Lead developer at Vincit, doing mostly:
+				<ul>
+					<li>Full stack web dev</li>
+					<li>Customer communication</li>
+					<li>Infrastructure, CI pipes, most of the grunt work people tend to avoid</li>
+				</ul>
+			</li>
 			<li>Hobbyist game developer</li>
 			<li>Part time programming teacher</li>
 		</ul>
