@@ -66,7 +66,8 @@
 					'With moba-like upgrades',
 					'And online multiplayer',
 					'With rollback netcode',
-					'Built with Bevy and Rust'
+					'Built with Bevy and Rust',
+					'Still in active development'
 				]}
 				contribution={[
 					'Game design',
@@ -77,14 +78,22 @@
 					'Icon art',
 					'SFX / Voice acting'
 				]}
-				focus={['Everything', 'So pretty much nothing']}
-				takeaways={[
-					'Lots of hard lessons',
+				learnings={[
 					'Fighting games are hard',
 					'Rollback netcode is hard',
 					'3D can be hard',
 					'ECS is a double edged sword',
-					'Rust mindset shift is awesome'
+					'Blender competence',
+					'Rust mindset shift is awesome',
+					'Lots of practial programming'
+				]}
+				changes={[
+					'Better art in all forms',
+					'More characters',
+					'More items',
+					'Add a tutorial / single player mode',
+					'Add a proper lobby system',
+					'Countless slight tweaks'
 				]}
 			/>
 			<p>
@@ -162,12 +171,18 @@
 			<PortfolioPanels
 				description={['Level based', '2D adventure', 'Platformer', 'Built with Godot']}
 				contribution={['Game design', 'Programming', 'Everything besides assets']}
-				focus={['Microinteractions', 'Juice', 'Efficient time use']}
-				takeaways={[
+				learnings={[
 					'Hitstop adds a lot',
 					'Charm is surprisingly cheap',
 					'Godot is nice',
 					'Prioritization'
+				]}
+				changes={[
+					"I'm pretty satisfied with this one",
+					'Extend with more worlds',
+					'Fix the font rendering',
+					'Add more music',
+					'Maybe add burst movement or a parry'
 				]}
 			/>
 			<p>
@@ -219,8 +234,17 @@
 					'Built with Unity'
 				]}
 				contribution={['Programming', 'Coaching', 'VFX', 'Game design']}
-				focus={['Working in a team', 'Delegation', 'Creating tooling']}
-				takeaways={['Compassion good', 'Patience is a must']}
+				learnings={[
+					'Unity is surprisingly extendable',
+					'Decals and animation blending',
+					'The power of friendship!'
+				]}
+				changes={[
+					'Add a model to the NPC',
+					'Add more levels / progression',
+					'Fix the lighting',
+					'Improve the HUD'
+				]}
 			/>
 			<p>
 				Like Green eggs and ham, this was made for the same university course. Unlike that one, this

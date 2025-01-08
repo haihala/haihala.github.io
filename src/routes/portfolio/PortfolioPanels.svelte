@@ -2,11 +2,11 @@
 	type Props = {
 		description: string[];
 		contribution: string[];
-		focus: string[];
-		takeaways: string[];
+		learnings: string[];
+		changes: string[];
 	};
 
-	const { description, contribution, focus, takeaways }: Props = $props();
+	const { description, contribution, learnings, changes }: Props = $props();
 </script>
 
 <div class="container">
@@ -26,18 +26,18 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="box focus">
-		<h3>What did I focus on?</h3>
+	<div class="box learnings">
+		<h3>What did I learn?</h3>
 		<ul>
-			{#each focus as item}
+			{#each learnings as item}
 				<li>{item}</li>
 			{/each}
 		</ul>
 	</div>
-	<div class="box takeaway">
-		<h3>What was my takeaway?</h3>
+	<div class="box changes">
+		<h3>How would I change it?</h3>
 		<ul>
-			{#each takeaways as item}
+			{#each changes as item}
 				<li>{item}</li>
 			{/each}
 		</ul>
@@ -81,10 +81,10 @@
 	.contribution {
 		background-color: #f17e84;
 	}
-	.focus {
+	.learnings {
 		background-color: #44ccee;
 	}
-	.takeaway {
+	.changes {
 		background-color: #50c878;
 	}
 </style>
