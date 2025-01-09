@@ -32,6 +32,7 @@
 		<div class="page">
 			<AboutMe />
 		</div>
+
 		<div class="page">
 			<h2>Whoops! All grapplers</h2>
 			<Carousel
@@ -67,7 +68,7 @@
 					'And online multiplayer',
 					'With rollback netcode',
 					'Built with Bevy and Rust',
-					'Still in active development'
+					'Scope: Solo project, semi-active since 2021'
 				]}
 				contribution={[
 					'Game design',
@@ -169,7 +170,13 @@
 				]}
 			/>
 			<PortfolioPanels
-				description={['Level based', '2D adventure', 'Platformer', 'Built with Godot']}
+				description={[
+					'Level based',
+					'2D adventure',
+					'Platformer',
+					'Built with Godot',
+					'Scope: Solo project, two weeks'
+				]}
 				contribution={['Game design', 'Programming', 'Everything besides assets']}
 				learnings={[
 					'Hitstop adds a lot',
@@ -231,7 +238,8 @@
 					'3D stealth game',
 					'With a goal to clean a house',
 					'Before the resident catches you',
-					'Built with Unity'
+					'Built with Unity',
+					'Scope: Team of five, two months'
 				]}
 				contribution={['Programming', 'Coaching', 'VFX', 'Game design']}
 				learnings={[
@@ -240,18 +248,14 @@
 					'The power of friendship!'
 				]}
 				changes={[
+					'Most of the game, for example:',
+					'Improve the HUD',
 					'Add a model to the NPC',
 					'Add more levels / progression',
 					'Fix the lighting',
-					'Improve the HUD'
+					'Add more interesting minigames'
 				]}
 			/>
-			<p>
-				Like Green eggs and ham, this was made for the same university course. Unlike that one, this
-				was made in a group with four other people. Unfortunately this was the second game most of
-				us had ever made, with the first one being mostly following a godot tutorial and then
-				changing a few assets, maybe editing a tilemap.
-			</p>
 			<p>
 				In the game, you play as a house self that sneaks around a house doing chores. The bar on
 				the left indicates how many chores you have left. Some chores required tools that start the
@@ -263,16 +267,21 @@
 				think gave you a movement speed buff.
 			</p>
 			<p>
-				The course mandated that everyone had a role. I wanted to be the programmer, so I
-				intentionally dodged the role of project manager. In the end I did end up helping most of
-				the team, including the project manager quite a bit, but overall consider this a successful
-				delegation. For most of the team, this was the first time they had ever used git or any type
-				of a project tracking tool (I think we ended up with shortcut, but it could've been trello).
-				Overall I'm satisfied with the project, although it doesn't really meet my personal
-				threshold of quality. It's not that appealing visually or mechanically. The kindest thing I
-				can say is that I think we tried our best and it has some decent ideas. If you want to check
-				it out, you can find <a href="https://uriel35.itch.io/mission-impossible"
-					>the game over on itch.io</a
+				This was made for the same university course as Green eggs and ham. The course had us work
+				in teams of five, but unfortunately this was the second game most of us had ever made. The
+				first one being following a godot tutorial with a few custom tweaks like changing the
+				sprites. The course mandated that everyone had a role. I primarily wanted to be the
+				programmer and secondarily to not be the project manager. I tend to take charge in these
+				sorts of projects, and see this is a problem for my ability to work in teams. I deliberately
+				wanted to practice delegation and giving other team members the freedom to work. In the end
+				I did end up helping most of the team, including the project manager quite a bit, but still
+				consider this a successful delegation exercise. The help was mostly technical stuff like
+				helping team members with git, as most of them had never heard of it before. I also did a
+				quick overview of how Scrum works, as the course enforced some of the rituals. Overall, I'm
+				satisfied with the project, even if it doesn't really meet my personal threshold of quality.
+				The kindest thing I can say is that I think we tried our best and it has some decent ideas.
+				If you want to check it out, you can find <a
+					href="https://uriel35.itch.io/mission-impossible">the game over on itch.io</a
 				>
 				and <a href="https://github.com/haihala/VIM.MT.310-Group-4">the code over at GitHub</a>.
 			</p>
@@ -300,15 +309,15 @@
 				alt="Poster art for 'My dystopian Laserhell hovercar'"
 			/>
 			<p>
-				I used to partake in the yearly GMTK itch.io game jam. Sometimes alone, sometimes with a
-				friend. In total I think I submitted four times, most of them being not that great. My
-				teaching gig schedule sadly overlaps with the jam, so I've been unable to attend for the
-				past few years. This was one of those submissions I did with Lauri Virtanen, a fellow
-				programmer I've known since high school. I did mostly design and programming with maybe a
-				30/70 split. Lauri did both of those, but also art and music with something like a
-				10/40/30/20 split between design/programming/art/music. It has been years and I'm handwaving
-				the numbers, but the gist is that I did most of of the programming and design, while Lauri
-				focused more on the aesthetics.
+				I used to partake in the yearly GMTK itch.io game jam. I've liked the themes and since it
+				only takes a weekend it's pretty easy to fit into a calendar. My teaching gig schedule sadly
+				overlaps with the jam, so I've been unable to attend for the past few years. In total I
+				think I submitted four times, with most of them being not that great. This one I did with
+				Lauri Virtanen, a fellow programmer I've known since high school. I did mostly design and
+				programming with maybe a 30/70 split. Lauri did both of those, but also art and music with
+				something like a 10/40/30/20 design/programming/art/music split. It has been years and I'm
+				handwaving the numbers, but the gist is that I did most of of the programming and design,
+				while Lauri focused more on the aesthetics.
 			</p>
 			<p>
 				You can find
