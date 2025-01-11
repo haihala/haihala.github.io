@@ -13,6 +13,7 @@
 \usepackage{graphicx}
 \usepackage{graphbox} %Allows aligning in tables
 \usepackage{tikz}
+\usepackage{arydshln}
 
 \graphicspath{ {./graphics} }
 
@@ -40,14 +41,18 @@
 }
 
 \newenvironment{Timeline}
-  {\tabularx{\linewidth}{l|X}}
+  {\tabularx{\linewidth}{Xl} \hdashline}
   {\endtabularx}
 
 
+\setlength{\dashlinedash}{.4pt}
+\setlength{\dashlinegap}{2pt}
+
+% Fields: Time, Title, Company / explanation
 \newcommand{\timelineitem}[3]{
-    #1 & \textbf{#2}\\
-       & \footnotesize#3
-        \vspace{\parsep}\\
+    \textbf{#2} & #1\\
+    \footnotesize#3\\
+    \hdashline
 }
 
 \newenvironment{skills}
