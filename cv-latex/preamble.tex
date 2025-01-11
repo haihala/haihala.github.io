@@ -2,86 +2,89 @@
 \pagenumbering{gobble}  % Removes page number
 
 \usepackage[a4paper, portrait, margin=0.5in]{geometry}
-\usepackage[parfill]{parskip}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{hyperref}
-\usepackage{collcell, booktabs}
-\usepackage{etaremune}  % Enumerate backwards
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{graphicx}
-\usepackage{graphbox} %Allows aligning in tables
-\usepackage{tikz}
-\usepackage{arydshln}
+\usepackage[parfill]{parskip}   % Saner paragraph formatting defaults
+\usepackage[utf8]{inputenc}     % Default to UTF-8
+\usepackage{hyperref}           % Links
+\usepackage{collcell}           % Something to do with image + text alignment top of page
+\usepackage{etaremune}          % Enumerate backwards
+\usepackage{tabularx}           % Dynamically sized table columns
+\usepackage{tikz}               % Graphics drawing (skill bars)
+\usepackage{arydshln}           % Dashed line dividers
+\usepackage{booktabs}           % ???
 
+% Where to find graphics (contains symlinks)
 \graphicspath{ {./graphics} }
 
+% Used as less harsh dividers
+\setlength{\dashlinedash}{.4pt}
+\setlength{\dashlinegap}{2pt}
+
+\newcommand{\cvheader}[2] {
+    \begin{tabularx}{\linewidth}{i X}
+        \toprule
+        #1 & 
+        \vspace{1pt} #2\\
+    \end{tabularx}
+}
+
+% Defines the 'i' column for images (only used in header)
+% This helps with centering the image
+\newcolumntype{i}{@{\hspace{1ex}}
+  >{\collectcell\includepic}l<{\endcollectcell}}
+
+% All of this is basically just to round the image corners a bit
+\newcommand{\includepic}[1]{ \raisebox{-\height}{
+    \begin{tikzpicture} 
+        \begin{scope}
+            \clip [rounded corners=.1cm] (0,0) rectangle coordinate (centerpoint) (5,5cm); 
+            \node [inner sep=0pt] at (centerpoint) { \includegraphics[width=5cm, height=5cm,keepaspectratio]{#1} }; 
+        \end{scope}
+    \end{tikzpicture}
+}}
+
+\newenvironment{skills}
+{
+      \tabularx{\linewidth}{c|X} 
+      % This is the header row
+      Level & Skill list \\
+}
+{\endtabularx}
+
+
+% First param is a number for how many skill segments.
+% Second param is a list of skills
+\newcommand{\skillitem}[2]{
+    \hdashline
+    \skillbar{#1}&#2\\
+}
+
 \newcommand{\skillbar}[1]{
-    \begin{tikzpicture}
+    % Baseline gives it some separation from the top divider
+    \begin{tikzpicture}[baseline=3]
         \foreach \x in {0,1,...,2}{
             \ifnum\x<#1
+                % Filled box
                 \draw[black, very thick, fill=gray] (\x, 0) rectangle (\x+0.8, 0.3);
             \else
+                % Empty box
                 \draw[black, very thick] (\x, 0) rectangle (\x+0.8, 0.3);
             \fi
         }
     \end{tikzpicture}
 }
 
-\NewDocumentCommand{\SidebarredLayout}{ 
-    +m
-}{%
-    \par
-    \noindent
-    \begin{minipage}{1cm}
-        #1
-    \end{minipage}
-    \par
-}
-
+% Timelines are used for employment and education histories
 \newenvironment{Timeline}
   {\tabularx{\linewidth}{Xl} \hdashline}
   {\endtabularx}
 
 
-\setlength{\dashlinedash}{.4pt}
-\setlength{\dashlinegap}{2pt}
-
-% Fields: Time, Title, Company / explanation
+% Fields: 
+  % Time
+  % Title
+  % Company / School / explanation
 \newcommand{\timelineitem}[3]{
     \textbf{#2} & #1\\
     \footnotesize#3\\
     \hdashline
 }
-
-\newenvironment{skills}
-  {\tabularx{\linewidth}{c|X}}
-  {\endtabularx}
-
-
-\newcommand{\skillitem}[2]{
-    \skillbar{#1}&#2\\
-}
-
-\newcommand{\includepic}[1]{ \raisebox{-\height}{
-    \begin{tikzpicture} 
-        \begin{scope}
-            \clip [rounded corners=.3cm] (0,0) rectangle coordinate (centerpoint) (5,5cm); 
-            \node [inner sep=0pt] at (centerpoint) { \includegraphics[width=5cm, height=5cm,keepaspectratio]{#1} }; 
-        \end{scope}
-    \end{tikzpicture}
-}}
-
-\newcolumntype{i}{@{\hspace{1ex}}
-  >{\collectcell\includepic}l<{\endcollectcell}}
-
-\newcommand{\cvtop}[2] {
-    \begin{tabularx}{\linewidth}{i X}
-        \toprule
-        #1 & 
-        \vspace{1pt}
-        #2\\
-    \end{tabularx}
-}
-
