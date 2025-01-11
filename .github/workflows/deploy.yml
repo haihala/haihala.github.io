@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup
-        run: sudo apt-get install -y latexmk
+        run: sudo apt-get install -y latexmk texlive-arydshln texlive-graphbox texlive-multirow texlive-etaremune texlive-collcell
       - name: Build
         run: |
           cd cv-latex
@@ -62,9 +62,10 @@ jobs:
 
   build-svelte:
     runs-on: ubuntu-latest
+    needs: [build-cv]
     steps:
+      - uses: actions/download-artifact@v4
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -86,11 +87,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-godot, build-svelte]
     steps:
+      - uses: actions/configure-pages@v4
       - uses: actions/download-artifact@v4
       - name: Unpack artefacts
         run: |
           mkdir build
-          mv godot/* svelte/* cv-latex/* build
+          mv godot/* svelte/* build
       - name: Debug
         run: ls -R
       - uses: actions/upload-pages-artifact@v3
