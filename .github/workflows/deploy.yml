@@ -19,11 +19,14 @@ concurrency:
 jobs:
   build-cv:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./cv-latex
     steps:
       - uses: actions/checkout@v4
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
-        working-directory: ./cv-latex
         with:
           root_file: cv.tex
       - uses: actions/upload-artifact@v4
