@@ -59,15 +59,20 @@
 }
 
 \newcommand{\skillbar}[1]{
+    \def \h {0.2}
+    \def \w {0.6}
+    \def \gap {0.1}
+    \def \thickness {\w-\gap}
     % Baseline gives it some separation from the top divider
-    \begin{tikzpicture}[baseline=3]
+    \begin{tikzpicture}[baseline=6]
         \foreach \x in {0,1,...,2}{
+            \def \start {\w*\x}
             \ifnum\x<#1
                 % Filled box
-                \draw[black, very thick, fill=gray] (\x, 0) rectangle (\x+0.8, 0.3);
+                \draw[black, very thick, fill=gray] (\start, 0) rectangle (\start + \thickness, \h);
             \else
                 % Empty box
-                \draw[black, very thick] (\x, 0) rectangle (\x+0.8, 0.3);
+                \draw[black, very thick] (\start, 0) rectangle (\start + \thickness, \h);
             \fi
         }
     \end{tikzpicture}
