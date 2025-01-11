@@ -143,6 +143,61 @@
 				just that there has been a lot of effort put into ventures one would probably not need to
 				worry about on a more established engine.
 			</p>
+			<details>
+				<summary>Implementation highlight: Builder pattern for actions</summary>
+				<p>
+					The game is a fighting game, so there are lots of actions a character can take. In a
+					traditional fighting game like Street Fighter, a character usually has about 20 different
+					moves on the low end. On top of that, I wanted things like jumping to also use the action
+					system. This way I can implement something for actions and that means it can be used in
+					lots of different places. There are still things that are not actions like walking and
+					blocking, but that's because they are easier to handle that way. This may change in the
+					future though.
+				</p>
+				<p>
+					Problem: Lots of actions with all sorts of corner cases. Some have attacks attached, some
+					do not. Some change the animation, some do not. Some trigger with an input, some get
+					triggered automatically with some game state change. Lots of complexity, hard to describe
+					actions in a concise and readable way.
+				</p>
+				<p>
+					Solution: Use of the builder pattern. For the most part I'm not a big fan of the Gang of
+					four patterns, with a few notable exceptions, the builder pattern being one of them. I
+					implemented a base action builder and then built specialized builders on top of that, so
+					now I can describe various types of actions clearly while maintaining the flexibility of
+					the underlying system. I've attached screenshots of a few builders used for different
+					types of actions.
+				</p>
+				<Carousel
+					elems={[
+						{
+							src: '/portfolio/wag-attack-builder-code.png',
+							alt: 'Code of an attack builder'
+						},
+						{
+							src: '/portfolio/wag-dash-builder-code.png',
+							alt: 'Code of a dash builder'
+						},
+						{
+							src: '/portfolio/wag-action-builder-code.png',
+							alt: 'Code of a generic action builder'
+						}
+					]}
+				/>
+
+				<p>
+					The example pictures are from the <a
+						href="https://github.com/haihala/whoops-all-grapplers/blob/main/client/characters/src/characters/samurai.rs#L168"
+						>Samurai's file</a
+					>. The first one is a jumping knee thrust, the second one is her grounded dash, which puts
+					her airborne, and the third one is a cancel option for her sword stance. It's hard for me
+					to tell, but the code seems like it should be understandable for someone who is familiar
+					with fighting games without much prior knowledge of how this one specifically has been
+					programmed. Systems like the shop system can transform moves mid match, so I needed a tool
+					that could match that level of dynamism. The builders can even take in functions that will
+					get evaluated per frame to do whatever I want it to do.
+				</p>
+			</details>
 		</div>
 
 		<div class="page">
@@ -213,6 +268,48 @@
 					>Code is available on Github</a
 				>.
 			</p>
+			<details>
+				<summary>Implementation highlight: State machine</summary>
+				<div class="side-by-side">
+					<div>
+						<p>
+							Problem: Character can be in many different states. Some with animations, some
+							without. How to manage that in a maintainable way?
+						</p>
+						<p>
+							Solution: Node based state machine. As long as I've worked in Godot, I've really liked
+							the node based approach. For this one, I had a system where the player node has an
+							empty node to hold the state machine. The state machine then contains all of the
+							states as children and references one in it's script as the active state. Each state
+							node has a script that inherits from the base State script and implements any number
+							of the provided functions. It has one function that gets called when that state
+							activates, one when it gets overridden with a different state and a third one for each
+							frame when the state is active. Any script can request a state transition, which will
+							then call the state specific functions. Overall the system worked remarkably well and
+							adding new states was very easy. I would probably not do this for 10+ states like in
+							WAG, but for the eight discrete states that were in this game the system was solid.
+						</p>
+						<p>
+							A lot of the behavior was also done outside the states. For example, the movement of
+							walking was done in the player root node script, since that has to move the root
+							object anyways. I probably could've moved more of the behavior to the states, but took
+							a pragmatic approach and went with the path of least resistance over the theoretically
+							'purest' solution.
+						</p>
+						<p>
+							Full disclosure: The approach is not originally mine, but I can't remember where I
+							took the initial version from. I do remember heavily modifying the code, as I remember
+							the source wanted to do more in the states I did and the noise was unnecessary in my
+							game. It was hard to think of something <i>special</i> for this one, as it was a very smooth
+							project through and through.
+						</p>
+					</div>
+					<img
+						src="/portfolio/geah-state-machine-nodes.png"
+						alt="Screenshot of Godot node hierarchy of the state machine"
+					/>
+				</div>
+			</details>
 		</div>
 
 		<div class="page">
@@ -285,6 +382,24 @@
 				>
 				and <a href="https://github.com/haihala/VIM.MT.310-Group-4">the code over at GitHub</a>.
 			</p>
+			<details>
+				<summary>Tooling highlight: Automatic item icons</summary>
+				<p>
+					Problem: We have lots of items in the game. The items require icons. Drawing icons by hand
+					would take a lot of time.
+				</p>
+				<p>
+					Solution: Use Unity to automate the process. The objects needed to show up in the game
+					world, so they had 3D models ready. I think we got them from some asset pack, not sure. I
+					built a scene that was only used in development. The scene had a camera, a light, and all
+					the 3D models of the objects, positioned to look good from the camera's perspective. I
+					then did some editor scripting. The script looped over all the objects, activating them
+					one by one, taking a screenshot with the camera, and saving that screenshot on disk, to be
+					used as an asset later. This way if we wanted to edit the item positions in the icons, we
+					could simply change the item positions in that scene and redo the screenshots. I think we
+					had maybe 15 items and it took a few seconds to generate all the icons.
+				</p>
+			</details>
 		</div>
 
 		<div class="page">
@@ -407,6 +522,7 @@
 		p,
 		ul,
 		img,
+		details,
 		div.padded {
 			max-width: 90%;
 			@media (min-width: 1280px) {
@@ -417,6 +533,22 @@
 		ul {
 			width: 100%;
 		}
+	}
+
+	details {
+		width: 100%;
+		padding: 1rem;
+		border-radius: 1rem;
+		background-color: color-mix(in srgb, black 10%, transparent);
+
+		summary {
+			color: var(--color-theme-2);
+			font-size: 1.25rem;
+		}
+	}
+
+	details:hover {
+		background-color: color-mix(in srgb, black 20%, transparent);
 	}
 
 	.video-cover {
@@ -434,5 +566,13 @@
 
 	h1 {
 		font-size: 2rem;
+	}
+
+	.side-by-side {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: 1280px) {
+			flex-direction: row;
+		}
 	}
 </style>
