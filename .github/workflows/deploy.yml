@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup
-        run: sudo apt-get install -y latexmk texlive-arydshln texlive-graphbox texlive-multirow texlive-etaremune texlive-collcell
+        run: sudo apt-get install -y latexmk texlive-latex-extra
       - name: Build
         run: |
           cd cv-latex
