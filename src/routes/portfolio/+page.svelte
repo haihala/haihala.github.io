@@ -547,8 +547,9 @@
 		}
 	}
 
-	details:hover {
+	details:has(summary:hover) {
 		background-color: color-mix(in srgb, black 20%, transparent);
+		cursor: pointer;
 	}
 
 	.video-cover {
