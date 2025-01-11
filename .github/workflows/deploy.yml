@@ -17,6 +17,21 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        run: sudo apt-get install -y latexmk
+      - name: Build
+        run: |
+          cd cv-latex
+          make
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv-latex
+          path: cv-latex
+
   build-godot:
     runs-on: ubuntu-latest
     env:
@@ -75,7 +90,7 @@ jobs:
       - name: Unpack artefacts
         run: |
           mkdir build
-          mv godot/* svelte/* build
+          mv godot/* svelte/* cv-latex/* build
       - name: Debug
         run: ls -R
       - uses: actions/upload-pages-artifact@v3
