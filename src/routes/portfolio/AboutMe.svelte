@@ -25,12 +25,12 @@
 		<b>Eero Häihälä</b>, the short version goes something like this:
 		<ul>
 			<li>Generalist programmer</li>
-			<li>Master of Technology</li>
+			<li>Master of Science (Technology)</li>
 			<li>
 				Lead developer at Vincit, doing mostly:
 				<ul>
 					<li>Full stack web dev</li>
-					<li>Customer communication</li>
+					<li>In direct customer communication</li>
 					<li>Infrastructure, CI pipes, most of the grunt work people tend to avoid</li>
 				</ul>
 			</li>
@@ -44,10 +44,37 @@
 			<a href="/blog">my blog</a>. The rest of this page is a list of cherry-picked game projects
 			that hopefully showcase I can indeed make those.
 		</p>
-		List of skills as well as my summarized employment history can be found in my
-		<a href="/portfolio/cv-eero-haihala.pdf" target="_blank">printable resume</a>. If you're already
-		interested, you can read more and get in touch via:
+		<p>
+			I actively seek out new things to do, use and experience, to the point of having those listed
+			in my project tracking app. Most of the projects here as well as the site you're currently
+			reading have gotten started simply because I learn to use something new. A natural consequence
+			of this is having a lot to draw from when I stumble onto something new. After trying several
+			project management systems, game engines, programming languages and frameworks, picking up
+			similar tools is a quick process. Learning how others think is also interesting to me. There
+			is a <a href="https://youtu.be/o8NPllzkFhE?si=bXSuFE4mqXklATY8&t=984"
+				>TED interview where Linus Torvalds</a
+			> says something that resonates with me:
+		</p>
+		<blockquote>
+			<p>
+				I'm perfectly happy with all the people who are walking around and just staring at the
+				clouds and looking at the stars and saying, "I want to go there." , but I'm looking at the
+				ground, and I want to fix the pothole that's right in front of me before I fall in.
+			</p>
+		</blockquote>
+		<p>
+			I heavily relate with Torvalds. While talking about design with my peers, I'm often the one
+			bringing the conversation back down to earth. I genuinely like thinking about the mundane
+			problems and how to best tackle them. Despite my best efforts, this attention to details still
+			every now and then comes across as dismissive or critical to my more idea-oriented friends. I
+			don't want to belittle or put others down, but to help them create the best version of what
+			they are making. If you have a game you think I could make better, do get in touch:
+		</p>
 		<Socials />
+		<p>
+			You can find a list of technical skills as well as my summarized employment history in my
+			<a href="/portfolio/cv-eero-haihala.pdf" target="_blank">printable resume</a>.
+		</p>
 	</div>
 </div>
 
