@@ -44,7 +44,9 @@
 			<a href="/blog">my blog</a>. The rest of this page is a list of cherry-picked game projects
 			that hopefully showcase I can indeed make those.
 		</p>
-		If you're already interested:
+		List of skills as well as my summarized employment history can be found in my
+		<a href="/portfolio/cv-eero-haihala.pdf" target="_blank">printable resume</a>. If you're already
+		interested, you can read more and get in touch via:
 		<Socials />
 	</div>
 </div>
