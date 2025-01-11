@@ -1,0 +1,82 @@
+\documentclass{article}
+\pagenumbering{gobble}  % Removes page number
+
+\usepackage[a4paper, portrait, margin=0.5in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{hyperref}
+\usepackage{collcell, booktabs}
+\usepackage{etaremune}  % Enumerate backwards
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{graphbox} %Allows aligning in tables
+\usepackage{tikz}
+
+\graphicspath{ {./graphics} }
+
+\newcommand{\skillbar}[1]{
+    \begin{tikzpicture}
+        \foreach \x in {0,1,...,2}{
+            \ifnum\x<#1
+                \draw[black, very thick, fill=gray] (\x, 0) rectangle (\x+0.8, 0.3);
+            \else
+                \draw[black, very thick] (\x, 0) rectangle (\x+0.8, 0.3);
+            \fi
+        }
+    \end{tikzpicture}
+}
+
+\NewDocumentCommand{\SidebarredLayout}{ 
+    +m
+}{%
+    \par
+    \noindent
+    \begin{minipage}{1cm}
+        #1
+    \end{minipage}
+    \par
+}
+
+\newenvironment{Timeline}
+  {\tabularx{\linewidth}{l|X}}
+  {\endtabularx}
+
+
+\newcommand{\timelineitem}[3]{
+    #1 & \textbf{#2}\\
+       & \footnotesize#3
+        \vspace{\parsep}\\
+}
+
+\newenvironment{skills}
+  {\tabularx{\linewidth}{c|X}}
+  {\endtabularx}
+
+
+\newcommand{\skillitem}[2]{
+    \skillbar{#1}&#2\\
+}
+
+\newcommand{\includepic}[1]{ \raisebox{-\height}{
+    \begin{tikzpicture} 
+        \begin{scope}
+            \clip [rounded corners=.3cm] (0,0) rectangle coordinate (centerpoint) (5,5cm); 
+            \node [inner sep=0pt] at (centerpoint) { \includegraphics[width=5cm, height=5cm,keepaspectratio]{#1} }; 
+        \end{scope}
+    \end{tikzpicture}
+}}
+
+\newcolumntype{i}{@{\hspace{1ex}}
+  >{\collectcell\includepic}l<{\endcollectcell}}
+
+\newcommand{\cvtop}[2] {
+    \begin{tabularx}{\linewidth}{i X}
+        \toprule
+        #1 & 
+        \vspace{1pt}
+        #2\\
+    \end{tabularx}
+}
+

@@ -1,0 +1,9 @@
+# Temp files
+cv.aux
+cv.fdb_latexmk
+cv.fls
+cv.log
+cv.out
+
+# Final product
+cv.pdf
