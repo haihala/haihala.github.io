@@ -39,31 +39,33 @@
 		</ul>
 		<p>
 			Wowee describing oneself is hard. I'm just a dude working on <a href="/projects">projects</a>.
-			I do engineering (whatever that is) for a living and develop games to live. Most of my
-			endeavors worth writing about end up on
+			I do engineering (whatever that is) for a living and develop games to live. Most of my what I
+			do and deem worth writing about end up on
 			<a href="/blog">my blog</a>. The rest of this page is a list of cherry-picked game projects
 			that hopefully showcase I can indeed make those.
 		</p>
 		<p>
 			I actively seek out new things to do, use and experience, to the point of having those listed
-			in my project tracking app. Most of the projects here as well as the site you're currently
-			reading have gotten started simply because I learn to use something new. A natural consequence
-			of this is having a lot to draw from when I stumble onto something new. After trying several
-			project management systems, game engines, programming languages and frameworks, picking up
-			similar tools is a quick process. Learning how others think is also interesting to me. There
-			is a <a href="https://youtu.be/o8NPllzkFhE?si=bXSuFE4mqXklATY8&t=984"
+			in my project tracking app. Most of the projects here as well as the website itself have
+			gotten started simply because I wanted to try something new. A natural consequence of doing a
+			bit of this and that is having a lot to draw from when I stumble onto something new. After
+			trying a few organizational structures, project management systems, game engines, programming
+			languages, and frameworks picking up new ones is a quick process. I primarily want to learn by
+			doing, but a close second is listening to someone who has a lot of experience works for me
+			really well. I listen to a lot of conference talks and podcast-adjacent stuff for example.
+			There is a <a href="https://youtu.be/o8NPllzkFhE?si=bXSuFE4mqXklATY8&t=984"
 				>TED interview where Linus Torvalds</a
 			> says something that resonates with me:
 		</p>
 		<blockquote>
 			<p>
 				I'm perfectly happy with all the people who are walking around and just staring at the
-				clouds and looking at the stars and saying, "I want to go there." , but I'm looking at the
+				clouds and looking at the stars and saying, "I want to go there.", but I'm looking at the
 				ground, and I want to fix the pothole that's right in front of me before I fall in.
 			</p>
 		</blockquote>
 		<p>
-			I heavily relate with Torvalds. While talking about design with my peers, I'm often the one
+			I heavily relate with Torvalds. While talking about design with my friends, I'm often the one
 			bringing the conversation back down to earth. I genuinely like thinking about the mundane
 			problems and how to best tackle them. Despite my best efforts, this attention to details still
 			every now and then comes across as dismissive or critical to my more idea-oriented friends. I
@@ -72,7 +74,7 @@
 		</p>
 		<Socials />
 		<p>
-			You can find a list of technical skills as well as my summarized employment history in my
+			You can find a list of my skills, as well as my summarized employment history in my
 			<a href="/portfolio/cv-eero-haihala.pdf" target="_blank">printable resume</a>.
 		</p>
 	</div>

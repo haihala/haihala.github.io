@@ -148,25 +148,25 @@
 				<p>
 					The game is a fighting game, so there are lots of actions a character can take. In a
 					traditional fighting game like Street Fighter, a character usually has about 20 different
-					moves on the low end. On top of that, I wanted things like jumping to also use the action
-					system. This way I can implement something for actions and that means it can be used in
-					lots of different places. There are still things that are not actions like walking and
-					blocking, but that's because they are easier to handle that way. This may change in the
-					future though.
+					moves on the low end. Multiple Tekken characters have 100+ moves in their arsenal, with
+					several of those being multi-part strings you can think of as distinct moves. WAG will be
+					closer to Street Fighter than Tekken, but the problem is still notable. On top of having
+					lots of moves,I wanted things like jumping and dashing to also use the action system. This
+					way I can implement something once and use it for all sorts of actions.
 				</p>
 				<p>
 					Problem: Lots of actions with all sorts of corner cases. Some have attacks attached, some
 					do not. Some change the animation, some do not. Some trigger with an input, some get
-					triggered automatically with some game state change. Lots of complexity, hard to describe
-					actions in a concise and readable way.
+					triggered automatically by something else. It's hard to describe actions in a concise and
+					readable way.
 				</p>
 				<p>
 					Solution: Use of the builder pattern. For the most part I'm not a big fan of the Gang of
-					four patterns, with a few notable exceptions, the builder pattern being one of them. I
-					implemented a base action builder and then built specialized builders on top of that, so
-					now I can describe various types of actions clearly while maintaining the flexibility of
-					the underlying system. I've attached screenshots of a few builders used for different
-					types of actions.
+					Four patterns, with a few notable exceptions. The builder pattern is one of those
+					exceptions. I implemented a base action builder and then built specialized builders on top
+					of that, so now I can describe various types of actions clearly while maintaining the
+					flexibility of the underlying system. I've attached screenshots of a few builders used for
+					different types of actions.
 				</p>
 				<Carousel
 					elems={[
@@ -187,15 +187,18 @@
 
 				<p>
 					The example pictures are from the <a
-						href="https://github.com/haihala/whoops-all-grapplers/blob/main/client/characters/src/characters/samurai.rs#L168"
-						>Samurai's file</a
+						href="https://github.com/haihala/whoops-all-grapplers/blob/9978175406e7b743c426146d0fdfb88da7315497/client/characters/src/characters/samurai.rs#L168"
+						>Samurai's file (may not be up to date)</a
 					>. The first one is a jumping knee thrust, the second one is her grounded dash, which puts
-					her airborne, and the third one is a cancel option for her sword stance. It's hard for me
-					to tell, but the code seems like it should be understandable for someone who is familiar
-					with fighting games without much prior knowledge of how this one specifically has been
-					programmed. Systems like the shop system can transform moves mid match, so I needed a tool
-					that could match that level of dynamism. The builders can even take in functions that will
-					get evaluated per frame to do whatever I want it to do.
+					her airborne on frame 5, and the third one is a cancel option for her sword stance. I've
+					become too used to the code to tell for real, but to me the code seems like it should be
+					understandable for someone who is familiar with fighting games without much prior
+					knowledge of how WAG has been programmed. Systems like the shop system can transform moves
+					mid match, so I needed a tool that could match that level of dynamism. The builders can
+					even take in functions that will get evaluated per frame to do whatever I want it to do.
+					The builders have a bunch of assertions in them that make sure I don't make any easy
+					mistakes. If I forget to add an end time to an action or a hitbox to an attack, an assert
+					will catch that.
 				</p>
 			</details>
 			<details>
@@ -376,15 +379,14 @@
 						</p>
 						<p>
 							Solution: Node based state machine. As long as I've worked in Godot, I've really liked
-							the node based approach. For this one, I had a system where the player node has an
-							empty node to hold the state machine. The state machine then contains all of the
-							states as children and references one in it's script as the active state. Each state
-							node has a script that inherits from the base State script and implements any number
-							of the provided functions. It has one function that gets called when that state
-							activates, one when it gets overridden with a different state and a third one for each
-							frame when the state is active. Any script can request a state transition, which will
-							then call the state specific functions. Overall the system worked remarkably well and
-							adding new states was very easy. I would probably not do this for 10+ states like in
+							the nodes. I made a system where the player node has a state machine node as a child.
+							The state machine then contains all of the states as children and references one in
+							it's script as the active state. Each state node has a script that inherits from the
+							base State script and implements any number of the provided functions. It has
+							functions that get called when the state is activated or deactivated and one called
+							each frame when the state is active. Any script can request a state transition, which
+							will then call the state functions. Overall the system worked remarkably well and
+							adding new states was very easy. I would probably not do this for 20+ states like in
 							WAG, but for the eight discrete states that were in this game the system was solid.
 						</p>
 						<p>
@@ -392,14 +394,15 @@
 							walking was done in the player root node script, since that has to move the root
 							object anyways. I probably could've moved more of the behavior to the states, but took
 							a pragmatic approach and went with the path of least resistance over the theoretically
-							'purest' solution.
+							'purest' solution. This is also something I would heavily reconsider if there were
+							more states.
 						</p>
 						<p>
 							Full disclosure: The approach is not originally mine, but I can't remember where I
 							took the initial version from. I do remember heavily modifying the code, as I remember
-							the source wanted to do more in the states I did and the noise was unnecessary in my
-							game. It was hard to think of something <i>special</i> for this one, as it was a very smooth
-							project through and through.
+							the original version wanted to do more in the states than I did and the noise was
+							unnecessary here. It was hard to think of something <i>special</i> for this one, as it
+							was a very smooth project.
 						</p>
 					</div>
 					<img
@@ -483,19 +486,28 @@
 			<details>
 				<summary>Tooling highlight: Automatic item icons</summary>
 				<p>
-					Problem: We have lots of items in the game. The items require icons. Drawing icons by hand
-					would take a lot of time.
+					Problem: We have lots of items in the game. The items require HUD icons. Drawing icons by
+					hand would take a lot of time.
 				</p>
 				<p>
 					Solution: Use Unity to automate the process. The objects needed to show up in the game
-					world, so they had 3D models ready. I think we got them from some asset pack, not sure. I
-					built a scene that was only used in development. The scene had a camera, a light, and all
-					the 3D models of the objects, positioned to look good from the camera's perspective. I
-					then did some editor scripting. The script looped over all the objects, activating them
-					one by one, taking a screenshot with the camera, and saving that screenshot on disk, to be
-					used as an asset later. This way if we wanted to edit the item positions in the icons, we
+					world, so we had 3D models. I built a scene that was only used in development. The scene
+					had a camera, a light, and all the 3D models of the objects. I then did some editor
+					scripting. The script looped over all the objects, activating them one by one, taking a
+					screenshot with the camera, and saving that screenshot on disk. These screenshots were
+					then used as the icons. This way if we wanted to edit the item positions in the icons, we
 					could simply change the item positions in that scene and redo the screenshots. I think we
 					had maybe 15 items and it took a few seconds to generate all the icons.
+				</p>
+				<p>
+					It could've been a lot more sophisticated in terms of visuals. The items could maybe have
+					a background to them to make them pop more and we did run into issues with model fidelity.
+					We got the models from some asset pack that had game ready models, meaning the poly counts
+					were on the lower end. Not a problem in the actual game, but when you want to shoot
+					close-ups of them it becomes an issue. Some items like the sponge are literally squished
+					capsules with a texture and this was really obvious in the icons. I did add some bumps to
+					the sponge with a vertex shader, but it still wasn't quite what I wanted. If I had to make
+					a sponge now, I wouldn't hesitate to just hop into blender and bang out a sponge.
 				</p>
 			</details>
 		</div>
