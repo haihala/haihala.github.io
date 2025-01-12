@@ -235,17 +235,18 @@
 						of this, Ken can do a combo where he first lands a crouching medium kick (normal),
 						cancels into shoryuken (special), and then cancels into super. The input for crouching
 						medium kick is any of the down directions + medium kick, shoryuken is →↓↘ + any punch
-						button, and the super is ↓↘→↓↘→ + punch. You can do the whole combo by inputting the
-						crouching medium kick and following up with 2x( →↓↘ + punch). The shoryuken should be
-						pretty clear, you are doing the input fair and square. It's harder to know why the super
-						comes out without two quarter circles. Often for complex motions, these games allow you
-						to miss an input or two. The full series of inputs should looks something like ↓ mk →↓↘
-						p →↓↘ p. The game could find the quarter circles where I've put the angle brackets: [↓
-						mk, (missing↘ allowed here) →][↓↘ p →]↓↘ p(this punch triggers super, since it comes
-						after two "quarter circles"). Alternatively the game could just trigger the super when
-						it sees enough of the desired directions in a short period of time regardless of order.
-						This is what Leon thinks. No matter why it works, the game is recycling the shoryuken
-						motion in the super, and allowing for some leniency with the super input.
+						button, and the super is a double quarter circle forward (↓↘→↓↘→) + any kick button.
+						You can do the whole combo by inputting the crouching medium kick into →↓↘ punch →↓↘
+						kick. The shoryuken should be pretty clear, you are doing the input fair and square.
+						It's harder to know why the super comes out without two quarter circles. Most games
+						allow you to miss an input or two in complex motions like supers. The full series of
+						inputs should looks something like ↓ mk →↓↘ p →↓↘ k. The game could find the quarter
+						circles where I've put the angle brackets: [↓ mk, (missing ↘ here, permitted by
+						leniency) →][↓↘ p →]↓↘ k(this kick triggers super, since it comes after two "quarter
+						circles"). Alternatively the game could just trigger the super when it sees enough of
+						the desired directions in a short period of time regardless of order. This is what Leon
+						thinks is going on. No matter why it works, the game is recycling the shoryuken motion
+						in the super, and allowing for some leniency with the super input.
 					</p>
 					<p>
 						Some of these tricks are game specific, like the Street Fighter crouching shoryuken,
