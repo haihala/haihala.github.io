@@ -198,6 +198,104 @@
 					get evaluated per frame to do whatever I want it to do.
 				</p>
 			</details>
+			<details>
+				<summary>Maintainability highlight: Automated input parser tests</summary>
+				<p>
+					Fighting games have special moves, which only activate after a specific set of motion
+					inputs. Street Fighter has it's hadoukens and shoryukens, both of which require moving the
+					movement stick through a set of points before pressing a punch button in order to come
+					out. The input parser is hard to get right. It has to be reliable, but not give false
+					positives. It has to allow for all sorts of input descriptions but be reasonable to use.
+					It has to run quickly and consider things like which way the player is facing. I've
+					rewritten the input parser three times now from scratch. You can read more about it on <a
+						href="/blog/wag-playtest-1">the dev log post I did the third rewrite</a
+					>.
+				</p>
+				<details>
+					<summary>Tangent about how motion input parsing is complex</summary>
+					<p>
+						The border between a bug and a feature is razor thin. Quirks from old games have
+						solidified as features of the genre. There are tricks the players have gotten accustomed
+						to and expect to work. You more or less have to program the quirks in, or design around
+						them.
+					</p>
+					<p>
+						It's expected that the input parser can reuse inputs for one action for a following one,
+						and that the inputs for complex motions don't need to be 100% "correct".
+						<a href="https://www.youtube.com/@LeonMassey">Leon Massey</a> explains it better than I
+						could in
+						<a href="https://youtu.be/kS7CcUSvamQ?si=IvWYHwDvBDu-4P7r&t=239"
+							>his video about combo variety</a
+						>, but I will give it a shot anyways. What you need to know is that in most games you
+						can cancel normal moves into specials (the motion moves). In some games including Street
+						Fighter 3, you can also cancel specials into supers (even more motion-y moves). Because
+						of this, Ken can do a combo where he first lands a crouching medium kick (normal),
+						cancels into shoryuken (special), and then cancels into super. The input for crouching
+						medium kick is any of the down directions + medium kick, shoryuken is →↓↘ + any punch
+						button, and the super is ↓↘→↓↘→ + punch. You can do the whole combo by inputting the
+						crouching medium kick and following up with 2x( →↓↘ + punch). The shoryuken should be
+						pretty clear, you are doing the input fair and square. It's harder to know why the super
+						comes out without two quarter circles. Often for complex motions, these games allow you
+						to miss an input or two. The full series of inputs should looks something like ↓ mk →↓↘
+						p →↓↘ p. The game could find the quarter circles where I've put the angle brackets: [↓
+						mk, (missing↘ allowed here) →][↓↘ p →]↓↘ p(this punch triggers super, since it comes
+						after two "quarter circles"). Alternatively the game could just trigger the super when
+						it sees enough of the desired directions in a short period of time regardless of order.
+						This is what Leon thinks. No matter why it works, the game is recycling the shoryuken
+						motion in the super, and allowing for some leniency with the super input.
+					</p>
+					<p>
+						Some of these tricks are game specific, like the Street Fighter crouching shoryuken,
+						inputted with ↘↓↘+punch, instead of the proper listed input of →↓↘+punch. The
+						shoryuken is often used as an anti-air, a counter to the opponent jumping at you. Being
+						able to do it crouching means your character's hurtbox is lower, which means the
+						opponent jumping at you will hit you later, giving you more time to react to the jump.
+						This is not really game breaking, but a technique that stems from the input parser being
+						lenient.
+					</p>
+					<p>
+						Some tricks are so common players just consider them the normal input. Grapplers have
+						these big grabs called command grabs which often have a "360" input. On paper the 360 is
+						a full rotation of the stick. Zangief's spinning piledriver input is shown in the input
+						list as →↘↓↙←↖↑↗→+punch. This has a few problems. One of them is that any of the
+						upwards inputs will cause you to jump if able, which forces you to churn the input when
+						Zangief is in a state where he can't jump. The second problem is that even on an arcade
+						stick, it's very easy to miss a corner. Developers have since made the 360 input more
+						lenient to the point where the name and notation are misleading to new players. For most
+						games, you only really need to hit half of the designated directions. Sometimes you need
+						to hit the cardinal directions, sometimes not. The way Zangief players really do SPDs is
+						more like →↘↓↙←↖+punch, which is a nice rolling motion with only one jump input and
+						it's the last required direction, so if you hit the punch within a few frames of the
+						last direction you get an SPD instead of a jump. It's not the easiest thing in the
+						world, but a silver Zangief player can land it nine times out of ten. If they had to do
+						the input as written, I doubt they would hit it once out of ten attempts. The confusion
+						of the 360 motion is largely why I probably won't ever put one in WAG despite loving
+						them as a concept.
+					</p>
+					<p>
+						Point here being there are lots of input shenanigans that players expect. Sometimes you
+						can get multiple birds with one stone, but some require their own changes. Adding a
+						shortcut the wrong way can cause you to accidentally invalidate other shortcuts, cause
+						false positives, or add a new degenerate shortcut that ruins a character or even the
+						game.
+					</p>
+				</details>
+				<p>Problem: Changes to the parser can very easily break a corner case elsewhere.</p>
+				<p>
+					Solution: Automated tests. I've gone back and forth on the amount of tests in the project
+					and it currently has about 30. The test coverage is not that great, but I don't think it
+					should be. Coverage is a misleading metric, and there have been lots of sweeping changes
+					in the architecture as I learn more about Rust, Bevy, or programming in general, which
+					invalidate parts of the codebase. I've removed maybe 20 or so tests because the system
+					being tested no longer exists. The input parsing tests are without a doubt the most
+					valuable tests I have. They were originally written for the previous parser, but I made
+					them generic enough to work with the current and any future parsers. They simply test if a
+					series of inputs gets registered as a specific input, or that it doesn't produce a common
+					false positive. They could be more detailed, but they already catch most of the problems
+					I've had. Having a test suite this good allows me to do TDD when I work on the input
+					parser, which I think is a great application of TDD.
+				</p>
+			</details>
 		</div>
 
 		<div class="page">
