@@ -5,6 +5,7 @@
 	import BackgroundVideo from './BackgroundVideo.svelte';
 	import PortfolioPanels from './PortfolioPanels.svelte';
 	import Socials from './Socials.svelte';
+	import NumpadArrows from '$lib/components/NumpadArrows.svelte';
 </script>
 
 <svelte:head>
@@ -234,47 +235,69 @@
 						Fighter 3, you can also cancel specials into supers (even more motion-y moves). Because
 						of this, Ken can do a combo where he first lands a crouching medium kick (normal),
 						cancels into shoryuken (special), and then cancels into super. The input for crouching
-						medium kick is any of the down directions + medium kick, shoryuken is →↓↘ + any punch
-						button, and the super is a double quarter circle forward (↓↘→↓↘→) + any kick button.
-						You can do the whole combo by inputting the crouching medium kick into →↓↘ punch →↓↘
-						kick. The shoryuken should be pretty clear, you are doing the input fair and square.
-						It's harder to know why the super comes out without two quarter circles. Most games
-						allow you to miss an input or two in complex motions like supers. The full series of
-						inputs should looks something like ↓ mk →↓↘ p →↓↘ k. The game could find the quarter
-						circles where I've put the angle brackets: [↓ mk, (missing ↘ here, permitted by
-						leniency) →][↓↘ p →]↓↘ k(this kick triggers super, since it comes after two "quarter
-						circles"). Alternatively the game could just trigger the super when it sees enough of
-						the desired directions in a short period of time regardless of order. This is what Leon
-						thinks is going on. No matter why it works, the game is recycling the shoryuken motion
-						in the super, and allowing for some leniency with the super input.
+						medium kick is any of the down directions + medium kick, shoryuken is <NumpadArrows
+							dirs={[6, 2, 3]}
+						/> + any punch button, and the super is a double quarter circle forward (<NumpadArrows
+							dirs={[2, 3, 6, 2, 3, 6]}
+						/>) + any kick button. You can do the whole combo by inputting the crouching medium kick
+						into <NumpadArrows dirs={[6, 2, 3]} /> punch
+						<NumpadArrows dirs={[6, 2, 3]} />
+						kick. The shoryuken should be pretty clear, you are doing the input fair and square. It's
+						harder to know why the super comes out without two quarter circles. Most games allow you
+						to miss an input or two in complex motions like supers. The full series of inputs should
+						looks something like <NumpadArrows dirs={[2]} /> mk
+						<NumpadArrows dirs={[6, 2, 3]} />
+						p
+						<NumpadArrows dirs={[6, 2, 3]} />
+						k. The game could find the quarter circles where I've put the angle brackets: [
+						<NumpadArrows dirs={[2]} />
+						mk, (missing
+						<NumpadArrows dirs={[3]} />
+						here, permitted by leniency)
+						<NumpadArrows dirs={[6]} />
+						][
+						<NumpadArrows dirs={[2, 3]} />
+						p
+						<NumpadArrows dirs={[6]} />
+						]
+						<NumpadArrows dirs={[2, 3]} />
+						k(this kick triggers super, since it comes after two "quarter circles"). Alternatively the
+						game could just trigger the super when it sees enough of the desired directions in a short
+						period of time regardless of order. This is what Leon thinks is going on. No matter why it
+						works, the game is recycling the shoryuken motion in the super, and allowing for some leniency
+						with the super input.
 					</p>
 					<p>
 						Some of these tricks are game specific, like the Street Fighter crouching shoryuken,
-						inputted with ↘↓↘+punch, instead of the proper listed input of →↓↘+punch. The
-						shoryuken is often used as an anti-air, a counter to the opponent jumping at you. Being
-						able to do it crouching means your character's hurtbox is lower, which means the
-						opponent jumping at you will hit you later, giving you more time to react to the jump.
-						This is not really game breaking, but a technique that stems from the input parser being
-						lenient.
+						inputted with
+						<NumpadArrows dirs={[3, 2, 3]} />
+						+ punch, instead of the proper listed input of
+						<NumpadArrows dirs={[6, 2, 3]} />
+						+ punch. The shoryuken is often used as an anti-air, a counter to the opponent jumping at
+						you. Being able to do it crouching means your character's hurtbox is lower, which means the
+						opponent jumping at you will hit you later, giving you more time to react to the jump. This
+						is not really game breaking, but a technique that stems from the input parser being lenient.
 					</p>
 					<p>
 						Some tricks are so common players just consider them the normal input. Grapplers have
 						these big grabs called command grabs which often have a "360" input. On paper the 360 is
 						a full rotation of the stick. Zangief's spinning piledriver input is shown in the input
-						list as →↘↓↙←↖↑↗→+punch. This has a few problems. One of them is that any of the
-						upwards inputs will cause you to jump if able, which forces you to churn the input when
-						Zangief is in a state where he can't jump. The second problem is that even on an arcade
-						stick, it's very easy to miss a corner. Developers have since made the 360 input more
-						lenient to the point where the name and notation are misleading to new players. For most
-						games, you only really need to hit half of the designated directions. Sometimes you need
-						to hit the cardinal directions, sometimes not. The way Zangief players really do SPDs is
-						more like →↘↓↙←↖+punch, which is a nice rolling motion with only one jump input and
-						it's the last required direction, so if you hit the punch within a few frames of the
-						last direction you get an SPD instead of a jump. It's not the easiest thing in the
-						world, but a silver Zangief player can land it nine times out of ten. If they had to do
-						the input as written, I doubt they would hit it once out of ten attempts. The confusion
-						of the 360 motion is largely why I probably won't ever put one in WAG despite loving
-						them as a concept.
+						list as
+						<NumpadArrows dirs={[6, 3, 2, 1, 4, 7, 8, 9, 6]} />
+						+ punch. This has a few problems. One of them is that any of the upwards inputs will cause
+						you to jump if able, which forces you to churn the input when Zangief is in a state where
+						he can't jump. The second problem is that even on an arcade stick, it's very easy to miss
+						a corner. Developers have since made the 360 input more lenient to the point where the name
+						and notation are misleading to new players. For most games, you only really need to hit half
+						of the designated directions. Sometimes you need to hit the cardinal directions, sometimes
+						not. The way Zangief players really do SPDs is more like
+						<NumpadArrows dirs={[6, 3, 2, 1, 4, 7]} />
+						+ punch, which is a nice rolling motion with only one jump input and it's the last required
+						direction, so if you hit the punch within a few frames of the last direction you get an SPD
+						instead of a jump. It's not the easiest thing in the world, but a silver Zangief player can
+						land it nine times out of ten. If they had to do the input as written, I doubt they would
+						hit it once out of ten attempts. The confusion of the 360 motion is largely why I probably
+						won't ever put one in WAG despite loving them as a concept.
 					</p>
 					<p>
 						Point here being there are lots of input shenanigans that players expect. Sometimes you
