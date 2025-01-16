@@ -2,7 +2,7 @@
 title: 'What the git?'
 tagline: 'Speedrun learning'
 createdAt: '2024-12-25T16:29+02:00'
-updatedAt: '2024-12-29T13:40+02:00'
+updatedAt: '2025-01-16T17:34+02:00'
 tags: ['teaching']
 favourite: true
 draft: false
@@ -64,7 +64,7 @@ Literally speaking, a commit consist of the following elements:
 
 ### Changes
 
-The changes are are the change we've been talking about. Sometimes git sees a
+The changes are the change we've been talking about. Sometimes git sees a
 change differently than a human would, as it only understands that something got
 added or removed from a place. Moving a line of code for example is interpreted
 as deleting it from the original position and adding a completely new but
@@ -103,7 +103,7 @@ you should keep the following things in mind:
 Git automatically adds details to the commit when it's made. It's important to
 know that it happens, but the specifics don't necessarily matter.
 
-Changes are usually are built on top of a previous version of the project. Git
+Changes are usually built on top of a previous version of the project. Git
 handles this by designating each commit "parent" commits. It is usually best to
 try to keep the number of parents at one, meaning each change happens on top of
 the previous one in an unambiguous lineage. The first commit can't have a
