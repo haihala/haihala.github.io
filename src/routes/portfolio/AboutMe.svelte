@@ -75,7 +75,7 @@
 		<Socials />
 		<p>
 			You can find a list of my skills, as well as my summarized employment history in my
-			<a href="/portfolio/cv-eero-haihala.pdf" target="_blank">printable resume</a>.
+			<a href="/portfolio-assets/cv-eero-haihala.pdf" target="_blank">printable resume</a>.
 		</p>
 	</div>
 </div>
