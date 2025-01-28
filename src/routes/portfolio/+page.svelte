@@ -40,24 +40,24 @@
 				elems={[
 					{
 						type: 'video',
-						src: '/portfolio/wag-combo.mp4',
+						src: '/portfolio-assets/wag-combo.mp4',
 						alt: 'Video of a combo in a juggle fighting game'
 					},
 					{
 						type: 'video',
-						src: '/portfolio/wag-round-flow.mp4',
+						src: '/portfolio-assets/wag-round-flow.mp4',
 						alt: 'Fighting game round ends, a shop fills the screen, lots of time is spent twiddling through the options, new round begins'
 					},
 					{
-						src: '/portfolio/wag-menu.png',
+						src: '/portfolio-assets/wag-menu.png',
 						alt: 'Main menu of Whoops! All grapplers'
 					},
 					{
-						src: '/portfolio/wag-sharpen.png',
+						src: '/portfolio-assets/wag-sharpen.png',
 						alt: 'Female character running her hand over a katana, sharpening it'
 					},
 					{
-						src: '/portfolio/wag-shop.png',
+						src: '/portfolio-assets/wag-shop.png',
 						alt: 'Shop view in Whoops! All grapplers'
 					}
 				]}
@@ -172,15 +172,15 @@
 				<Carousel
 					elems={[
 						{
-							src: '/portfolio/wag-attack-builder-code.png',
+							src: '/portfolio-assets/wag-attack-builder-code.png',
 							alt: 'Code of an attack builder'
 						},
 						{
-							src: '/portfolio/wag-dash-builder-code.png',
+							src: '/portfolio-assets/wag-dash-builder-code.png',
 							alt: 'Code of a dash builder'
 						},
 						{
-							src: '/portfolio/wag-action-builder-code.png',
+							src: '/portfolio-assets/wag-action-builder-code.png',
 							alt: 'Code of a generic action builder'
 						}
 					]}
@@ -331,20 +331,20 @@
 				elems={[
 					{
 						type: 'video',
-						src: '/portfolio/geah-tutorial.mp4',
+						src: '/portfolio-assets/geah-tutorial.mp4',
 						alt: 'Video of the tutorial'
 					},
 					{
 						type: 'video',
-						src: '/portfolio/geah-boss.mp4',
+						src: '/portfolio-assets/geah-boss.mp4',
 						alt: 'Video of the first boss fight'
 					},
 					{
-						src: '/portfolio/geah2.png',
+						src: '/portfolio-assets/geah2.png',
 						alt: 'A dwarf in a hole as a cannon ball flies overhead'
 					},
 					{
-						src: '/portfolio/geah-corridor.png',
+						src: '/portfolio-assets/geah-corridor.png',
 						alt: 'A dwarf with a hammer in a corridor, getting shot at with a cannon by a small green pig'
 					}
 				]}
@@ -430,7 +430,7 @@
 						</p>
 					</div>
 					<img
-						src="/portfolio/geah-state-machine-nodes.png"
+						src="/portfolio-assets/geah-state-machine-nodes.png"
 						alt="Screenshot of Godot node hierarchy of the state machine"
 					/>
 				</div>

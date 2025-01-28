@@ -1,8 +1,8 @@
 <script>
 	const videos = [
-		'portfolio/geah-tutorial.mp4',
-		'/portfolio/wag-combo.mp4',
-		'/portfolio/dickbone.mp4'
+		'/portfolio-assets/geah-tutorial.mp4',
+		'/portfolio-assets/wag-combo.mp4',
+		'/portfolio-assets/dickbone.mp4'
 	];
 
 	let index = $state(0);

@@ -8,15 +8,15 @@
 	<Carousel
 		elems={[
 			{
-				src: '/portfolio/face-bw.jpg',
+				src: '/portfolio-assets/face-bw.jpg',
 				alt: 'My black and white portrait, posed like Steve Jobs'
 			},
 			{
-				src: '/portfolio/face-outside.jpg',
+				src: '/portfolio-assets/face-outside.jpg',
 				alt: 'My portrait outside in a coat and scarf'
 			},
 			{
-				src: '/portfolio/face-pf-dm-cropped.jpg',
+				src: '/portfolio-assets/face-pf-dm-cropped.jpg',
 				alt: 'Me DMing pathfinder for my weekly group'
 			}
 		]}
