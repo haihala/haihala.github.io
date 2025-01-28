@@ -550,6 +550,9 @@
 				<li>
 					<a href="/blog/squeli">Squeli</a> - Top down 2d 2-4 player pvp arena shooter weekend Jam game
 				</li>
+				<li>
+					<a href="/blog/mankind-knew">Mankind knew</a> - A political statement / weekend game jam project.
+				</li>
 			</ul>
 
 			<h3>My Dystopian Laserhell Hovercar</h3>
