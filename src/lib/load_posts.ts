@@ -63,5 +63,5 @@ export const load_pages = async (opts?: LoadOptions): Promise<Article[]> => {
 				(opts?.drafts === undefined && !post.draft)
 		);
 
-	return posts.sort((a, b) => b.createdAt.valueOf() - a.createdAt.valueOf());
+	return posts.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
 };
