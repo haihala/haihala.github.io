@@ -93,7 +93,7 @@
 		width: 0.9cm;
 		height: 0.9cm;
 
-		background-color: var(--color-bg-card);
+		background-color: var(--color-bg-light);
 
 		&:hover {
 			opacity: 50%;

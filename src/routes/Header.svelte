@@ -5,7 +5,7 @@
 
 	let pages = [
 		['/', 'Home'],
-		['/blog', 'Blog'],
+		['/blog', 'Blog posts'],
 		['/portfolio', 'Hire me']
 	];
 </script>
@@ -26,6 +26,9 @@
 	nav {
 		display: flex;
 		justify-content: center;
+		position: fixed;
+		left: 50%;
+		transform: translate(-50%, 0);
 	}
 
 	ul {

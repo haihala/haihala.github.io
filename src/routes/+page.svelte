@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CardGrid from '$lib/components/CardGrid.svelte';
+	import BigCard from '$lib/components/BigCard.svelte';
 
 	let { data } = $props();
 </script>
@@ -17,8 +17,24 @@
 	</p>
 
 	<p>"Fresh" off the presses:</p>
-	<CardGrid posts={data.newest} />
+	{#each data.newest as post}
+		<BigCard
+			title={post.title}
+			subtitle={post.tagline}
+			link={post.link}
+			wordCount={post.wordCount}
+			pubDate={post.createdAt}
+		/>
+	{/each}
 
 	<p>Some of my favorites:</p>
-	<CardGrid posts={data.favourites} />
+	{#each data.favourites as post}
+		<BigCard
+			title={post.title}
+			subtitle={post.tagline}
+			link={post.link}
+			wordCount={post.wordCount}
+			pubDate={post.createdAt}
+		/>
+	{/each}
 </section>
