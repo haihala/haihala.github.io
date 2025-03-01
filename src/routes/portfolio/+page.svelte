@@ -616,9 +616,8 @@
 
 			<h2>The end</h2>
 			<p>
-				Thanks for reading, you can get <a href="/">back to the blog</a> or
-				<a href="/projects">check out my projects</a>. If any of this seems helpful or interesting,
-				get in contact:
+				Thanks for reading, you can get <a href="/">back to the blog</a>. If any of this seems
+				helpful or interesting, get in contact:
 			</p>
 			<div class="padded">
 				<Socials />
