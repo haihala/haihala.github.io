@@ -30,11 +30,11 @@ export type Article = {
 	wordCount: number;
 };
 
-export type LoadOptions = {
+type LoadOptions = {
 	drafts?: 'include' | 'only';
 };
 
-export const load_posts = async (opts?: LoadOptions): Promise<Article[]> => {
+const load_posts = async (opts?: LoadOptions): Promise<Article[]> => {
 	const raw = import.meta.glob(`./posts/*.md`, { eager: true });
 
 	const posts = Object.entries(raw)
@@ -70,12 +70,6 @@ export const load_posts = async (opts?: LoadOptions): Promise<Article[]> => {
 	return posts.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
 };
 
-export const load_posts_serializable = async (
-	opts?: LoadOptions
-): Promise<Omit<Article, 'content'>[]> => {
-	// Content is a function and can't be serialized
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	return (await load_posts(opts)).map(({ content: _, ...rest }: Article) => {
-		return rest;
-	});
-};
+export const public_posts = await load_posts();
+export const draft_posts = await load_posts({ drafts: 'only' });
+export const all_posts = await load_posts({ drafts: 'include' });

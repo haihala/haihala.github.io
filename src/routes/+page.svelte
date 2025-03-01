@@ -1,7 +1,6 @@
 <script lang="ts">
-	import BigCard from '$lib/components/BigCard.svelte';
-
-	let { data } = $props();
+	import CardList from '$lib/components/CardList.svelte';
+	import { public_posts } from '$lib/load_posts';
 </script>
 
 <svelte:head>
@@ -17,24 +16,7 @@
 	</p>
 
 	<p>"Fresh" off the presses:</p>
-	{#each data.newest as post}
-		<BigCard
-			title={post.title}
-			subtitle={post.tagline}
-			link={post.link}
-			wordCount={post.wordCount}
-			pubDate={post.createdAt}
-		/>
-	{/each}
-
+	<CardList posts={public_posts.slice(0, 3)} />
 	<p>Some of my favorites:</p>
-	{#each data.favourites as post}
-		<BigCard
-			title={post.title}
-			subtitle={post.tagline}
-			link={post.link}
-			wordCount={post.wordCount}
-			pubDate={post.createdAt}
-		/>
-	{/each}
+	<CardList posts={public_posts.filter((post) => post.favourite)} />
 </section>

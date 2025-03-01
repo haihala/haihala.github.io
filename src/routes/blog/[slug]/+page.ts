@@ -1,10 +1,9 @@
-import { load_posts } from '$lib/load_posts';
+import { all_posts } from '$lib/load_posts';
 import type { EntryGenerator, PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
-	const pages = await load_posts({ drafts: 'include' });
-	const main_post = pages.find((p) => p.slug === params.slug);
-	const similar = pages
+	const main_post = all_posts.find((p) => p.slug === params.slug);
+	const similar = all_posts
 		.filter((post) => post.slug !== main_post?.slug && !post.draft)
 		.map((post) => {
 			return {
@@ -33,5 +32,5 @@ export const load: PageLoad = async ({ params }) => {
 };
 
 export const entries: EntryGenerator = async () => {
-	return await load_posts();
+	return all_posts;
 };

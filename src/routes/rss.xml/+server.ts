@@ -1,10 +1,9 @@
-import { load_posts, type Article } from '$lib/load_posts';
+import { public_posts, type Article } from '$lib/load_posts';
 import { title, website } from '../constants';
 
 export const prerender = true;
 export async function GET() {
-	const articles = await load_posts();
-	return new Response(format(articles), {
+	return new Response(format(public_posts), {
 		headers: {
 			'Cache-Control': 'max-age=0, s-maxage=3600',
 			'Content-Type': 'application/xml'

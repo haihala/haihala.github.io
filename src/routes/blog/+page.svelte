@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { website } from '../constants';
-	import BigCard from '$lib/components/BigCard.svelte';
+	import { public_posts } from '$lib/load_posts';
+	import CardList from '$lib/components/CardList.svelte';
 	const feed = `${website}/rss.xml`;
-
-	const { data } = $props();
 </script>
 
 <svelte:head>
@@ -18,13 +17,5 @@
 		RSS feed available at <a href={feed}>{feed}</a>
 	</p>
 
-	{#each data.posts as post}
-		<BigCard
-			title={post.title}
-			subtitle={post.tagline}
-			link={post.link}
-			wordCount={post.wordCount}
-			pubDate={post.createdAt}
-		/>
-	{/each}
+	<CardList posts={public_posts} />
 </section>
