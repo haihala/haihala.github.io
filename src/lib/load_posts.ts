@@ -14,6 +14,7 @@ export type MetaArticle = {
 	tags: string[];
 	createdAt: string;
 	updatedAt?: string;
+	wordCount: number;
 };
 
 export type Article = {
@@ -40,7 +41,8 @@ const load_posts = async (opts?: LoadOptions): Promise<Article[]> => {
 	const posts = Object.entries(raw)
 		.map(([path, untypedPost]) => {
 			const post = untypedPost as Post;
-			const { tagline, title, tags, createdAt, updatedAt, favourite, draft } = post.metadata;
+			const { tagline, title, tags, createdAt, updatedAt, favourite, draft, wordCount } =
+				post.metadata;
 			const fname = path.replace(/^.*[\\/]/, '');
 			const slug = fname.replace(/\.md$/, '');
 
@@ -50,14 +52,12 @@ const load_posts = async (opts?: LoadOptions): Promise<Article[]> => {
 				title,
 				tagline,
 				tags,
+				wordCount,
 				createdAt: new Date(createdAt),
 				updatedAt: updatedAt === undefined ? undefined : new Date(updatedAt),
 				content: post.default,
 				favourite: !!favourite,
-				draft: !!draft,
-				// This was easy, and is proportional, but not accurate.
-				// There are a bunch of tags and vite garbage in there
-				wordCount: post.default.toString().split(/\s+/).length
+				draft: !!draft
 			} satisfies Article;
 		})
 		.filter(

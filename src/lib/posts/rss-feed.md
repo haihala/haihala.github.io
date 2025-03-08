@@ -3,6 +3,7 @@ title: 'Svelte blog RSS feed on Github pages'
 tagline: 'And you can do it too'
 createdAt: '2024-12-25T16:29+02:00'
 tags: ['webdev', 'pet-project']
+wordCount: 159
 ---
 
 ## The short version

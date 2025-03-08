@@ -4,6 +4,7 @@ tagline: 'An eye opening experience'
 createdAt: '2024-11-30T09:09+02:00'
 tags: ['wag']
 favourite: false
+wordCount: 5346
 ---
 
 [Short video](https://youtu.be/OdVJorNeXlM), [Github release](https://github.com/haihala/whoops-all-grapplers/releases/tag/11-2024-video)

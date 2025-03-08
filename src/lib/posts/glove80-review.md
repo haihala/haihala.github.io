@@ -3,6 +3,7 @@ title: 'Glove80 after 6 months'
 tagline: 'My first ergo keyboard'
 createdAt: '2024-07-28T10:59+03:00'
 tags: ['hardware', 'review']
+wordCount: 944
 ---
 
 ## What and why

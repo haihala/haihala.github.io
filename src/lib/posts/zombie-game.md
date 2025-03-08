@@ -3,6 +3,7 @@ title: 'Zombie game'
 tagline: 'Trying out pixi.js'
 createdAt: '2024-06-17T15:15+03:00'
 tags: ['webdev', 'pet-project']
+wordCount: 981
 ---
 
 So I got baited to make a zombie game with Pixi.js
@@ -90,4 +91,4 @@ is still a long way from being there. Here is to hoping it will get here before
 nuclear fission.
 
 Maybe this project will continue, maybe even in this form, but for now I'm
-satisfied in my experiment and not craving more of this..
+satisfied in my experiment and not craving more of this.

@@ -3,6 +3,7 @@ title: 'I push buttons'
 tagline: 'Warning on the grind'
 createdAt: '2024-07-11T23:46+03:00'
 tags: ['prose', 'abstract']
+wordCount: 1440
 ---
 
 I push buttons in a respectable group. One with brand recognition, at least

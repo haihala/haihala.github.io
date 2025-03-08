@@ -3,6 +3,7 @@ title: 'WAG pre-polish update'
 tagline: 'Mechanically settling down'
 createdAt: '2024-07-18T14:22+03:00'
 tags: ['wag']
+wordCount: 2698
 ---
 
 I made a short [Video demo](https://youtu.be/hjmYv8yBe7Q) for those who want

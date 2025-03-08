@@ -3,6 +3,7 @@ title: 'Mankind knew'
 tagline: 'An interactive experience'
 createdAt: '2025-01-28T19:19+02:00'
 tags: ['pet-project']
+wordCount: 1953
 ---
 
 <script>

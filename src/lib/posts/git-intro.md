@@ -6,6 +6,7 @@ updatedAt: '2025-01-16T17:34+02:00'
 tags: ['teaching']
 favourite: true
 draft: false
+wordCount: 2454
 ---
 
 Git is a version management tool, which allows for wonderful things, like:

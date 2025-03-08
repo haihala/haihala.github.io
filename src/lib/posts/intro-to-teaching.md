@@ -4,6 +4,7 @@ tagline: 'Lessons learnt along the way'
 createdAt: '2024-01-08T10:14+02:00'
 tags: ['teaching']
 favourite: true
+wordCount: 697
 ---
 
 Full disclosure: I have no pedagogical background, for some reason people just

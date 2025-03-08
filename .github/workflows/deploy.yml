@@ -74,6 +74,8 @@ jobs:
           path: cv-latex
       - name: Install
         run: npm install
+      - name: Check that word counts are up to date
+        run: 'npm run wc && git diff --exit-code'
       - name: Check
         run: npm run check && npm run lint
       - name: Build

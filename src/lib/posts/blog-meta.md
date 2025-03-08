@@ -3,6 +3,7 @@ title: 'I made a blog with svelte'
 tagline: 'In magic we trust'
 createdAt: '2024-01-08T13:23+02:00'
 tags: ['webdev', 'pet-project']
+wordCount: 596
 ---
 
 First things first, you can find the source code at

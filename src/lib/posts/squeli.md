@@ -3,6 +3,7 @@ title: 'Squeli'
 tagline: 'Wonky quake, in 2d!'
 createdAt: '2025-01-07T10:01+02:00'
 tags: ['pet-project']
+wordCount: 735
 ---
 
 <script>

@@ -3,6 +3,7 @@ title: 'So you want to learn the web'
 tagline: 'Start here'
 createdAt: '2024-01-08T14:05+02:00'
 tags: ['webdev', 'teaching']
+wordCount: 693
 ---
 
 This is meant as a resource for people with some software development basics like

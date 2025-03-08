@@ -5,6 +5,7 @@ createdAt: '2024-01-07 19:00:00'
 updatedAt: '2025-01-07T09:51+02:00'
 tags: ['wag']
 favourite: true
+wordCount: 421
 ---
 
 "Whoops! All grapplers" is the working title of the rust base fighting game I've
