@@ -3,7 +3,7 @@ title: 'Whoops! All grapplers'
 tagline: 'My fighting game project'
 createdAt: '2024-01-07 19:00:00'
 updatedAt: '2025-01-07T09:51+02:00'
-tags: ['wag']
+tags: ['wag', 'game design']
 favourite: true
 wordCount: 421
 ---

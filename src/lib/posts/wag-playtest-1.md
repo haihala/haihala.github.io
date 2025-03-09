@@ -2,7 +2,7 @@
 title: 'WAG first playtests'
 tagline: 'An eye opening experience'
 createdAt: '2024-11-30T09:09+02:00'
-tags: ['wag']
+tags: ['wag', 'game design']
 favourite: false
 wordCount: 5346
 ---

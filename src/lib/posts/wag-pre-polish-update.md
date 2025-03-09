@@ -2,7 +2,7 @@
 title: 'WAG pre-polish update'
 tagline: 'Mechanically settling down'
 createdAt: '2024-07-18T14:22+03:00'
-tags: ['wag']
+tags: ['wag', 'game design']
 wordCount: 2698
 ---
 

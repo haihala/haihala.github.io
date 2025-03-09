@@ -2,7 +2,7 @@
 title: 'Zombie game'
 tagline: 'Trying out pixi.js'
 createdAt: '2024-06-17T15:15+03:00'
-tags: ['webdev', 'pet-project']
+tags: ['webdev', 'pet-project', 'game design']
 wordCount: 981
 ---
 
