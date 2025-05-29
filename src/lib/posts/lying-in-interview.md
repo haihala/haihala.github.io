@@ -4,6 +4,7 @@ tagline: 'What is the social contract anyways'
 createdAt: '2025-01-07T10:01+02:00'
 draft: true
 tags: ['abstract']
+wordCount: 939
 ---
 
 This is not going to be educational, so if you're here for that, pick another

@@ -4,6 +4,7 @@ tagline: 'Designing human-interactive games'
 createdAt: '2025-01-07T10:01+02:00'
 draft: true
 tags: ['fighters', 'design']
+wordCount: 3899
 ---
 
 As one of the greats, Tokido once said: "Fighting games are so great". I'm
