@@ -2,9 +2,10 @@
 title: 'How not to teach computer science'
 tagline: 'Lessons learnt along the way'
 createdAt: '2024-01-08T10:14+02:00'
+updatedAt: '2025-06-10T09:37+03:00'
 tags: ['teaching']
 favourite: true
-wordCount: 697
+wordCount: 710
 ---
 
 Full disclosure: I have no pedagogical background, for some reason people just
@@ -52,6 +53,8 @@ For way 2 I can't and won't offer sources, but for way 1 here are a few of my fa
   - An ego check for some (that's me)
 - [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
   - Concise yet comprehensive explanation of why more rigid type systems are powerful
+- [Yak shaving](https://seths.blog/2005/03/dont_shave_that/)
+  - A warning of a class of task
 
 And remember, engineering is not about memorization. It doesn't matter if you
 have to google things or ask an AI. It's not a shame to not know,
