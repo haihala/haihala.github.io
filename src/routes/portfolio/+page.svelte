@@ -145,6 +145,19 @@
 				worry about on a more established engine.
 			</p>
 			<details>
+				<summary>Graphics programmer highlight: Online shader playground</summary>
+				<p>
+					As a side project to this side project, I've taught myself graphics programming, more
+					specifically the WGSL shading language and Bevy material trickery. You can follow these
+					links to find the
+					<a href="https://haihala.github.io/bevy-shader-testing/">online shader playground</a>
+					and
+					<a href="https://github.com/haihala/bevy-shader-testing/">code for the playground</a>. The
+					playground may take a while to load and will probably not work that well on mobile,
+					although requesting the desktop version of a page sometimes helps.
+				</p>
+			</details>
+			<details>
 				<summary>Implementation highlight: Builder pattern for actions</summary>
 				<p>
 					The game is a fighting game, so there are lots of actions a character can take. In a
@@ -674,6 +687,7 @@
 	details {
 		width: 100%;
 		padding: 1rem;
+		margin-bottom: 1rem;
 		border-radius: 1rem;
 		background-color: color-mix(in srgb, black 10%, transparent);
 
