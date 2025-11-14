@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapterStatic from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
@@ -7,9 +7,7 @@ const config = {
 	preprocess: [vitePreprocess(), mdsvex({ extensions: ['.md'] })],
 	extensions: ['.svelte', '.md'],
 
-	kit: {
-		adapter: adapter()
-	}
+	kit: { adapter: adapterStatic(), prerender: { entries: ['*', '/'] } }
 };
 
 export default config;

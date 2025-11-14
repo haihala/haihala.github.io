@@ -1,9 +1,12 @@
 <script lang="ts">
-	import Header from './Header.svelte';
 	import './styles.css';
 	import { page } from '$app/stores';
+	import { redirect } from '@sveltejs/kit';
 	interface Props {
 		children?: import('svelte').Snippet;
+	}
+	if ($page.url.pathname === '/') {
+		redirect(308, '/portfolio');
 	}
 
 	const { children }: Props = $props();
@@ -15,8 +18,6 @@
 	{@render children?.()}
 {:else}
 	<div class="app">
-		<Header />
-
 		<main>
 			{@render children?.()}
 		</main>
