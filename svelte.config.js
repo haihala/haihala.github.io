@@ -4,7 +4,10 @@ import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [vitePreprocess(), mdsvex({ extensions: ['.md'] })],
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({ extensions: ['.md'], highlight: { alias: { rs: 'rust' } } })
+	],
 	extensions: ['.svelte', '.md'],
 
 	kit: { adapter: adapterStatic(), prerender: { entries: ['*', '/'] } }
