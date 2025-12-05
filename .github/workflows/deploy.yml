@@ -21,7 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup
+      - name: Update package repos
+        run: sudo apt-get update
+      - name: Install packages
         run: sudo apt-get install -y latexmk texlive-latex-extra
       - name: Build
         run: |
@@ -52,7 +54,7 @@ jobs:
       - name: Fix problem with Github Pages headers
         run: |
           cd build
-          wget https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js 
+          wget https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.min.js
           sed  '/\<head\>/a \<script src="coi-serviceworker.min.js"\>\</script\>' godot-test.html > temp.html
           mv temp.html godot-test.html
       - uses: actions/upload-artifact@v4
