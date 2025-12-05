@@ -3,8 +3,8 @@ title: 'Draw steel first impressions'
 tagline: 'Damningly Colvellian'
 createdAt: '2025-11-15T04:38+02:00'
 tags: ['ttrpg']
-wordCount: 1738
 draft: true
+wordCount: 26
 ---
 
 - What even is a good system

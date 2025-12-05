@@ -260,7 +260,7 @@ types of moves, so I ended up with lots of overloads for the same macro with
 differing amounts of arguments, rest filled with defaults. This was fine in some
 cases, but cumbersome in the real pain points.
 
-The solution was to learn. Instead of an fn, I used Arc<dyn Fn> and life became
+The solution was to learn. Instead of an fn, I used `Arc<dyn Fn>` and life became
 a lot easier. I had to give up on some trait definitions, but the game works
 fine without them. Now I could implement builder patterns to construct all sorts
 of actions and the sun rose once again. I have a generic action builder for when
