@@ -1,6 +1,9 @@
 <script>
 	const videos = [
-		'/portfolio-assets/geah-tutorial.mp4',
+		'/portfolio-assets/geah-tutorial-part0.mp4',
+		'/portfolio-assets/geah-tutorial-part1.mp4',
+		'/portfolio-assets/geah-tutorial-part2.mp4',
+		'/portfolio-assets/geah-tutorial-part3.mp4',
 		'/portfolio-assets/wag-combo.mp4',
 		'/portfolio-assets/dickbone.mp4'
 	];
